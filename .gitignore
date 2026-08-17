@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Datos crudos intermedios (grandes, no aportan valor al repo — se
+# regeneran corriendo extract.py; ver README "Cómo correrlo")
+raw_items.json
+raw_recipes.json
+
+# Diagnóstico temporal (usado una vez para depurar extract_categories.py)
+debug_page.html
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
