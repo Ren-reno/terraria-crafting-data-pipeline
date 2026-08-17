@@ -1,0 +1,188 @@
+{
+  "Any Wood": [
+    9,
+    619,
+    620,
+    621,
+    911,
+    1729,
+    2504,
+    2503,
+    5215
+  ],
+  "Any Iron Bar": [
+    22,
+    704
+  ],
+  "Any Cobalt Bar": [
+    381,
+    1184
+  ],
+  "Any Mythril Bar": [
+    382,
+    1191
+  ],
+  "Any Adamantite Bar": [
+    391,
+    1198
+  ],
+  "Any Sand Block": [
+    169,
+    408,
+    1246,
+    370,
+    3272,
+    3338,
+    3274,
+    3275
+  ],
+  "Any Stone Block": [
+    3,
+    61,
+    836,
+    409
+  ],
+  "Any Pressure Plate": [
+    542,
+    852,
+    543,
+    541,
+    1151,
+    529,
+    853,
+    4261
+  ],
+  "Any Bird": [
+    2015,
+    2016,
+    2017
+  ],
+  "Any Scorpion": [
+    2157,
+    2156
+  ],
+  "Any Squirrel": [
+    2018,
+    3563
+  ],
+  "Any Jungle Bug": [
+    3192,
+    3193,
+    3194
+  ],
+  "Any Duck": [
+    2123,
+    2122
+  ],
+  "Any Butterfly": [
+    1994,
+    1998,
+    2000,
+    1997,
+    2001,
+    1996,
+    1995,
+    1999
+  ],
+  "Any Firefly": [
+    1992,
+    2004
+  ],
+  "Any Snail": [
+    2006,
+    2007
+  ],
+  "Any Turtle": [
+    4464,
+    4465
+  ],
+  "Any Macaw": [
+    5212,
+    5300
+  ],
+  "Any Cockatiel": [
+    5312,
+    5313
+  ],
+  "Any Dragonfly": [
+    4334,
+    4335,
+    4336,
+    4338,
+    4339,
+    4337
+  ],
+  "Any Gem Critter": [
+    4838,
+    4844,
+    4843,
+    4841,
+    4842,
+    4840,
+    4839,
+    4831,
+    4837,
+    4836,
+    4834,
+    4835,
+    4833,
+    4832
+  ],
+  "Any Fruit": [
+    4009,
+    4282,
+    4283,
+    4284,
+    4285,
+    4286,
+    4287,
+    4288,
+    4289,
+    4290,
+    4291,
+    4292,
+    4293,
+    4294,
+    4295,
+    4296,
+    4297,
+    5277,
+    5278
+  ],
+  "Any Balloon": [
+    3738,
+    3736,
+    3737
+  ],
+  "Any Cloud Balloon": [
+    399,
+    1250
+  ],
+  "Any Blizzard Balloon": [
+    1163,
+    1251
+  ],
+  "Any Sandstorm Balloon": [
+    983,
+    1252
+  ],
+  "Any Guide to Critter Companionship": [
+    4767,
+    5453
+  ],
+  "Any Guide to Environmental Preservation": [
+    5309,
+    5454
+  ],
+  "Any Seashell or Starfish": [
+    2625,
+    2626
+  ],
+  "Any Magic Mirror": [
+    50,
+    3199
+  ],
+  "Any Torch": [
+    8
+  ]
+}

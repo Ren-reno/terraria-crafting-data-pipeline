@@ -1,0 +1,145 @@
+[
+  {
+    "itemid": 5036,
+    "name": "Ocram Trophy",
+    "row": {
+      "itemid": "5036",
+      "name": "Ocram Trophy",
+      "type": "furniture",
+      "rare": "<span class=\"rarity\"><s class=\"sortkey\" style=\"display:none;\">01*</s>[[File:Rarity color 1.png|Blue (Rarity level: 1)|link=Category:Items of rarity 1]]</span>",
+      "damage": "",
+      "sell": "<span class=\"coin\" title=\"1 Gold&#32;Coin\" data-sort-value=\"10000\"><span class=\"gc\">1<i> GC</i></span></span>",
+      "imagefile": "Ocram Trophy.png"
+    }
+  },
+  {
+    "itemid": 5048,
+    "name": "Shiny Black Slab",
+    "row": {
+      "itemid": "5048",
+      "name": "Shiny Black Slab",
+      "type": "pet summon",
+      "rare": "<span class=\"rarity\"><s class=\"sortkey\" style=\"display:none;\">05*</s>[[File:Rarity color 5.png|Pink (Rarity level: 5)|link=Category:Items of rarity 5]]</span>[[Category:Items of rarity 5]]",
+      "damage": "",
+      "sell": "",
+      "imagefile": "Shiny Black Slab.png"
+    }
+  },
+  {
+    "itemid": 5052,
+    "name": "Rainbow Piece",
+    "row": {
+      "itemid": "5052",
+      "name": "Rainbow Piece",
+      "type": "crafting material",
+      "rare": "<span class=\"rarity\"><s class=\"sortkey\" style=\"display:none;\">01*</s>[[File:Rarity color 1.png|Blue (Rarity level: 1)|link=Category:Items of rarity 1]]</span>[[Category:Items of rarity 1]]",
+      "damage": "",
+      "sell": "",
+      "imagefile": "Rainbow Piece.png"
+    }
+  },
+  {
+    "itemid": 5054,
+    "name": "Floret Protector Helmet",
+    "row": {
+      "itemid": "5054",
+      "name": "Floret Protector Helmet",
+      "type": "vanity",
+      "rare": "2",
+      "damage": "",
+      "sell": "<span class=\"coin\" title=\"1 Silver&#32;Coin\" data-sort-value=\"100\"><span class=\"sc\">1<i> SC</i></span></span>",
+      "imagefile": "Floret Protector Helmet.png"
+    }
+  },
+  {
+    "itemid": 5055,
+    "name": "Floret Protector Shirt",
+    "row": {
+      "itemid": "5055",
+      "name": "Floret Protector Shirt",
+      "type": "vanity",
+      "rare": "2",
+      "damage": "",
+      "sell": "<span class=\"coin\" title=\"1 Silver&#32;Coin\" data-sort-value=\"100\"><span class=\"sc\">1<i> SC</i></span></span>",
+      "imagefile": "Floret Protector Shirt.png"
+    }
+  },
+  {
+    "itemid": 5076,
+    "name": "Red Envelope",
+    "row": {
+      "itemid": "5076",
+      "name": "Red Envelope",
+      "type": "grab bag",
+      "rare": "<span class=\"rarity\"><s class=\"sortkey\" style=\"display:none;\">03*</s>[[File:Rarity color 3.png|Orange (Rarity level: 3)|link=Category:Items of rarity 3]]</span>[[Category:Items of rarity 3]]",
+      "damage": "",
+      "sell": "",
+      "imagefile": "Red Envelope.png"
+    }
+  },
+  {
+    "itemid": 5077,
+    "name": "Glass Slipper",
+    "row": {
+      "itemid": "5077",
+      "name": "Glass Slipper",
+      "type": "accessory^vanity",
+      "rare": "5",
+      "damage": "",
+      "sell": "<span class=\"coin\" title=\"20 Gold&#32;Coins\" data-sort-value=\"200000\"><span class=\"gc\">20<i> GC</i></span></span>",
+      "imagefile": "Glass Slipper.png"
+    }
+  },
+  {
+    "itemid": 5078,
+    "name": "Prince Uniform",
+    "row": {
+      "itemid": "5078",
+      "name": "Prince Uniform",
+      "type": "vanity",
+      "rare": "5",
+      "damage": "",
+      "sell": "<span class=\"coin\" title=\"10 Gold&#32;Coins\" data-sort-value=\"100000\"><span class=\"gc\">10<i> GC</i></span></span>",
+      "imagefile": "Prince Uniform.png"
+    }
+  },
+  {
+    "itemid": 5079,
+    "name": "Prince Pants",
+    "row": {
+      "itemid": "5079",
+      "name": "Prince Pants",
+      "type": "vanity",
+      "rare": "5",
+      "damage": "",
+      "sell": "<span class=\"coin\" title=\"10 Gold&#32;Coins\" data-sort-value=\"100000\"><span class=\"gc\">10<i> GC</i></span></span>",
+      "imagefile": "Prince Pants.png"
+    }
+  },
+  {
+    "itemid": 5264,
+    "name": "Silent Fish",
+    "row": {
+      "itemid": "5264",
+      "name": "Silent Fish",
+      "type": "furniture",
+      "rare": "0",
+      "damage": "",
+      "sell": "<span class=\"coin\" title=\"50 Silver&#32;Coins\" data-sort-value=\"5000\"><span class=\"sc\">50<i> SC</i></span></span>",
+      "imagefile": "Silent Fish.png"
+    }
+  },
+  {
+    "itemid": 5376,
+    "name": "Forbidden Lihzahrd Brick Wall",
+    "row": {
+      "itemid": "5376",
+      "name": "Forbidden Lihzahrd Brick Wall",
+      "type": "wall",
+      "rare": "0",
+      "damage": "",
+      "sell": "",
+      "imagefile": "Forbidden Lihzahrd Brick Wall.png"
+    }
+  }
+]
