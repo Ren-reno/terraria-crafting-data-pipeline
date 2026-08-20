@@ -122,6 +122,14 @@ def process_items(raw_items):
     PRIMERA aparición y se reportan los descartes en duplicate_itemids.json
     para revisión manual (probablemente sean 2 templates de recipe/infobox
     distintos apuntando al mismo id por error de la wiki).
+
+    Nota sobre 'name': se agrega directo en cada item (nombre en inglés,
+    tal como viene de la wiki) además de usarse como clave del diccionario
+    name_to_id interno. Confirmado contra datos reales: nunca viene vacío
+    para una fila con itemid válido, pero NO es único -- 9 nombres se
+    repiten entre 2+ itemid distintos (ej. "Strange Plant" aparece 4 veces,
+    variantes de bioma). Por eso 'name' es solo un dato descriptivo, nunca
+    una clave -- la clave única sigue siendo 'id'.
     """
     items = []
     name_to_id = {}
@@ -153,6 +161,7 @@ def process_items(raw_items):
 
         item = {
             "id": itemid,
+            "name": name,
             "category": category,
             "subcategory": subcategory,
             "imageUrl": build_image_url(row.get("imagefile")),

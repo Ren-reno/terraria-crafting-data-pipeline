@@ -78,6 +78,46 @@ class TestItemsStructure:
                 f"item.id debería ser int, encontrado {type(item['id'])} en {item}"
             )
 
+    def test_todos_los_items_tienen_name_no_vacio(self, items):
+        # Confirmado contra datos reales: 'name' nunca viene vacío para una
+        # fila con itemid válido (0 casos en 6082 filas crudas). Se agrega
+        # como campo obligatorio -- si esto cambia en una futura
+        # re-extracción, es una señal real de que algo se rompió, no un
+        # caso a tolerar en silencio.
+        sin_name = [item["id"] for item in items if not item.get("name") or not item["name"].strip()]
+        assert not sin_name, (
+            f"{len(sin_name)} item(s) sin 'name' (o vacío): {sin_name[:10]}. "
+            f"Esto no debería pasar nunca -- revisar process.py o los datos crudos."
+        )
+
+    def test_name_no_es_clave_unica_pero_id_si(self, items):
+        # Documentado, no es un bug: 7 nombres se repiten entre 2+ itemid
+        # distintos en el dataset FINAL (ej. "Strange Plant" x4, variantes
+        # de bioma). Esto significa que la UI/app NUNCA debe usar 'name'
+        # como clave para buscar o identificar un ítem -- solo 'id' es
+        # única.
+        #
+        # Nota sobre el número exacto: en raw_items.json (6082 filas, sin
+        # deduplicar) hay 9 nombres duplicados, no 7. La diferencia son 2
+        # nombres ("Forbidden Lihzahrd Brick Wall", "Silent Fish") cuya
+        # única "pareja" duplicada era justo una de las 11 filas
+        # descartadas por itemid duplicado (ver duplicate_itemids.json) --
+        # al perder su pareja, esos 2 nombres pasaron a ser únicos en el
+        # archivo final. Confirmado cruzando ambos archivos, no es
+        # coincidencia. Por eso este test valida contra items.json (el
+        # dato real que consume la app), no contra el crudo.
+        from collections import Counter
+        KNOWN_DUPLICATE_NAME_COUNT = 7
+
+        name_counts = Counter(item["name"] for item in items if item.get("name"))
+        duplicated_names = {name: count for name, count in name_counts.items() if count > 1}
+        assert len(duplicated_names) == KNOWN_DUPLICATE_NAME_COUNT, (
+            f"{len(duplicated_names)} nombres duplicados entre distintos id, "
+            f"distinto al valor conocido de {KNOWN_DUPLICATE_NAME_COUNT}. "
+            f"Ejemplos: {list(duplicated_names.items())[:5]}. Si subió mucho, "
+            f"revisar si sigue siendo solo variantes de bioma/reskins."
+        )
+
     def test_ids_son_unicos(self, items):
         # Se descubrió en la extracción real que la wiki puede devolver el
         # mismo itemid para dos ítems distintos (11 casos en ~6000 items,

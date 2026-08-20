@@ -2,7 +2,7 @@
 
 Pipeline de extracción, limpieza y validación de datos que convierte el catálogo completo de ítems y recetas de crafteo de Terraria (v1.4.5.x) en dos archivos JSON estructurados, listos para consumir desde una aplicación.
 
-**Resultado final:** 6.071 ítems y 3.905 recetas, validados por una suite de 26 tests automatizados de calidad de datos.
+**Resultado final:** 6.071 ítems y 3.905 recetas, validados por una suite de 28 tests automatizados de calidad de datos.
 
 ## Por qué este proyecto
 
@@ -28,7 +28,7 @@ raw_items.json / raw_recipes.json     (datos crudos, sin transformar)
    items.json / recipes.json          (datos finales, listos para consumir)
         │
         ▼
-   tests/test_data_quality.py         → 26 tests validan el resultado
+   tests/test_data_quality.py         → 28 tests validan el resultado
 ```
 
 Dos scripts auxiliares resuelven casos especiales del dataset:
@@ -48,11 +48,13 @@ Esta es la parte que más vale la pena leer. Cada punto es un caso concreto dond
 
 **Datos corruptos en filas descontinuadas.** Un pequeño número de filas traía identificadores en formatos no válidos (ej. dos IDs separados por `/`, sufijos inesperados). Se blindó el parseo para descartar esas filas puntuales sin interrumpir la ejecución completa, en lugar de dejar que un caso extremo tumbe todo el proceso.
 
+**Nombres que no son identificadores únicos.** 7 nombres de ítem aparecen repetidos en 2 o más filas distintas (ej. "Strange Plant" con 4 variantes según bioma). El nombre es un dato descriptivo, no una clave — solo `id` lo es, y el modelo de datos y los tests lo dejan explícito para evitar que una futura integración use el nombre como identificador por error.
+
 El registro completo de esta investigación — con evidencia, números exactos y el razonamiento detrás de cada decisión — está en [`docs/03-avance-extraccion-cargo.md`](./docs/03-avance-extraccion-cargo.md).
 
 ## Validación de datos, no solo extracción
 
-`tests/test_data_quality.py` corre 26 tests con `pytest` sobre el resultado final: tipos de dato correctos, unicidad de identificadores, ausencia de HTML sin procesar, integridad referencial entre archivos, y límites de tolerancia para los casos especiales documentados arriba. No son tests de código — son tests sobre el contrato del propio dataset, para que cualquier cambio futuro en la fuente (una nueva versión del juego, un cambio en la wiki) se detecte automáticamente en lugar de corromper el resultado en silencio.
+`tests/test_data_quality.py` corre 28 tests con `pytest` sobre el resultado final: tipos de dato correctos, unicidad de identificadores, ausencia de HTML sin procesar, integridad referencial entre archivos, y límites de tolerancia para los casos especiales documentados arriba. No son tests de código — son tests sobre el contrato del propio dataset, para que cualquier cambio futuro en la fuente (una nueva versión del juego, un cambio en la wiki) se detecte automáticamente en lugar de corromper el resultado en silencio.
 
 ## Estructura del repositorio
 
@@ -88,13 +90,13 @@ python extract_categories.py   # genera ingredient_categories.json
 python process.py              # genera items.json y recipes.json
 python verify_orphan_images.py # genera orphan_image_urls.json
 
-python -m pytest tests/ -v     # corre la suite de validación — 26 passed
+python -m pytest tests/ -v     # corre la suite de validación — 28 passed
 ```
 
 ## Modelo de datos
 
 ```
-items.json    → { id, category, subcategory, imageUrl, rarity, damage?, sellValue? }
+items.json    → { id, name, category, subcategory, imageUrl, rarity, damage?, sellValue? }
 recipes.json  → { id, resultItemId, resultQuantity, ingredients[], station, requiredCondition,
                    resultName?, resultImageUrl? }   ← estos dos últimos, solo en casos incompletos en la fuente
 ```
