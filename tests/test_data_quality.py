@@ -222,8 +222,20 @@ class TestItemsStructure:
         # principal de la app; el resto es aceptable resolverlo con una
         # categoría de respaldo ("Otros") en el frontend, sin tocar el
         # pipeline. Se vigilan ambos conteos para detectar cambios.
+        #
+        # Actualizado (ver doc 08): subió de 7 a 9 crafteables tras una
+        # re-extracción posterior al lanzamiento de Terraria 1.4.5.7/1.4.5.8
+        # (parches recientes de la actualización 1.4.5 "Bigger & Boulder",
+        # crossover con Palworld, ~ene-ago 2026). Confirmado con evidencia
+        # externa, no es un bug: "Trusty Digtoise" (id 6174) es una mejora
+        # crafteable de un Pal, agregada en un parche muy reciente -- la
+        # wiki oficial confirma "(Digtoise) can now be upgraded into its
+        # 'trusty' variant... from crafting". Mismo patrón de siempre:
+        # receta ya cargada en Cargo, ficha de ítem (category) sin migrar
+        # todavía. El total de null-category (107) no cambió, solo subió
+        # cuántos de esos 107 tienen receta.
         KNOWN_NULL_CATEGORY_COUNT = 107
-        KNOWN_CRAFTEABLE_COUNT = 7
+        KNOWN_CRAFTEABLE_COUNT = 9
 
         null_category_items = [i for i in items if i.get("category") is None]
         assert len(null_category_items) == KNOWN_NULL_CATEGORY_COUNT, (
@@ -236,10 +248,66 @@ class TestItemsStructure:
         assert len(crafteables) == KNOWN_CRAFTEABLE_COUNT, (
             f"{len(crafteables)} items con category=null SÍ son crafteables "
             f"(aparecen como resultado de receta), distinto al valor conocido "
-            f"de {KNOWN_CRAFTEABLE_COUNT}. Si subió, revisar si vale la pena "
-            f"mapear esos casos a mano en process.py en vez de dejarlos para "
-            f"el frontend."
+            f"de {KNOWN_CRAFTEABLE_COUNT}. Si subió, revisar si es contenido "
+            f"nuevo del juego (ver doc 08) antes de asumir que es un bug; "
+            f"si es contenido nuevo, actualizar este número con la evidencia "
+            f"correspondiente, no solo silenciar el test."
         )
+
+    def test_damage_type_tiene_valores_dentro_del_set_tolerado(self, items):
+        # Confirmado contra datos reales (muestra de 500 items, itemid
+        # 1-501, ver doc 07): los valores vistos son "Melee", "Ranged",
+        # "Magic", "Summon" -- con mayúscula inicial (no en minúscula como
+        # se asumía al principio del pedido). "Thrown" existe en la lógica
+        # del módulo Iteminfo de la wiki, pero no se confirmó en una fila
+        # real todavía y podría no existir como clase de daño vigente en
+        # esta versión del juego (Rogue reemplazó a Thrown en 1.4.x) -- se
+        # tolera como válido por si aparece, sin exigirlo.
+        #
+        # Este test valida que ningún valor FUERA de este set tolerado se
+        # cuele (lo cual indicaría un valor nuevo real del juego, o un
+        # problema de parseo) -- no exige que los 5 aparezcan.
+        TOLERATED_DAMAGE_TYPES = {"Melee", "Ranged", "Magic", "Summon", "Thrown"}
+
+        seen_values = {i["damageType"] for i in items if i.get("damageType")}
+        unexpected = seen_values - TOLERATED_DAMAGE_TYPES
+        assert not unexpected, (
+            f"Valores de damageType no reconocidos: {unexpected}. "
+            f"Revisar si es una clase de daño nueva del juego (ej. 'Rogue') "
+            f"que haya que sumar al set tolerado, o un problema de parseo."
+        )
+
+    def test_damage_type_no_esta_limitado_a_category_weapon(self, items):
+        # Hallazgo confirmado en la muestra real (ver doc 07): Iron Pickaxe
+        # tiene category="tool", no "weapon", y sin embargo sí tiene
+        # damageType="Melee" -- correcto según el juego real (picos/hachas
+        # hacen daño de melee a los enemigos). Este test documenta que
+        # damageType puede aparecer en categorías distintas a "weapon" a
+        # propósito -- si en algún momento se quisiera "arreglar" esto
+        # filtrando por category, este test avisaría que rompe un caso real.
+        con_damage_type = [i for i in items if i.get("damageType")]
+        if not con_damage_type:
+            pytest.skip("Ningún item con damageType en este dataset -- nada que validar")
+
+        categories_with_damage_type = {i.get("category") for i in con_damage_type}
+        assert categories_with_damage_type != {"weapon"}, (
+            "Todos los items con damageType tienen category='weapon' -- si "
+            "esto es así en el dataset actual, revisar si sigue siendo cierto "
+            "que herramientas (picos, hachas) también tienen damageType en "
+            "esta versión de los datos; si de verdad cambió, este test puede "
+            "ajustarse o eliminarse."
+        )
+
+    def test_defense_es_entero_no_negativo(self, items):
+        # Confirmado contra datos reales (muestra de 500 items): defense
+        # siempre viene como entero limpio, sin HTML mezclado -- a
+        # diferencia de sellValue/rarity, no necesitó regex para parsear.
+        for item in items:
+            defense = item.get("defense")
+            if defense is not None:
+                assert isinstance(defense, int) and defense >= 0, (
+                    f"defense inválido en item {item['id']}: {defense!r}"
+                )
 
 
 # ---------------------------------------------------------------------------

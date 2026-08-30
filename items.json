@@ -7,6 +7,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Iron_Pickaxe.png",
     "rarity": 0,
     "damage": 5,
+    "damageType": "Melee",
     "sellValue": 400
   },
   {
@@ -33,6 +34,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Iron_Broadsword.png",
     "rarity": 0,
     "damage": 12,
+    "damageType": "Melee",
     "sellValue": 360
   },
   {
@@ -52,6 +54,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Iron_Shortsword.png",
     "rarity": 0,
     "damage": 8,
+    "damageType": "Melee",
     "sellValue": 280
   },
   {
@@ -62,6 +65,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Iron_Hammer.png",
     "rarity": 0,
     "damage": 7,
+    "damageType": "Melee",
     "sellValue": 320
   },
   {
@@ -89,6 +93,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Iron_Axe.png",
     "rarity": 0,
     "damage": 5,
+    "damageType": "Melee",
     "sellValue": 320
   },
   {
@@ -216,6 +221,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Wooden_Sword.png",
     "rarity": 0,
     "damage": 7,
+    "damageType": "Melee",
     "sellValue": 20
   },
   {
@@ -331,6 +337,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Goggles.png",
     "rarity": 0,
+    "defense": 1,
     "sellValue": 200
   },
   {
@@ -350,6 +357,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Wooden_Bow.png",
     "rarity": 0,
     "damage": 4,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -360,6 +368,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Wooden_Arrow.png",
     "rarity": 0,
     "damage": 5,
+    "damageType": "Ranged",
     "sellValue": 1
   },
   {
@@ -370,6 +379,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flaming_Arrow.png",
     "rarity": 0,
     "damage": 7,
+    "damageType": "Ranged",
     "sellValue": 2
   },
   {
@@ -380,6 +390,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shuriken.png",
     "rarity": 0,
     "damage": 10,
+    "damageType": "Ranged",
     "sellValue": 3
   },
   {
@@ -398,6 +409,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Demon_Bow.png",
     "rarity": 1,
     "damage": 14,
+    "damageType": "Ranged",
     "sellValue": 3600
   },
   {
@@ -408,6 +420,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/War_Axe_of_the_Night.png",
     "rarity": 1,
     "damage": 20,
+    "damageType": "Melee",
     "sellValue": 2700
   },
   {
@@ -418,6 +431,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Light's_Bane.png",
     "rarity": 1,
     "damage": 16,
+    "damageType": "Melee",
     "sellValue": 2700
   },
   {
@@ -428,6 +442,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Unholy_Arrow.png",
     "rarity": 1,
     "damage": 12,
+    "damageType": "Ranged",
     "sellValue": 8
   },
   {
@@ -465,6 +480,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Jester's_Arrow.png",
     "rarity": 1,
     "damage": 10,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -502,6 +518,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Enchanted_Boomerang.png",
     "rarity": 1,
     "damage": 17,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -582,6 +599,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Vilethorn.png",
     "rarity": 1,
     "damage": 10,
+    "damageType": "Magic",
     "sellValue": 15000
   },
   {
@@ -592,6 +610,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Starfury.png",
     "rarity": 2,
     "damage": 25,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -645,7 +664,8 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Copper_Coin.png",
     "rarity": 0,
-    "damage": 25
+    "damage": 25,
+    "damageType": "Ranged"
   },
   {
     "id": 72,
@@ -654,7 +674,8 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Silver_Coin.png",
     "rarity": 0,
-    "damage": 50
+    "damage": 50,
+    "damageType": "Ranged"
   },
   {
     "id": 73,
@@ -663,7 +684,8 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Gold_Coin.png",
     "rarity": 0,
-    "damage": 100
+    "damage": 100,
+    "damageType": "Ranged"
   },
   {
     "id": 74,
@@ -672,7 +694,8 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Platinum_Coin.png",
     "rarity": 0,
-    "damage": 200
+    "damage": 200,
+    "damageType": "Ranged"
   },
   {
     "id": 75,
@@ -690,6 +713,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Copper_Greaves.png",
     "rarity": 0,
+    "defense": 1,
     "sellValue": 200
   },
   {
@@ -699,6 +723,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Iron_Greaves.png",
     "rarity": 0,
+    "defense": 2,
     "sellValue": 800
   },
   {
@@ -708,6 +733,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Silver_Greaves.png",
     "rarity": 0,
+    "defense": 3,
     "sellValue": 2000
   },
   {
@@ -717,6 +743,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Gold_Greaves.png",
     "rarity": 0,
+    "defense": 4,
     "sellValue": 4000
   },
   {
@@ -726,6 +753,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Copper_Chainmail.png",
     "rarity": 0,
+    "defense": 2,
     "sellValue": 250
   },
   {
@@ -735,6 +763,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Iron_Chainmail.png",
     "rarity": 0,
+    "defense": 3,
     "sellValue": 1000
   },
   {
@@ -744,6 +773,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Silver_Chainmail.png",
     "rarity": 0,
+    "defense": 4,
     "sellValue": 2500
   },
   {
@@ -753,6 +783,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Gold_Chainmail.png",
     "rarity": 0,
+    "defense": 5,
     "sellValue": 5000
   },
   {
@@ -798,6 +829,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Mining_Helmet.png",
     "rarity": 1,
+    "defense": 2,
     "sellValue": 8000
   },
   {
@@ -807,6 +839,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Copper_Helmet.png",
     "rarity": 0,
+    "defense": 1,
     "sellValue": 150
   },
   {
@@ -816,6 +849,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Iron_Helmet.png",
     "rarity": 0,
+    "defense": 2,
     "sellValue": 600
   },
   {
@@ -825,6 +859,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Silver_Helmet.png",
     "rarity": 0,
+    "defense": 3,
     "sellValue": 1500
   },
   {
@@ -834,6 +869,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Gold_Helmet.png",
     "rarity": 0,
+    "defense": 4,
     "sellValue": 3000
   },
   {
@@ -856,10 +892,11 @@
     "id": 95,
     "name": "Flintlock Pistol",
     "category": "weapon",
-    "subcategory": "crafting material",
+    "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Flintlock_Pistol.png",
     "rarity": 1,
     "damage": 13,
+    "damageType": "Ranged",
     "sellValue": 10000
   },
   {
@@ -870,6 +907,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Musket.png",
     "rarity": 1,
     "damage": 31,
+    "damageType": "Ranged",
     "sellValue": 15000
   },
   {
@@ -880,6 +918,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Musket_Ball.png",
     "rarity": 0,
     "damage": 7,
+    "damageType": "Ranged",
     "sellValue": 1
   },
   {
@@ -890,6 +929,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Minishark.png",
     "rarity": 2,
     "damage": 6,
+    "damageType": "Ranged",
     "sellValue": 70000
   },
   {
@@ -900,6 +940,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Iron_Bow.png",
     "rarity": 0,
     "damage": 8,
+    "damageType": "Ranged",
     "sellValue": 280
   },
   {
@@ -909,6 +950,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shadow_Greaves.png",
     "rarity": 1,
+    "defense": 6,
     "sellValue": 4500
   },
   {
@@ -918,6 +960,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shadow_Scalemail.png",
     "rarity": 1,
+    "defense": 7,
     "sellValue": 6000
   },
   {
@@ -927,6 +970,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shadow_Helmet.png",
     "rarity": 1,
+    "defense": 6,
     "sellValue": 7500
   },
   {
@@ -937,6 +981,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nightmare_Pickaxe.png",
     "rarity": 1,
     "damage": 9,
+    "damageType": "Melee",
     "sellValue": 3600
   },
   {
@@ -947,6 +992,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/The_Breaker.png",
     "rarity": 1,
     "damage": 24,
+    "damageType": "Melee",
     "sellValue": 3000
   },
   {
@@ -1020,6 +1066,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flower_of_Fire.png",
     "rarity": 3,
     "damage": 48,
+    "damageType": "Magic",
     "sellValue": 25000
   },
   {
@@ -1030,6 +1077,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Magic_Missile.png",
     "rarity": 2,
     "damage": 35,
+    "damageType": "Magic",
     "sellValue": 17500
   },
   {
@@ -1085,16 +1133,18 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flamarang.png",
     "rarity": 3,
     "damage": 49,
+    "damageType": "Melee",
     "sellValue": 20000
   },
   {
     "id": 120,
     "name": "Molten Fury",
     "category": "weapon",
-    "subcategory": "crafting material",
+    "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Molten_Fury.png",
     "rarity": 3,
     "damage": 31,
+    "damageType": "Ranged",
     "sellValue": 5400
   },
   {
@@ -1105,6 +1155,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Volcano.png",
     "rarity": 3,
     "damage": 40,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -1115,6 +1166,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Molten_Pickaxe.png",
     "rarity": 3,
     "damage": 12,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -1124,6 +1176,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Meteor_Helmet.png",
     "rarity": 1,
+    "defense": 5,
     "sellValue": 9000
   },
   {
@@ -1133,6 +1186,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Meteor_Suit.png",
     "rarity": 1,
+    "defense": 6,
     "sellValue": 6000
   },
   {
@@ -1142,6 +1196,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Meteor_Leggings.png",
     "rarity": 1,
+    "defense": 5,
     "sellValue": 6000
   },
   {
@@ -1161,6 +1216,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Space_Gun.png",
     "rarity": 1,
     "damage": 20,
+    "damageType": "Magic",
     "sellValue": 4000
   },
   {
@@ -1358,6 +1414,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Necro_Helmet.png",
     "rarity": 2,
+    "defense": 6,
     "sellValue": 9000
   },
   {
@@ -1367,6 +1424,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Necro_Breastplate.png",
     "rarity": 2,
+    "defense": 7,
     "sellValue": 6000
   },
   {
@@ -1376,6 +1434,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Necro_Greaves.png",
     "rarity": 2,
+    "defense": 6,
     "sellValue": 6000
   },
   {
@@ -1386,6 +1445,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bone.png",
     "rarity": 0,
     "damage": 20,
+    "damageType": "Ranged",
     "sellValue": 10
   },
   {
@@ -1396,6 +1456,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Muramasa.png",
     "rarity": 2,
     "damage": 24,
+    "damageType": "Melee",
     "sellValue": 17500
   },
   {
@@ -1405,6 +1466,7 @@
     "subcategory": "accessory",
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Shield.png",
     "rarity": 2,
+    "defense": 1,
     "sellValue": 17500
   },
   {
@@ -1415,6 +1477,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Aqua_Scepter.png",
     "rarity": 2,
     "damage": 27,
+    "damageType": "Magic",
     "sellValue": 17500
   },
   {
@@ -1443,6 +1506,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Harpoon.png",
     "rarity": 2,
     "damage": 25,
+    "damageType": "Ranged",
     "sellValue": 5400
   },
   {
@@ -1453,6 +1517,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Spiky_Ball.png",
     "rarity": 0,
     "damage": 16,
+    "damageType": "Ranged",
     "sellValue": 16
   },
   {
@@ -1463,6 +1528,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ball_O'_Hurt.png",
     "rarity": 1,
     "damage": 30,
+    "damageType": "Melee",
     "sellValue": 15000
   },
   {
@@ -1473,6 +1539,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Blue_Moon.png",
     "rarity": 2,
     "damage": 54,
+    "damageType": "Melee",
     "sellValue": 17500
   },
   {
@@ -1483,6 +1550,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Handgun.png",
     "rarity": 2,
     "damage": 26,
+    "damageType": "Ranged",
     "sellValue": 17500
   },
   {
@@ -1493,6 +1561,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Water_Bolt.png",
     "rarity": 2,
     "damage": 19,
+    "damageType": "Magic",
     "sellValue": 15000
   },
   {
@@ -1523,6 +1592,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Grenade.png",
     "rarity": 0,
     "damage": 60,
+    "damageType": "Ranged",
     "sellValue": 15
   },
   {
@@ -1679,6 +1749,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Breathing_Reed.png",
     "rarity": 1,
     "damage": 10,
+    "damageType": "Melee",
     "sellValue": 2000
   },
   {
@@ -1716,6 +1787,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Blade_of_Grass.png",
     "rarity": 3,
     "damage": 18,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -1726,6 +1798,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Thorn_Chakram.png",
     "rarity": 3,
     "damage": 25,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -1743,6 +1816,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Obsidian_Skull.png",
     "rarity": 2,
+    "defense": 1,
     "sellValue": 5400
   },
   {
@@ -1771,6 +1845,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Wooden_Hammer.png",
     "rarity": 0,
     "damage": 2,
+    "damageType": "Melee",
     "sellValue": 10
   },
   {
@@ -1781,6 +1856,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Star_Cannon.png",
     "rarity": 2,
     "damage": 55,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -1791,6 +1867,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Blue_Phaseblade.png",
     "rarity": 1,
     "damage": 26,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -1801,6 +1878,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Red_Phaseblade.png",
     "rarity": 1,
     "damage": 26,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -1811,6 +1889,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Green_Phaseblade.png",
     "rarity": 1,
     "damage": 26,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -1821,6 +1900,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Purple_Phaseblade.png",
     "rarity": 1,
     "damage": 26,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -1831,6 +1911,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/White_Phaseblade.png",
     "rarity": 1,
     "damage": 26,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -1841,6 +1922,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Yellow_Phaseblade.png",
     "rarity": 1,
     "damage": 26,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -1851,6 +1933,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Meteor_Hamaxe.png",
     "rarity": 1,
     "damage": 20,
+    "damageType": "Melee",
     "sellValue": 3000
   },
   {
@@ -1859,7 +1942,8 @@
     "category": "tool",
     "subcategory": "armor",
     "imageUrl": "https://terraria.wiki.gg/images/Empty_Bucket.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 206,
@@ -1930,6 +2014,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Staff_of_Regrowth.png",
     "rarity": 3,
     "damage": 7,
+    "damageType": "Melee",
     "sellValue": 5000
   },
   {
@@ -1956,6 +2041,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Shackle.png",
     "rarity": 1,
+    "defense": 1,
     "sellValue": 2000
   },
   {
@@ -1966,6 +2052,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Molten_Hamaxe.png",
     "rarity": 3,
     "damage": 20,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -1976,6 +2063,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flamelash.png",
     "rarity": 3,
     "damage": 32,
+    "damageType": "Magic",
     "sellValue": 25000
   },
   {
@@ -1986,6 +2074,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Phoenix_Blaster.png",
     "rarity": 3,
     "damage": 30,
+    "damageType": "Ranged",
     "sellValue": 35000
   },
   {
@@ -1996,6 +2085,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Sunfury.png",
     "rarity": 3,
     "damage": 64,
+    "damageType": "Melee",
     "sellValue": 25000
   },
   {
@@ -2059,6 +2149,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Jungle_Hat.png",
     "rarity": 3,
+    "defense": 5,
     "sellValue": 9000
   },
   {
@@ -2068,6 +2159,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Jungle_Shirt.png",
     "rarity": 3,
+    "defense": 6,
     "sellValue": 6000
   },
   {
@@ -2077,6 +2169,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Jungle_Pants.png",
     "rarity": 3,
+    "defense": 6,
     "sellValue": 6000
   },
   {
@@ -2086,6 +2179,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Molten_Helmet.png",
     "rarity": 3,
+    "defense": 8,
     "sellValue": 9000
   },
   {
@@ -2095,6 +2189,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Molten_Breastplate.png",
     "rarity": 3,
+    "defense": 9,
     "sellValue": 6000
   },
   {
@@ -2104,6 +2199,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Molten_Greaves.png",
     "rarity": 3,
+    "defense": 8,
     "sellValue": 6000
   },
   {
@@ -2114,6 +2210,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Meteor_Shot.png",
     "rarity": 1,
     "damage": 8,
+    "damageType": "Ranged",
     "sellValue": 1
   },
   {
@@ -2151,6 +2248,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Wizard_Hat.png",
     "rarity": 2,
+    "defense": 4,
     "sellValue": 2000
   },
   {
@@ -2304,7 +2402,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Green_Thread.png",
     "rarity": 0,
-    "sellValue": 400
+    "sellValue": 90
   },
   {
     "id": 256,
@@ -2313,6 +2411,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ninja_Hood.png",
     "rarity": 1,
+    "defense": 2,
     "sellValue": 2000
   },
   {
@@ -2322,6 +2421,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ninja_Shirt.png",
     "rarity": 1,
+    "defense": 4,
     "sellValue": 1000
   },
   {
@@ -2331,6 +2431,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ninja_Pants.png",
     "rarity": 1,
+    "defense": 3,
     "sellValue": 1000
   },
   {
@@ -2395,6 +2496,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Hellfire_Arrow.png",
     "rarity": 2,
     "damage": 13,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -2405,6 +2507,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Sandgun.png",
     "rarity": 2,
     "damage": 30,
+    "damageType": "Ranged",
     "sellValue": 2000
   },
   {
@@ -2423,6 +2526,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Diving_Helmet.png",
     "rarity": 2,
+    "defense": 2,
     "sellValue": 200
   },
   {
@@ -2460,6 +2564,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Demon_Scythe.png",
     "rarity": 3,
     "damage": 35,
+    "damageType": "Magic",
     "sellValue": 15000
   },
   {
@@ -2470,6 +2575,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Night's_Edge.png",
     "rarity": 3,
     "damage": 40,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -2480,6 +2586,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Dark_Lance.png",
     "rarity": 3,
     "damage": 34,
+    "damageType": "Melee",
     "sellValue": 25000
   },
   {
@@ -2508,6 +2615,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Trident.png",
     "rarity": 1,
     "damage": 14,
+    "damageType": "Melee",
     "sellValue": 2000
   },
   {
@@ -2518,6 +2626,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Silver_Bullet.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Ranged",
     "sellValue": 3
   },
   {
@@ -2528,6 +2637,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Throwing_Knife.png",
     "rarity": 0,
     "damage": 12,
+    "damageType": "Ranged",
     "sellValue": 10
   },
   {
@@ -2538,6 +2648,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Spear.png",
     "rarity": 0,
     "damage": 8,
+    "damageType": "Melee",
     "sellValue": 200
   },
   {
@@ -2548,6 +2659,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Blowpipe.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Ranged",
     "sellValue": 2000
   },
   {
@@ -2566,7 +2678,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Seed.png",
     "rarity": 0,
-    "damage": 4
+    "damage": 4,
+    "damageType": "Ranged"
   },
   {
     "id": 284,
@@ -2576,6 +2689,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Wooden_Boomerang.png",
     "rarity": 1,
     "damage": 10,
+    "damageType": "Melee",
     "sellValue": 2000
   },
   {
@@ -2604,6 +2718,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Poisoned_Knife.png",
     "rarity": 0,
     "damage": 14,
+    "damageType": "Ranged",
     "sellValue": 12
   },
   {
@@ -3102,7 +3217,7 @@
     "id": 343,
     "name": "Barrel",
     "category": "furniture",
-    "subcategory": "crafting material",
+    "subcategory": "storage",
     "imageUrl": "https://terraria.wiki.gg/images/Barrel.png",
     "rarity": 0,
     "sellValue": 100
@@ -3321,6 +3436,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Pwnhammer.png",
     "rarity": 4,
     "damage": 26,
+    "damageType": "Melee",
     "sellValue": 7800
   },
   {
@@ -3331,6 +3447,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Excalibur.png",
     "rarity": 5,
     "damage": 72,
+    "damageType": "Melee",
     "sellValue": 46000
   },
   {
@@ -3357,6 +3474,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Hat.png",
     "rarity": 4,
+    "defense": 3,
     "sellValue": 15000
   },
   {
@@ -3366,6 +3484,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Helmet.png",
     "rarity": 4,
+    "defense": 14,
     "sellValue": 15000
   },
   {
@@ -3375,6 +3494,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Mask.png",
     "rarity": 4,
+    "defense": 5,
     "sellValue": 15000
   },
   {
@@ -3384,6 +3504,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Breastplate.png",
     "rarity": 4,
+    "defense": 10,
     "sellValue": 12000
   },
   {
@@ -3393,6 +3514,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Leggings.png",
     "rarity": 4,
+    "defense": 8,
     "sellValue": 9000
   },
   {
@@ -3402,6 +3524,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Mythril_Hood.png",
     "rarity": 4,
+    "defense": 3,
     "sellValue": 22500
   },
   {
@@ -3411,6 +3534,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Mythril_Helmet.png",
     "rarity": 4,
+    "defense": 16,
     "sellValue": 22500
   },
   {
@@ -3420,6 +3544,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Mythril_Hat.png",
     "rarity": 4,
+    "defense": 6,
     "sellValue": 22500
   },
   {
@@ -3429,6 +3554,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Mythril_Chainmail.png",
     "rarity": 4,
+    "defense": 12,
     "sellValue": 18000
   },
   {
@@ -3438,6 +3564,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Mythril_Greaves.png",
     "rarity": 4,
+    "defense": 9,
     "sellValue": 13500
   },
   {
@@ -3466,6 +3593,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Chainsaw.png",
     "rarity": 4,
     "damage": 23,
+    "damageType": "Melee",
     "sellValue": 10800
   },
   {
@@ -3476,6 +3604,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mythril_Chainsaw.png",
     "rarity": 4,
     "damage": 29,
+    "damageType": "Melee",
     "sellValue": 16200
   },
   {
@@ -3486,6 +3615,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Drill.png",
     "rarity": 4,
     "damage": 10,
+    "damageType": "Melee",
     "sellValue": 10800
   },
   {
@@ -3496,6 +3626,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mythril_Drill.png",
     "rarity": 4,
     "damage": 15,
+    "damageType": "Melee",
     "sellValue": 16200
   },
   {
@@ -3506,6 +3637,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Adamantite_Chainsaw.png",
     "rarity": 4,
     "damage": 33,
+    "damageType": "Melee",
     "sellValue": 21600
   },
   {
@@ -3516,6 +3648,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Adamantite_Drill.png",
     "rarity": 4,
     "damage": 20,
+    "damageType": "Melee",
     "sellValue": 21600
   },
   {
@@ -3526,6 +3659,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Dao_of_Pow.png",
     "rarity": 5,
     "damage": 100,
+    "damageType": "Melee",
     "sellValue": 28800
   },
   {
@@ -3536,6 +3670,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mythril_Halberd.png",
     "rarity": 4,
     "damage": 45,
+    "damageType": "Melee",
     "sellValue": 13500
   },
   {
@@ -3598,6 +3733,7 @@
     "subcategory": "accessory",
     "imageUrl": "https://terraria.wiki.gg/images/Obsidian_Shield.png",
     "rarity": 4,
+    "defense": 2,
     "sellValue": 20000
   },
   {
@@ -3625,6 +3761,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Adamantite_Headgear.png",
     "rarity": 4,
+    "defense": 4,
     "sellValue": 30000
   },
   {
@@ -3634,6 +3771,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Adamantite_Helmet.png",
     "rarity": 4,
+    "defense": 22,
     "sellValue": 30000
   },
   {
@@ -3643,6 +3781,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Adamantite_Mask.png",
     "rarity": 4,
+    "defense": 8,
     "sellValue": 30000
   },
   {
@@ -3652,6 +3791,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Adamantite_Breastplate.png",
     "rarity": 4,
+    "defense": 16,
     "sellValue": 24000
   },
   {
@@ -3661,6 +3801,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Adamantite_Leggings.png",
     "rarity": 4,
+    "defense": 12,
     "sellValue": 18000
   },
   {
@@ -3680,6 +3821,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Adamantite_Glaive.png",
     "rarity": 4,
     "damage": 49,
+    "damageType": "Melee",
     "sellValue": 18000
   },
   {
@@ -3714,6 +3856,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Mining_Shirt.png",
     "rarity": 1,
+    "defense": 1,
     "sellValue": 1000
   },
   {
@@ -3723,6 +3866,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Mining_Pants.png",
     "rarity": 1,
+    "defense": 1,
     "sellValue": 1000
   },
   {
@@ -3850,6 +3994,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Breaker_Blade.png",
     "rarity": 4,
     "damage": 70,
+    "damageType": "Melee",
     "sellValue": 30000
   },
   {
@@ -3923,6 +4068,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Clockwork_Assault_Rifle.png",
     "rarity": 4,
     "damage": 17,
+    "damageType": "Ranged",
     "sellValue": 30000
   },
   {
@@ -3933,6 +4079,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Repeater.png",
     "rarity": 4,
     "damage": 35,
+    "damageType": "Ranged",
     "sellValue": 12000
   },
   {
@@ -3943,6 +4090,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mythril_Repeater.png",
     "rarity": 4,
     "damage": 39,
+    "damageType": "Ranged",
     "sellValue": 18000
   },
   {
@@ -4347,6 +4495,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Adamantite_Repeater.png",
     "rarity": 4,
     "damage": 42,
+    "damageType": "Ranged",
     "sellValue": 24000
   },
   {
@@ -4357,6 +4506,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Adamantite_Sword.png",
     "rarity": 4,
     "damage": 61,
+    "damageType": "Melee",
     "sellValue": 27600
   },
   {
@@ -4367,6 +4517,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Sword.png",
     "rarity": 4,
     "damage": 40,
+    "damageType": "Melee",
     "sellValue": 13800
   },
   {
@@ -4377,6 +4528,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mythril_Sword.png",
     "rarity": 4,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 20700
   },
   {
@@ -4396,6 +4548,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ruler.png",
     "rarity": 1,
     "damage": 12,
+    "damageType": "Melee",
     "sellValue": 200
   },
   {
@@ -4469,6 +4622,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Magical_Harp.png",
     "rarity": 5,
     "damage": 42,
+    "damageType": "Magic",
     "sellValue": 40000
   },
   {
@@ -4479,6 +4633,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rainbow_Rod.png",
     "rarity": 5,
     "damage": 50,
+    "damageType": "Magic",
     "sellValue": 40000
   },
   {
@@ -4489,6 +4644,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ice_Rod.png",
     "rarity": 4,
     "damage": 28,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -4579,6 +4735,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flamethrower.png",
     "rarity": 5,
     "damage": 35,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -4652,6 +4809,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Laser_Rifle.png",
     "rarity": 4,
     "damage": 29,
+    "damageType": "Magic",
     "sellValue": 30000
   },
   {
@@ -4662,6 +4820,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Crystal_Bullet.png",
     "rarity": 3,
     "damage": 9,
+    "damageType": "Ranged",
     "sellValue": 6
   },
   {
@@ -4672,6 +4831,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Holy_Arrow.png",
     "rarity": 3,
     "damage": 13,
+    "damageType": "Ranged",
     "sellValue": 16
   },
   {
@@ -4682,6 +4842,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Magic_Dagger.png",
     "rarity": 4,
     "damage": 30,
+    "damageType": "Magic",
     "sellValue": 50000
   },
   {
@@ -4692,6 +4853,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Crystal_Storm.png",
     "rarity": 4,
     "damage": 35,
+    "damageType": "Magic",
     "sellValue": 40000
   },
   {
@@ -4702,6 +4864,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cursed_Flames.png",
     "rarity": 4,
     "damage": 55,
+    "damageType": "Magic",
     "sellValue": 40000
   },
   {
@@ -4829,6 +4992,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Megashark.png",
     "rarity": 5,
     "damage": 25,
+    "damageType": "Ranged",
     "sellValue": 70000
   },
   {
@@ -4839,6 +5003,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shotgun.png",
     "rarity": 4,
     "damage": 24,
+    "damageType": "Ranged",
     "sellValue": 50000
   },
   {
@@ -4867,6 +5032,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Naginata.png",
     "rarity": 4,
     "damage": 44,
+    "damageType": "Melee",
     "sellValue": 9000
   },
   {
@@ -4938,6 +5104,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cursed_Arrow.png",
     "rarity": 3,
     "damage": 17,
+    "damageType": "Ranged",
     "sellValue": 8
   },
   {
@@ -4948,6 +5115,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cursed_Bullet.png",
     "rarity": 3,
     "damage": 12,
+    "damageType": "Ranged",
     "sellValue": 6
   },
   {
@@ -4981,10 +5149,11 @@
     "id": 550,
     "name": "Gungnir",
     "category": "weapon",
-    "subcategory": "crafting material",
+    "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Gungnir.png",
     "rarity": 5,
     "damage": 61,
+    "damageType": "Melee",
     "sellValue": 46000
   },
   {
@@ -4994,6 +5163,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Hallowed_Plate_Mail.png",
     "rarity": 5,
+    "defense": 15,
     "sellValue": 40000
   },
   {
@@ -5003,6 +5173,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Hallowed_Greaves.png",
     "rarity": 5,
+    "defense": 11,
     "sellValue": 30000
   },
   {
@@ -5012,6 +5183,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Hallowed_Helmet.png",
     "rarity": 5,
+    "defense": 9,
     "sellValue": 50000
   },
   {
@@ -5055,6 +5227,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Hallowed_Headgear.png",
     "rarity": 5,
+    "defense": 5,
     "sellValue": 50000
   },
   {
@@ -5064,6 +5237,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Hallowed_Mask.png",
     "rarity": 5,
+    "defense": 24,
     "sellValue": 50000
   },
   {
@@ -5082,6 +5256,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Light_Disc.png",
     "rarity": 5,
     "damage": 60,
+    "damageType": "Melee",
     "sellValue": 150000
   },
   {
@@ -5231,10 +5406,11 @@
     "id": 578,
     "name": "Hallowed Repeater",
     "category": "weapon",
-    "subcategory": "crafting material",
+    "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Hallowed_Repeater.png",
     "rarity": 4,
     "damage": 50,
+    "damageType": "Ranged",
     "sellValue": 40000
   },
   {
@@ -5245,6 +5421,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Drax.png",
     "rarity": 4,
     "damage": 35,
+    "damageType": "Melee",
     "sellValue": 44000
   },
   {
@@ -5873,6 +6050,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ebonwood_Sword.png",
     "rarity": 0,
     "damage": 11,
+    "damageType": "Melee",
     "sellValue": 20
   },
   {
@@ -5883,6 +6061,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ebonwood_Hammer.png",
     "rarity": 0,
     "damage": 7,
+    "damageType": "Melee",
     "sellValue": 10
   },
   {
@@ -5893,6 +6072,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ebonwood_Bow.png",
     "rarity": 0,
     "damage": 8,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -5903,6 +6083,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rich_Mahogany_Sword.png",
     "rarity": 0,
     "damage": 8,
+    "damageType": "Melee",
     "sellValue": 20
   },
   {
@@ -5913,6 +6094,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rich_Mahogany_Hammer.png",
     "rarity": 0,
     "damage": 4,
+    "damageType": "Melee",
     "sellValue": 10
   },
   {
@@ -5923,6 +6105,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rich_Mahogany_Bow.png",
     "rarity": 0,
     "damage": 6,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -5933,6 +6116,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Pearlwood_Sword.png",
     "rarity": 0,
     "damage": 30,
+    "damageType": "Melee",
     "sellValue": 20
   },
   {
@@ -5943,6 +6127,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Pearlwood_Hammer.png",
     "rarity": 0,
     "damage": 10,
+    "damageType": "Melee",
     "sellValue": 10
   },
   {
@@ -5953,6 +6138,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Pearlwood_Bow.png",
     "rarity": 0,
     "damage": 12,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -6032,6 +6218,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ice_Boomerang.png",
     "rarity": 1,
     "damage": 21,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -6042,6 +6229,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Keybrand.png",
     "rarity": 8,
     "damage": 105,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -6052,6 +6240,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cutlass.png",
     "rarity": 4,
     "damage": 53,
+    "damageType": "Melee",
     "sellValue": 36000
   },
   {
@@ -6071,6 +6260,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/True_Excalibur.png",
     "rarity": 8,
     "damage": 72,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -6081,6 +6271,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/True_Night's_Edge.png",
     "rarity": 8,
     "damage": 70,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -6091,6 +6282,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Frostbrand.png",
     "rarity": 5,
     "damage": 49,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -6118,6 +6310,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tactical_Shotgun.png",
     "rarity": 8,
     "damage": 36,
+    "damageType": "Ranged",
     "sellValue": 80000
   },
   {
@@ -6145,7 +6338,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Marrow.png",
     "rarity": 5,
-    "damage": 53,
+    "damage": 40,
+    "damageType": "Ranged",
     "sellValue": 5400
   },
   {
@@ -6155,7 +6349,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Unholy_Trident.png",
     "rarity": 6,
-    "damage": 88,
+    "damage": 150,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -6165,6 +6360,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Frost_Helmet.png",
     "rarity": 5,
+    "defense": 10,
     "sellValue": 50000
   },
   {
@@ -6174,6 +6370,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Frost_Breastplate.png",
     "rarity": 5,
+    "defense": 20,
     "sellValue": 40000
   },
   {
@@ -6183,6 +6380,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Frost_Leggings.png",
     "rarity": 5,
+    "defense": 13,
     "sellValue": 30000
   },
   {
@@ -6192,6 +6390,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Tin_Helmet.png",
     "rarity": 0,
+    "defense": 2,
     "sellValue": 225
   },
   {
@@ -6201,6 +6400,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Tin_Chainmail.png",
     "rarity": 0,
+    "defense": 2,
     "sellValue": 375
   },
   {
@@ -6210,6 +6410,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Tin_Greaves.png",
     "rarity": 0,
+    "defense": 1,
     "sellValue": 300
   },
   {
@@ -6219,6 +6420,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Lead_Helmet.png",
     "rarity": 0,
+    "defense": 3,
     "sellValue": 900
   },
   {
@@ -6228,6 +6430,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Lead_Chainmail.png",
     "rarity": 0,
+    "defense": 3,
     "sellValue": 1500
   },
   {
@@ -6237,6 +6440,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Lead_Greaves.png",
     "rarity": 0,
+    "defense": 2,
     "sellValue": 1200
   },
   {
@@ -6246,6 +6450,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Tungsten_Helmet.png",
     "rarity": 0,
+    "defense": 4,
     "sellValue": 2250
   },
   {
@@ -6255,6 +6460,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Tungsten_Chainmail.png",
     "rarity": 0,
+    "defense": 5,
     "sellValue": 3750
   },
   {
@@ -6264,6 +6470,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Tungsten_Greaves.png",
     "rarity": 0,
+    "defense": 3,
     "sellValue": 3000
   },
   {
@@ -6273,6 +6480,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Platinum_Helmet.png",
     "rarity": 0,
+    "defense": 5,
     "sellValue": 4500
   },
   {
@@ -6282,6 +6490,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Platinum_Chainmail.png",
     "rarity": 0,
+    "defense": 6,
     "sellValue": 7500
   },
   {
@@ -6291,6 +6500,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Platinum_Greaves.png",
     "rarity": 0,
+    "defense": 5,
     "sellValue": 6000
   },
   {
@@ -6511,6 +6721,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Beam_Sword.png",
     "rarity": 4,
     "damage": 52,
+    "damageType": "Melee",
     "sellValue": 30000
   },
   {
@@ -6521,6 +6732,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ice_Blade.png",
     "rarity": 1,
     "damage": 17,
+    "damageType": "Melee",
     "sellValue": 4000
   },
   {
@@ -6531,6 +6743,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ice_Bow.png",
     "rarity": 5,
     "damage": 39,
+    "damageType": "Ranged",
     "sellValue": 50000
   },
   {
@@ -6541,6 +6754,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Frost_Staff.png",
     "rarity": 5,
     "damage": 46,
+    "damageType": "Magic",
     "sellValue": 40000
   },
   {
@@ -6549,7 +6763,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Wood_Helmet.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 728,
@@ -6557,7 +6772,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Wood_Breastplate.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 729,
@@ -6573,7 +6789,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ebonwood_Helmet.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 731,
@@ -6581,7 +6798,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ebonwood_Breastplate.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 2
   },
   {
     "id": 732,
@@ -6589,7 +6807,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ebonwood_Greaves.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 733,
@@ -6597,7 +6816,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Rich_Mahogany_Helmet.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 734,
@@ -6605,7 +6825,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Rich_Mahogany_Breastplate.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 735,
@@ -6613,7 +6834,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Rich_Mahogany_Greaves.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 736,
@@ -6621,7 +6843,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Pearlwood_Helmet.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 2
   },
   {
     "id": 737,
@@ -6629,7 +6852,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Pearlwood_Breastplate.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 3
   },
   {
     "id": 738,
@@ -6637,7 +6861,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Pearlwood_Greaves.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 2
   },
   {
     "id": 739,
@@ -6647,6 +6872,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Amethyst_Staff.png",
     "rarity": 0,
     "damage": 15,
+    "damageType": "Magic",
     "sellValue": 400
   },
   {
@@ -6657,6 +6883,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Topaz_Staff.png",
     "rarity": 0,
     "damage": 16,
+    "damageType": "Magic",
     "sellValue": 600
   },
   {
@@ -6667,6 +6894,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Sapphire_Staff.png",
     "rarity": 1,
     "damage": 18,
+    "damageType": "Magic",
     "sellValue": 2000
   },
   {
@@ -6677,6 +6905,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Emerald_Staff.png",
     "rarity": 1,
     "damage": 19,
+    "damageType": "Magic",
     "sellValue": 3000
   },
   {
@@ -6686,7 +6915,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ruby_Staff.png",
     "rarity": 1,
-    "damage": 21,
+    "damage": 18,
+    "damageType": "Magic",
     "sellValue": 4000
   },
   {
@@ -6697,6 +6927,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Diamond_Staff.png",
     "rarity": 2,
     "damage": 23,
+    "damageType": "Magic",
     "sellValue": 6000
   },
   {
@@ -6803,6 +7034,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mushroom_Spear.png",
     "rarity": 7,
     "damage": 60,
+    "damageType": "Melee",
     "sellValue": 140000
   },
   {
@@ -6813,6 +7045,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Terra_Blade.png",
     "rarity": 8,
     "damage": 85,
+    "damageType": "Melee",
     "sellValue": 200000
   },
   {
@@ -6823,6 +7056,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Grenade_Launcher.png",
     "rarity": 8,
     "damage": 60,
+    "damageType": "Ranged",
     "sellValue": 70000
   },
   {
@@ -6833,6 +7067,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rocket_Launcher.png",
     "rarity": 8,
     "damage": 55,
+    "damageType": "Ranged",
     "sellValue": 80000
   },
   {
@@ -6843,6 +7078,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Proximity_Mine_Launcher.png",
     "rarity": 8,
     "damage": 80,
+    "damageType": "Ranged",
     "sellValue": 70000
   },
   {
@@ -6934,6 +7170,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rocket_I.png",
     "rarity": 0,
     "damage": 40,
+    "damageType": "Ranged",
     "sellValue": 10
   },
   {
@@ -6944,6 +7181,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rocket_II.png",
     "rarity": 1,
     "damage": 40,
+    "damageType": "Ranged",
     "sellValue": 50
   },
   {
@@ -6954,6 +7192,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rocket_III.png",
     "rarity": 1,
     "damage": 65,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -6964,6 +7203,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rocket_IV.png",
     "rarity": 2,
     "damage": 65,
+    "damageType": "Ranged",
     "sellValue": 100
   },
   {
@@ -6982,6 +7222,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Pickaxe.png",
     "rarity": 4,
     "damage": 10,
+    "damageType": "Melee",
     "sellValue": 10800
   },
   {
@@ -6992,6 +7233,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mythril_Pickaxe.png",
     "rarity": 4,
     "damage": 15,
+    "damageType": "Melee",
     "sellValue": 16200
   },
   {
@@ -7002,6 +7244,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Adamantite_Pickaxe.png",
     "rarity": 4,
     "damage": 20,
+    "damageType": "Melee",
     "sellValue": 21600
   },
   {
@@ -7084,6 +7327,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Hammush.png",
     "rarity": 7,
     "damage": 26,
+    "damageType": "Melee",
     "sellValue": 80000
   },
   {
@@ -7094,6 +7338,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nettle_Burst.png",
     "rarity": 7,
     "damage": 35,
+    "damageType": "Magic",
     "sellValue": 40000
   },
   {
@@ -7130,6 +7375,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Crimson_Helmet.png",
     "rarity": 1,
+    "defense": 6,
     "sellValue": 10000
   },
   {
@@ -7139,6 +7385,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Crimson_Scalemail.png",
     "rarity": 1,
+    "defense": 7,
     "sellValue": 8000
   },
   {
@@ -7148,6 +7395,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Crimson_Greaves.png",
     "rarity": 1,
+    "defense": 6,
     "sellValue": 6000
   },
   {
@@ -7158,6 +7406,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Blood_Butcherer.png",
     "rarity": 1,
     "damage": 22,
+    "damageType": "Melee",
     "sellValue": 2700
   },
   {
@@ -7168,6 +7417,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tendon_Bow.png",
     "rarity": 1,
     "damage": 19,
+    "damageType": "Ranged",
     "sellValue": 3600
   },
   {
@@ -7178,6 +7428,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flesh_Grinder.png",
     "rarity": 1,
     "damage": 23,
+    "damageType": "Melee",
     "sellValue": 3000
   },
   {
@@ -7188,6 +7439,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Deathbringer_Pickaxe.png",
     "rarity": 1,
     "damage": 12,
+    "damageType": "Melee",
     "sellValue": 3600
   },
   {
@@ -7198,6 +7450,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Blood_Lust_Cluster.png",
     "rarity": 1,
     "damage": 22,
+    "damageType": "Melee",
     "sellValue": 2700
   },
   {
@@ -7208,6 +7461,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/The_Undertaker.png",
     "rarity": 1,
     "damage": 19,
+    "damageType": "Ranged",
     "sellValue": 15000
   },
   {
@@ -7218,6 +7472,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/The_Meatball.png",
     "rarity": 1,
     "damage": 34,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -7228,6 +7483,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/The_Rotted_Fork.png",
     "rarity": 1,
     "damage": 17,
+    "damageType": "Melee",
     "sellValue": 15000
   },
   {
@@ -7237,6 +7493,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Snow_Hood.png",
     "rarity": 0,
+    "defense": 3,
     "sellValue": 10000
   },
   {
@@ -7246,6 +7503,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Snow_Coat.png",
     "rarity": 0,
+    "defense": 3,
     "sellValue": 8000
   },
   {
@@ -7255,6 +7513,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Snow_Pants.png",
     "rarity": 0,
+    "defense": 3,
     "sellValue": 6000
   },
   {
@@ -7807,6 +8066,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Green_Cap.png",
     "rarity": 1,
+    "defense": 2,
     "sellValue": 5000
   },
   {
@@ -7915,6 +8175,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Viking_Helmet.png",
     "rarity": 1,
+    "defense": 4,
     "sellValue": 5000
   },
   {
@@ -7934,6 +8195,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cactus_Sword.png",
     "rarity": 0,
     "damage": 10,
+    "damageType": "Melee",
     "sellValue": 360
   },
   {
@@ -7944,6 +8206,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cactus_Pickaxe.png",
     "rarity": 0,
     "damage": 4,
+    "damageType": "Melee",
     "sellValue": 400
   },
   {
@@ -8050,6 +8313,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Cactus_Helmet.png",
     "rarity": 0,
+    "defense": 1,
     "sellValue": 40
   },
   {
@@ -8059,6 +8323,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Cactus_Breastplate.png",
     "rarity": 0,
+    "defense": 1,
     "sellValue": 60
   },
   {
@@ -8068,6 +8333,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Cactus_Leggings.png",
     "rarity": 0,
+    "defense": 1,
     "sellValue": 50
   },
   {
@@ -8150,6 +8416,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Coin_Gun.png",
     "rarity": 6,
     "damage": 0,
+    "damageType": "Ranged",
     "sellValue": 60000
   },
   {
@@ -8293,6 +8560,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shadewood_Sword.png",
     "rarity": 0,
     "damage": 11,
+    "damageType": "Melee",
     "sellValue": 20
   },
   {
@@ -8303,6 +8571,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shadewood_Hammer.png",
     "rarity": 0,
     "damage": 7,
+    "damageType": "Melee",
     "sellValue": 10
   },
   {
@@ -8313,6 +8582,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shadewood_Bow.png",
     "rarity": 0,
     "damage": 8,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -8321,7 +8591,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shadewood_Helmet.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 925,
@@ -8329,7 +8600,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shadewood_Breastplate.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 2
   },
   {
     "id": 926,
@@ -8337,7 +8609,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shadewood_Greaves.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 927,
@@ -8360,11 +8633,10 @@
     "id": 929,
     "name": "Cannonball",
     "category": "block",
-    "subcategory": "weapon",
+    "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Cannonball.png",
     "rarity": 0,
-    "damage": 300,
-    "sellValue": 300
+    "sellValue": 40
   },
   {
     "id": 930,
@@ -8384,6 +8656,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flare.png",
     "rarity": 0,
     "damage": 1,
+    "damageType": "Ranged",
     "sellValue": 1
   },
   {
@@ -8447,6 +8720,7 @@
     "subcategory": "accessory",
     "imageUrl": "https://terraria.wiki.gg/images/Paladin's_Shield.png",
     "rarity": 8,
+    "defense": 6,
     "sellValue": 60000
   },
   {
@@ -8520,6 +8794,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Umbrella.png",
     "rarity": 1,
     "damage": 10,
+    "damageType": "Melee",
     "sellValue": 2000
   },
   {
@@ -8547,7 +8822,8 @@
     "subcategory": "ammunition",
     "imageUrl": "https://terraria.wiki.gg/images/Snowball.png",
     "rarity": 0,
-    "damage": 8
+    "damage": 8,
+    "damageType": "Ranged"
   },
   {
     "id": 950,
@@ -8592,6 +8868,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Iron_Helmet.png",
     "rarity": 0,
+    "defense": 2,
     "sellValue": 1000
   },
   {
@@ -8601,6 +8878,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Gold_Helmet.png",
     "rarity": 0,
+    "defense": 4,
     "sellValue": 5000
   },
   {
@@ -8610,6 +8888,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Shadow_Helmet.png",
     "rarity": 1,
+    "defense": 6,
     "sellValue": 7500
   },
   {
@@ -8619,6 +8898,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Shadow_Scalemail.png",
     "rarity": 1,
+    "defense": 7,
     "sellValue": 6000
   },
   {
@@ -8628,6 +8908,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Shadow_Greaves.png",
     "rarity": 1,
+    "defense": 6,
     "sellValue": 4500
   },
   {
@@ -8637,6 +8918,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Necro_Helmet.png",
     "rarity": 2,
+    "defense": 6,
     "sellValue": 9000
   },
   {
@@ -8646,6 +8928,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Cobalt_Helmet.png",
     "rarity": 3,
+    "defense": 5,
     "sellValue": 9000
   },
   {
@@ -8655,6 +8938,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Cobalt_Breastplate.png",
     "rarity": 3,
+    "defense": 6,
     "sellValue": 6000
   },
   {
@@ -8664,6 +8948,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Cobalt_Leggings.png",
     "rarity": 3,
+    "defense": 6,
     "sellValue": 6000
   },
   {
@@ -8683,6 +8968,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Boomstick.png",
     "rarity": 2,
     "damage": 14,
+    "damageType": "Ranged",
     "sellValue": 20000
   },
   {
@@ -8812,6 +9098,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Pink_Snow_Hood.png",
     "rarity": 0,
+    "defense": 3,
     "sellValue": 10000
   },
   {
@@ -8821,6 +9108,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Pink_Snow_Coat.png",
     "rarity": 0,
+    "defense": 3,
     "sellValue": 8000
   },
   {
@@ -8830,6 +9118,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Pink_Snow_Pants.png",
     "rarity": 0,
+    "defense": 3,
     "sellValue": 6000
   },
   {
@@ -8885,6 +9174,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Blowgun.png",
     "rarity": 3,
     "damage": 27,
+    "damageType": "Ranged",
     "sellValue": 10000
   },
   {
@@ -8903,7 +9193,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Frostburn_Arrow.png",
     "rarity": 0,
-    "damage": 7,
+    "damage": 9,
+    "damageType": "Ranged",
     "sellValue": 3
   },
   {
@@ -8914,6 +9205,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Enchanted_Sword.png",
     "rarity": 2,
     "damage": 23,
+    "damageType": "Melee",
     "sellValue": 30000
   },
   {
@@ -8924,6 +9216,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Pickaxe_Axe.png",
     "rarity": 4,
     "damage": 35,
+    "damageType": "Melee",
     "sellValue": 44000
   },
   {
@@ -8934,6 +9227,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cobalt_Waraxe.png",
     "rarity": 4,
     "damage": 33,
+    "damageType": "Melee",
     "sellValue": 10800
   },
   {
@@ -8944,6 +9238,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mythril_Waraxe.png",
     "rarity": 4,
     "damage": 39,
+    "damageType": "Melee",
     "sellValue": 16200
   },
   {
@@ -8954,6 +9249,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Adamantite_Waraxe.png",
     "rarity": 4,
     "damage": 43,
+    "damageType": "Melee",
     "sellValue": 21600
   },
   {
@@ -9018,6 +9314,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Confetti_Gun.png",
     "rarity": 0,
     "damage": 0,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -9027,6 +9324,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Mask.png",
     "rarity": 7,
+    "defense": 20,
     "sellValue": 60000
   },
   {
@@ -9036,6 +9334,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Helmet.png",
     "rarity": 7,
+    "defense": 13,
     "sellValue": 60000
   },
   {
@@ -9045,6 +9344,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Headgear.png",
     "rarity": 7,
+    "defense": 7,
     "sellValue": 60000
   },
   {
@@ -9054,6 +9354,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Plate_Mail.png",
     "rarity": 7,
+    "defense": 18,
     "sellValue": 48000
   },
   {
@@ -9063,6 +9364,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Greaves.png",
     "rarity": 7,
+    "defense": 13,
     "sellValue": 36000
   },
   {
@@ -10105,6 +10407,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bee_Gun.png",
     "rarity": 2,
     "damage": 9,
+    "damageType": "Magic",
     "sellValue": 20000
   },
   {
@@ -10115,6 +10418,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Possessed_Hatchet.png",
     "rarity": 7,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 70000
   },
   {
@@ -10125,6 +10429,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bee_Keeper.png",
     "rarity": 3,
     "damage": 30,
+    "damageType": "Melee",
     "sellValue": 20000
   },
   {
@@ -10184,6 +10489,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Beenade.png",
     "rarity": 0,
     "damage": 12,
+    "damageType": "Ranged",
     "sellValue": 500
   },
   {
@@ -10228,6 +10534,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Rain_Hat.png",
     "rarity": 0,
+    "defense": 1,
     "sellValue": 200
   },
   {
@@ -10237,6 +10544,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Rain_Coat.png",
     "rarity": 0,
+    "defense": 2,
     "sellValue": 200
   },
   {
@@ -10407,6 +10715,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Wasp_Gun.png",
     "rarity": 8,
     "damage": 31,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -10417,6 +10726,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Piranha_Gun.png",
     "rarity": 8,
     "damage": 40,
+    "damageType": "Ranged",
     "sellValue": 200000
   },
   {
@@ -10427,6 +10737,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Pygmy_Staff.png",
     "rarity": 7,
     "damage": 40,
+    "damageType": "Summon",
     "sellValue": 70000
   },
   {
@@ -10445,6 +10756,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Tiki_Mask.png",
     "rarity": 7,
+    "defense": 6,
     "sellValue": 100000
   },
   {
@@ -10454,6 +10766,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Tiki_Shirt.png",
     "rarity": 7,
+    "defense": 17,
     "sellValue": 100000
   },
   {
@@ -10463,6 +10776,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Tiki_Pants.png",
     "rarity": 7,
+    "defense": 12,
     "sellValue": 100000
   },
   {
@@ -10509,6 +10823,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bone_Sword.png",
     "rarity": 3,
     "damage": 19,
+    "damageType": "Melee",
     "sellValue": 1800
   },
   {
@@ -10613,6 +10928,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Leaf_Blower.png",
     "rarity": 7,
     "damage": 48,
+    "damageType": "Magic",
     "sellValue": 60000
   },
   {
@@ -10623,6 +10939,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Bullet.png",
     "rarity": 7,
     "damage": 9,
+    "damageType": "Ranged",
     "sellValue": 10
   },
   {
@@ -10678,6 +10995,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Palladium_Sword.png",
     "rarity": 4,
     "damage": 49,
+    "damageType": "Melee",
     "sellValue": 18400
   },
   {
@@ -10688,6 +11006,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Palladium_Pike.png",
     "rarity": 4,
     "damage": 44,
+    "damageType": "Melee",
     "sellValue": 12000
   },
   {
@@ -10698,6 +11017,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Palladium_Repeater.png",
     "rarity": 4,
     "damage": 37,
+    "damageType": "Ranged",
     "sellValue": 16000
   },
   {
@@ -10708,6 +11028,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Palladium_Pickaxe.png",
     "rarity": 4,
     "damage": 12,
+    "damageType": "Melee",
     "sellValue": 14400
   },
   {
@@ -10718,6 +11039,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Palladium_Drill.png",
     "rarity": 4,
     "damage": 12,
+    "damageType": "Melee",
     "sellValue": 14400
   },
   {
@@ -10728,6 +11050,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Palladium_Chainsaw.png",
     "rarity": 4,
     "damage": 26,
+    "damageType": "Melee",
     "sellValue": 14400
   },
   {
@@ -10747,6 +11070,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Orichalcum_Sword.png",
     "rarity": 4,
     "damage": 59,
+    "damageType": "Melee",
     "sellValue": 25300
   },
   {
@@ -10757,6 +11081,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Orichalcum_Halberd.png",
     "rarity": 4,
     "damage": 46,
+    "damageType": "Melee",
     "sellValue": 16500
   },
   {
@@ -10767,6 +11092,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Orichalcum_Repeater.png",
     "rarity": 4,
     "damage": 40,
+    "damageType": "Ranged",
     "sellValue": 22000
   },
   {
@@ -10777,6 +11103,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Orichalcum_Pickaxe.png",
     "rarity": 4,
     "damage": 17,
+    "damageType": "Melee",
     "sellValue": 19800
   },
   {
@@ -10787,6 +11114,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Orichalcum_Drill.png",
     "rarity": 4,
     "damage": 17,
+    "damageType": "Melee",
     "sellValue": 19800
   },
   {
@@ -10797,6 +11125,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Orichalcum_Chainsaw.png",
     "rarity": 4,
     "damage": 31,
+    "damageType": "Melee",
     "sellValue": 19800
   },
   {
@@ -10816,6 +11145,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Titanium_Sword.png",
     "rarity": 4,
     "damage": 61,
+    "damageType": "Melee",
     "sellValue": 32200
   },
   {
@@ -10826,6 +11156,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Titanium_Trident.png",
     "rarity": 4,
     "damage": 48,
+    "damageType": "Melee",
     "sellValue": 21000
   },
   {
@@ -10836,6 +11167,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Titanium_Repeater.png",
     "rarity": 4,
     "damage": 43,
+    "damageType": "Ranged",
     "sellValue": 28000
   },
   {
@@ -10846,6 +11178,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Titanium_Pickaxe.png",
     "rarity": 4,
     "damage": 27,
+    "damageType": "Melee",
     "sellValue": 25200
   },
   {
@@ -10856,6 +11189,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Titanium_Drill.png",
     "rarity": 4,
     "damage": 27,
+    "damageType": "Melee",
     "sellValue": 25200
   },
   {
@@ -10866,6 +11200,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Titanium_Chainsaw.png",
     "rarity": 4,
     "damage": 34,
+    "damageType": "Melee",
     "sellValue": 25200
   },
   {
@@ -10875,6 +11210,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Palladium_Mask.png",
     "rarity": 4,
+    "defense": 14,
     "sellValue": 15000
   },
   {
@@ -10884,6 +11220,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Palladium_Helmet.png",
     "rarity": 4,
+    "defense": 5,
     "sellValue": 15000
   },
   {
@@ -10893,6 +11230,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Palladium_Headgear.png",
     "rarity": 4,
+    "defense": 3,
     "sellValue": 15000
   },
   {
@@ -10902,6 +11240,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Palladium_Breastplate.png",
     "rarity": 4,
+    "defense": 10,
     "sellValue": 12000
   },
   {
@@ -10911,6 +11250,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Palladium_Leggings.png",
     "rarity": 4,
+    "defense": 8,
     "sellValue": 9000
   },
   {
@@ -10920,6 +11260,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Orichalcum_Mask.png",
     "rarity": 4,
+    "defense": 19,
     "sellValue": 22500
   },
   {
@@ -10929,6 +11270,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Orichalcum_Helmet.png",
     "rarity": 4,
+    "defense": 7,
     "sellValue": 22500
   },
   {
@@ -10938,6 +11280,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Orichalcum_Headgear.png",
     "rarity": 4,
+    "defense": 4,
     "sellValue": 22500
   },
   {
@@ -10947,6 +11290,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Orichalcum_Breastplate.png",
     "rarity": 4,
+    "defense": 13,
     "sellValue": 18000
   },
   {
@@ -10956,51 +11300,57 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Orichalcum_Leggings.png",
     "rarity": 4,
+    "defense": 10,
     "sellValue": 13500
   },
   {
     "id": 1215,
     "name": "Titanium Mask",
     "category": "armor",
-    "subcategory": "crafting material",
+    "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Titanium_Mask.png",
     "rarity": 4,
+    "defense": 23,
     "sellValue": 30000
   },
   {
     "id": 1216,
     "name": "Titanium Helmet",
     "category": "armor",
-    "subcategory": "crafting material",
+    "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Titanium_Helmet.png",
     "rarity": 4,
+    "defense": 8,
     "sellValue": 30000
   },
   {
     "id": 1217,
     "name": "Titanium Headgear",
     "category": "armor",
-    "subcategory": "crafting material",
+    "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Titanium_Headgear.png",
     "rarity": 4,
+    "defense": 4,
     "sellValue": 30000
   },
   {
     "id": 1218,
     "name": "Titanium Breastplate",
     "category": "armor",
-    "subcategory": "crafting material",
+    "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Titanium_Breastplate.png",
     "rarity": 4,
+    "defense": 15,
     "sellValue": 24000
   },
   {
     "id": 1219,
     "name": "Titanium Leggings",
     "category": "armor",
-    "subcategory": "crafting material",
+    "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Titanium_Leggings.png",
     "rarity": 4,
+    "defense": 11,
     "sellValue": 18000
   },
   {
@@ -11029,6 +11379,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Palladium_Waraxe.png",
     "rarity": 4,
     "damage": 36,
+    "damageType": "Melee",
     "sellValue": 14400
   },
   {
@@ -11039,6 +11390,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Orichalcum_Waraxe.png",
     "rarity": 4,
     "damage": 41,
+    "damageType": "Melee",
     "sellValue": 19800
   },
   {
@@ -11049,6 +11401,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Titanium_Waraxe.png",
     "rarity": 4,
     "damage": 44,
+    "damageType": "Melee",
     "sellValue": 25200
   },
   {
@@ -11068,6 +11421,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Claymore.png",
     "rarity": 7,
     "damage": 95,
+    "damageType": "Melee",
     "sellValue": 55200
   },
   {
@@ -11077,7 +11431,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Saber.png",
     "rarity": 7,
-    "damage": 57,
+    "damage": 80,
+    "damageType": "Melee",
     "sellValue": 55200
   },
   {
@@ -11088,6 +11443,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Partisan.png",
     "rarity": 7,
     "damage": 49,
+    "damageType": "Melee",
     "sellValue": 36000
   },
   {
@@ -11098,6 +11454,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Shotbow.png",
     "rarity": 7,
     "damage": 34,
+    "damageType": "Ranged",
     "sellValue": 48000
   },
   {
@@ -11108,6 +11465,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Pickaxe.png",
     "rarity": 7,
     "damage": 40,
+    "damageType": "Melee",
     "sellValue": 43200
   },
   {
@@ -11118,6 +11476,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Drill.png",
     "rarity": 7,
     "damage": 35,
+    "damageType": "Melee",
     "sellValue": 43200
   },
   {
@@ -11128,6 +11487,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Chainsaw.png",
     "rarity": 7,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 43200
   },
   {
@@ -11138,6 +11498,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Greataxe.png",
     "rarity": 7,
     "damage": 70,
+    "damageType": "Melee",
     "sellValue": 43200
   },
   {
@@ -11148,6 +11509,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Warhammer.png",
     "rarity": 7,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 43200
   },
   {
@@ -11158,6 +11520,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Arrow.png",
     "rarity": 7,
     "damage": 16,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -11239,6 +11602,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nimbus_Rod.png",
     "rarity": 6,
     "damage": 30,
+    "damageType": "Magic",
     "sellValue": 35000
   },
   {
@@ -11329,6 +11693,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Sniper_Rifle.png",
     "rarity": 8,
     "damage": 200,
+    "damageType": "Ranged",
     "sellValue": 80000
   },
   {
@@ -11339,6 +11704,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Venus_Magnum.png",
     "rarity": 7,
     "damage": 50,
+    "damageType": "Ranged",
     "sellValue": 50000
   },
   {
@@ -11349,6 +11715,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Crimson_Rod.png",
     "rarity": 1,
     "damage": 12,
+    "damageType": "Magic",
     "sellValue": 15000
   },
   {
@@ -11368,6 +11735,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stynger.png",
     "rarity": 7,
     "damage": 45,
+    "damageType": "Ranged",
     "sellValue": 70000
   },
   {
@@ -11378,6 +11746,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flower_Pow.png",
     "rarity": 7,
     "damage": 130,
+    "damageType": "Melee",
     "sellValue": 60000
   },
   {
@@ -11388,6 +11757,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rainbow_Gun.png",
     "rarity": 8,
     "damage": 45,
+    "damageType": "Magic",
     "sellValue": 200000
   },
   {
@@ -11398,6 +11768,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stynger_Bolt.png",
     "rarity": 5,
     "damage": 17,
+    "damageType": "Ranged",
     "sellValue": 15
   },
   {
@@ -11408,6 +11779,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Jackhammer.png",
     "rarity": 7,
     "damage": 45,
+    "damageType": "Melee",
     "sellValue": 43200
   },
   {
@@ -11427,6 +11799,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flower_of_Frost.png",
     "rarity": 5,
     "damage": 60,
+    "damageType": "Magic",
     "sellValue": 50000
   },
   {
@@ -11437,6 +11810,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Uzi.png",
     "rarity": 7,
     "damage": 30,
+    "damageType": "Ranged",
     "sellValue": 70000
   },
   {
@@ -11447,6 +11821,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Magnet_Sphere.png",
     "rarity": 8,
     "damage": 48,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -11599,6 +11974,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Topaz_Robe.png",
     "rarity": 0,
+    "defense": 1,
     "sellValue": 10000
   },
   {
@@ -11608,6 +11984,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Sapphire_Robe.png",
     "rarity": 1,
+    "defense": 1,
     "sellValue": 15000
   },
   {
@@ -11617,6 +11994,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Emerald_Robe.png",
     "rarity": 1,
+    "defense": 2,
     "sellValue": 20000
   },
   {
@@ -11626,6 +12004,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ruby_Robe.png",
     "rarity": 1,
+    "defense": 2,
     "sellValue": 25000
   },
   {
@@ -11635,6 +12014,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Diamond_Robe.png",
     "rarity": 2,
+    "defense": 3,
     "sellValue": 30000
   },
   {
@@ -11699,6 +12079,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Picksaw.png",
     "rarity": 7,
     "damage": 34,
+    "damageType": "Melee",
     "sellValue": 43200
   },
   {
@@ -11709,6 +12090,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Heat_Ray.png",
     "rarity": 7,
     "damage": 90,
+    "damageType": "Magic",
     "sellValue": 70000
   },
   {
@@ -11719,6 +12101,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Staff_of_Earth.png",
     "rarity": 7,
     "damage": 125,
+    "damageType": "Magic",
     "sellValue": 70000
   },
   {
@@ -11729,6 +12112,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Golem_Fist.png",
     "rarity": 7,
     "damage": 90,
+    "damageType": "Melee",
     "sellValue": 70000
   },
   {
@@ -11775,6 +12159,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/High_Velocity_Bullet.png",
     "rarity": 3,
     "damage": 11,
+    "damageType": "Ranged",
     "sellValue": 8
   },
   {
@@ -11794,6 +12179,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Zombie_Arm.png",
     "rarity": 0,
     "damage": 15,
+    "damageType": "Melee",
     "sellValue": 400
   },
   {
@@ -11804,6 +12190,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/The_Axe.png",
     "rarity": 8,
     "damage": 72,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -11814,6 +12201,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ice_Sickle.png",
     "rarity": 5,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -11833,6 +12221,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Poison_Staff.png",
     "rarity": 6,
     "damage": 43,
+    "damageType": "Magic",
     "sellValue": 40000
   },
   {
@@ -11843,6 +12232,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Slime_Staff.png",
     "rarity": 4,
     "damage": 8,
+    "damageType": "Summon",
     "sellValue": 20000
   },
   {
@@ -11852,7 +12242,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Poison_Dart.png",
     "rarity": 2,
-    "damage": 10
+    "damage": 10,
+    "damageType": "Ranged"
   },
   {
     "id": 1311,
@@ -11880,6 +12271,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Book_of_Skulls.png",
     "rarity": 2,
     "damage": 29,
+    "damageType": "Magic",
     "sellValue": 15000
   },
   {
@@ -11890,6 +12282,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/KO_Cannon.png",
     "rarity": 4,
     "damage": 40,
+    "damageType": "Melee",
     "sellValue": 35000
   },
   {
@@ -11907,6 +12300,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Turtle_Helmet.png",
     "rarity": 8,
+    "defense": 21,
     "sellValue": 60000
   },
   {
@@ -11916,6 +12310,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Turtle_Scale_Mail.png",
     "rarity": 8,
+    "defense": 27,
     "sellValue": 48000
   },
   {
@@ -11925,6 +12320,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Turtle_Leggings.png",
     "rarity": 8,
+    "defense": 17,
     "sellValue": 36000
   },
   {
@@ -11935,6 +12331,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Snowball_Cannon.png",
     "rarity": 1,
     "damage": 10,
+    "damageType": "Ranged",
     "sellValue": 20000
   },
   {
@@ -11945,6 +12342,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bone_Pickaxe.png",
     "rarity": 1,
     "damage": 8,
+    "damageType": "Melee",
     "sellValue": 3000
   },
   {
@@ -11982,6 +12380,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bananarang.png",
     "rarity": 5,
     "damage": 45,
+    "damageType": "Melee",
     "sellValue": 120000
   },
   {
@@ -11992,6 +12391,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chain_Knife.png",
     "rarity": 1,
     "damage": 12,
+    "damageType": "Melee",
     "sellValue": 2500
   },
   {
@@ -12011,6 +12411,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Death_Sickle.png",
     "rarity": 6,
     "damage": 57,
+    "damageType": "Melee",
     "sellValue": 75000
   },
   {
@@ -12074,6 +12475,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ichor_Arrow.png",
     "rarity": 3,
     "damage": 16,
+    "damageType": "Ranged",
     "sellValue": 8
   },
   {
@@ -12084,6 +12486,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ichor_Bullet.png",
     "rarity": 3,
     "damage": 13,
+    "damageType": "Ranged",
     "sellValue": 6
   },
   {
@@ -12094,6 +12497,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Golden_Shower.png",
     "rarity": 4,
     "damage": 30,
+    "damageType": "Magic",
     "sellValue": 40000
   },
   {
@@ -12108,7 +12512,7 @@
   {
     "id": 1338,
     "name": "Explosive Bunny",
-    "category": "ammunition",
+    "category": null,
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Explosive_Bunny.png",
     "rarity": 0,
@@ -12140,6 +12544,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Venom_Arrow.png",
     "rarity": 3,
     "damage": 19,
+    "damageType": "Ranged",
     "sellValue": 18
   },
   {
@@ -12150,6 +12555,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Venom_Bullet.png",
     "rarity": 3,
     "damage": 15,
+    "damageType": "Ranged",
     "sellValue": 8
   },
   {
@@ -12214,6 +12620,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Party_Bullet.png",
     "rarity": 3,
     "damage": 10,
+    "damageType": "Ranged",
     "sellValue": 2
   },
   {
@@ -12223,7 +12630,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Nano_Bullet.png",
     "rarity": 3,
-    "damage": 15,
+    "damage": 10,
+    "damageType": "Ranged",
     "sellValue": 8
   },
   {
@@ -12234,6 +12642,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Exploding_Bullet.png",
     "rarity": 3,
     "damage": 10,
+    "damageType": "Ranged",
     "sellValue": 8
   },
   {
@@ -12244,6 +12653,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Golden_Bullet.png",
     "rarity": 3,
     "damage": 10,
+    "damageType": "Ranged",
     "sellValue": 8
   },
   {
@@ -13057,6 +13467,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shadowbeam_Staff.png",
     "rarity": 8,
     "damage": 80,
+    "damageType": "Magic",
     "sellValue": 60000
   },
   {
@@ -13067,6 +13478,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Inferno_Fork.png",
     "rarity": 8,
     "damage": 70,
+    "damageType": "Magic",
     "sellValue": 60000
   },
   {
@@ -13077,6 +13489,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Spectre_Staff.png",
     "rarity": 8,
     "damage": 65,
+    "damageType": "Magic",
     "sellValue": 60000
   },
   {
@@ -13587,6 +14000,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Spectre_Hood.png",
     "rarity": 8,
+    "defense": 6,
     "sellValue": 75000
   },
   {
@@ -13596,6 +14010,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Spectre_Robe.png",
     "rarity": 8,
+    "defense": 14,
     "sellValue": 60000
   },
   {
@@ -13605,6 +14020,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Spectre_Pants.png",
     "rarity": 8,
+    "defense": 10,
     "sellValue": 45000
   },
   {
@@ -13615,6 +14031,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Spectre_Pickaxe.png",
     "rarity": 8,
     "damage": 32,
+    "damageType": "Melee",
     "sellValue": 43200
   },
   {
@@ -13625,6 +14042,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Spectre_Hamaxe.png",
     "rarity": 8,
     "damage": 60,
+    "damageType": "Melee",
     "sellValue": 43200
   },
   {
@@ -13680,6 +14098,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Paladin's_Hammer.png",
     "rarity": 8,
     "damage": 100,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -13966,6 +14385,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shroomite_Headgear.png",
     "rarity": 8,
+    "defense": 11,
     "sellValue": 75000
   },
   {
@@ -13975,6 +14395,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shroomite_Mask.png",
     "rarity": 8,
+    "defense": 11,
     "sellValue": 75000
   },
   {
@@ -13984,6 +14405,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shroomite_Helmet.png",
     "rarity": 8,
+    "defense": 11,
     "sellValue": 75000
   },
   {
@@ -13993,6 +14415,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shroomite_Breastplate.png",
     "rarity": 8,
+    "defense": 24,
     "sellValue": 60000
   },
   {
@@ -14002,6 +14425,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shroomite_Leggings.png",
     "rarity": 8,
+    "defense": 16,
     "sellValue": 45000
   },
   {
@@ -14030,6 +14454,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/S.D.M.G..png",
     "rarity": 10,
     "damage": 85,
+    "damageType": "Ranged",
     "sellValue": 150000
   },
   {
@@ -14175,6 +14600,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Vampire_Knives.png",
     "rarity": 8,
     "damage": 29,
+    "damageType": "Melee",
     "sellValue": 200000
   },
   {
@@ -14194,6 +14620,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Scourge_of_the_Corruptor.png",
     "rarity": 8,
     "damage": 70,
+    "damageType": "Melee",
     "sellValue": 200000
   },
   {
@@ -14204,6 +14631,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Staff_of_the_Frost_Hydra.png",
     "rarity": 8,
     "damage": 100,
+    "damageType": "Summon",
     "sellValue": 200000
   },
   {
@@ -14405,6 +14833,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Magic_Cuffs.png",
     "rarity": 2,
+    "defense": 2,
     "sellValue": 20000
   },
   {
@@ -14567,6 +14996,7 @@
     "subcategory": "accessory",
     "imageUrl": "https://terraria.wiki.gg/images/Ankh_Shield.png",
     "rarity": 7,
+    "defense": 4,
     "sellValue": 50000
   },
   {
@@ -14577,6 +15007,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Blue_Flare.png",
     "rarity": 0,
     "damage": 1,
+    "damageType": "Ranged",
     "sellValue": 1
   },
   {
@@ -15622,7 +16053,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Pumpkin_Helmet.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 2
   },
   {
     "id": 1732,
@@ -15630,7 +16062,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Pumpkin_Breastplate.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 3
   },
   {
     "id": 1733,
@@ -15638,7 +16071,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Pumpkin_Leggings.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 2
   },
   {
     "id": 1734,
@@ -16078,6 +16512,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Candy_Corn_Rifle.png",
     "rarity": 8,
     "damage": 60,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -16088,6 +16523,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Candy_Corn.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Ranged",
     "sellValue": 1
   },
   {
@@ -16098,6 +16534,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Jack_'O_Lantern_Launcher.png",
     "rarity": 8,
     "damage": 85,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -16108,6 +16545,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Explosive_Jack_'O_Lantern.png",
     "rarity": 0,
     "damage": 60,
+    "damageType": "Ranged",
     "sellValue": 3
   },
   {
@@ -16118,6 +16556,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Sickle.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Melee",
     "sellValue": 1200
   },
   {
@@ -16253,6 +16692,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bat_Scepter.png",
     "rarity": 8,
     "damage": 45,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -16263,6 +16703,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Raven_Staff.png",
     "rarity": 8,
     "damage": 55,
+    "damageType": "Summon",
     "sellValue": 100000
   },
   {
@@ -16280,7 +16721,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Rotten_Egg.png",
     "rarity": 0,
-    "damage": 13
+    "damage": 13,
+    "damageType": "Ranged"
   },
   {
     "id": 1810,
@@ -16422,6 +16864,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bloody_Machete.png",
     "rarity": 2,
     "damage": 20,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -16432,6 +16875,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/The_Horseman's_Blade.png",
     "rarity": 8,
     "damage": 150,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -16442,6 +16886,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bladed_Glove.png",
     "rarity": 2,
     "damage": 14,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -16487,6 +16932,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Spooky_Helmet.png",
     "rarity": 8,
+    "defense": 9,
     "sellValue": 10000
   },
   {
@@ -16496,6 +16942,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Spooky_Breastplate.png",
     "rarity": 8,
+    "defense": 11,
     "sellValue": 10000
   },
   {
@@ -16505,6 +16952,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Spooky_Leggings.png",
     "rarity": 8,
+    "defense": 10,
     "sellValue": 10000
   },
   {
@@ -16515,6 +16963,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stake_Launcher.png",
     "rarity": 8,
     "damage": 75,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -16525,6 +16974,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stake.png",
     "rarity": 0,
     "damage": 25,
+    "damageType": "Ranged",
     "sellValue": 3
   },
   {
@@ -16828,6 +17278,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Red_Ryder.png",
     "rarity": 1,
     "damage": 20,
+    "damageType": "Ranged",
     "sellValue": 20000
   },
   {
@@ -17179,6 +17630,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Candy_Cane_Sword.png",
     "rarity": 1,
     "damage": 19,
+    "damageType": "Melee",
     "sellValue": 2700
   },
   {
@@ -17189,6 +17641,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Elf_Melter.png",
     "rarity": 8,
     "damage": 57,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -17217,6 +17670,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Star_Anise.png",
     "rarity": 0,
     "damage": 14,
+    "damageType": "Ranged",
     "sellValue": 5
   },
   {
@@ -17254,6 +17708,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Candy_Cane_Pickaxe.png",
     "rarity": 0,
     "damage": 7,
+    "damageType": "Melee",
     "sellValue": 2000
   },
   {
@@ -17264,6 +17719,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Fruitcake_Chakram.png",
     "rarity": 1,
     "damage": 19,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -17353,6 +17809,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Christmas_Tree_Sword.png",
     "rarity": 8,
     "damage": 86,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -17363,6 +17820,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chain_Gun.png",
     "rarity": 8,
     "damage": 38,
+    "damageType": "Ranged",
     "sellValue": 90000
   },
   {
@@ -17373,6 +17831,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Razorpine.png",
     "rarity": 8,
     "damage": 48,
+    "damageType": "Magic",
     "sellValue": 90000
   },
   {
@@ -17383,6 +17842,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Blizzard_Staff.png",
     "rarity": 8,
     "damage": 58,
+    "damageType": "Magic",
     "sellValue": 90000
   },
   {
@@ -17519,6 +17979,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Snowman_Cannon.png",
     "rarity": 8,
     "damage": 67,
+    "damageType": "Ranged",
     "sellValue": 90000
   },
   {
@@ -17529,6 +17990,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/North_Pole.png",
     "rarity": 7,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 90000
   },
   {
@@ -18944,10 +19406,10 @@
   },
   {
     "id": 2106,
-    "name": "Twin Mask",
+    "name": "Twins Mask",
     "category": "vanity",
     "subcategory": null,
-    "imageUrl": "https://terraria.wiki.gg/images/Twin_Mask.png",
+    "imageUrl": "https://terraria.wiki.gg/images/Twins_Mask.png",
     "rarity": 1,
     "sellValue": 7500
   },
@@ -19566,6 +20028,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shroomite_Digging_Claw.png",
     "rarity": 8,
     "damage": 45,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -19665,6 +20128,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Venom_Staff.png",
     "rarity": 7,
     "damage": 44,
+    "damageType": "Magic",
     "sellValue": 70000
   },
   {
@@ -19674,6 +20138,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Spectre_Mask.png",
     "rarity": 8,
+    "defense": 18,
     "sellValue": 75000
   },
   {
@@ -19762,6 +20227,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Beetle_Helmet.png",
     "rarity": 8,
+    "defense": 23,
     "sellValue": 60000
   },
   {
@@ -19771,6 +20237,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Beetle_Scale_Mail.png",
     "rarity": 8,
+    "defense": 20,
     "sellValue": 48000
   },
   {
@@ -19780,6 +20247,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Beetle_Shell.png",
     "rarity": 8,
+    "defense": 32,
     "sellValue": 48000
   },
   {
@@ -19789,6 +20257,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Beetle_Leggings.png",
     "rarity": 8,
+    "defense": 18,
     "sellValue": 36000
   },
   {
@@ -19972,6 +20441,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Pulse_Bow.png",
     "rarity": 8,
     "damage": 80,
+    "damageType": "Ranged",
     "sellValue": 90000
   },
   {
@@ -20385,6 +20855,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Revolver.png",
     "rarity": 2,
     "damage": 20,
+    "damageType": "Ranged",
     "sellValue": 30000
   },
   {
@@ -20395,6 +20866,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Gatligator.png",
     "rarity": 4,
     "damage": 21,
+    "damageType": "Ranged",
     "sellValue": 70000
   },
   {
@@ -20409,7 +20881,7 @@
   {
     "id": 2272,
     "name": "Water Gun",
-    "category": "miscellaneous",
+    "category": "tool",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Water_Gun.png",
     "rarity": 0,
@@ -20423,6 +20895,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Katana.png",
     "rarity": 1,
     "damage": 18,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -20441,6 +20914,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Magic_Hat.png",
     "rarity": 2,
+    "defense": 2,
     "sellValue": 6000
   },
   {
@@ -20459,6 +20933,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Gi.png",
     "rarity": 1,
+    "defense": 4,
     "sellValue": 4000
   },
   {
@@ -20477,6 +20952,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Mystic_Robe.png",
     "rarity": 1,
+    "defense": 2,
     "sellValue": 7000
   },
   {
@@ -20847,6 +21323,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rockfish.png",
     "rarity": 3,
     "damage": 24,
+    "damageType": "Melee",
     "sellValue": 15000
   },
   {
@@ -20938,6 +21415,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Purple_Clubberfish.png",
     "rarity": 1,
     "damage": 35,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -20948,6 +21426,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Obsidian_Swordfish.png",
     "rarity": 7,
     "damage": 70,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -20958,6 +21437,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Swordfish.png",
     "rarity": 2,
     "damage": 19,
+    "damageType": "Melee",
     "sellValue": 5000
   },
   {
@@ -21035,6 +21515,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Reaver_Shark.png",
     "rarity": 3,
     "damage": 16,
+    "damageType": "Melee",
     "sellValue": 15000
   },
   {
@@ -21045,6 +21526,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Sawtooth_Shark.png",
     "rarity": 3,
     "damage": 13,
+    "damageType": "Melee",
     "sellValue": 15000
   },
   {
@@ -21216,6 +21698,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Bee_Headgear.png",
     "rarity": 3,
+    "defense": 4,
     "sellValue": 4000
   },
   {
@@ -21225,6 +21708,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Bee_Breastplate.png",
     "rarity": 3,
+    "defense": 5,
     "sellValue": 6000
   },
   {
@@ -21234,6 +21718,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Bee_Greaves.png",
     "rarity": 3,
+    "defense": 4,
     "sellValue": 5000
   },
   {
@@ -21244,6 +21729,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Hornet_Staff.png",
     "rarity": 3,
     "damage": 12,
+    "damageType": "Summon",
     "sellValue": 7000
   },
   {
@@ -21254,6 +21740,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Imp_Staff.png",
     "rarity": 3,
     "damage": 17,
+    "damageType": "Summon",
     "sellValue": 5400
   },
   {
@@ -21264,6 +21751,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Queen_Spider_Staff.png",
     "rarity": 4,
     "damage": 26,
+    "damageType": "Summon",
     "sellValue": 50000
   },
   {
@@ -21273,6 +21761,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Angler_Hat.png",
     "rarity": 1,
+    "defense": 1,
     "sellValue": 10000
   },
   {
@@ -21282,6 +21771,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Angler_Vest.png",
     "rarity": 1,
+    "defense": 2,
     "sellValue": 10000
   },
   {
@@ -21291,6 +21781,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Angler_Pants.png",
     "rarity": 1,
+    "defense": 1,
     "sellValue": 10000
   },
   {
@@ -21300,6 +21791,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Spider_Mask.png",
     "rarity": 4,
+    "defense": 5,
     "sellValue": 7500
   },
   {
@@ -21309,6 +21801,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Spider_Breastplate.png",
     "rarity": 4,
+    "defense": 8,
     "sellValue": 7500
   },
   {
@@ -21318,6 +21811,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Spider_Greaves.png",
     "rarity": 4,
+    "defense": 7,
     "sellValue": 7500
   },
   {
@@ -21787,6 +22281,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Anchor.png",
     "rarity": 3,
     "damage": 70,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -22501,7 +22996,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Boreal_Wood_Helmet.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 2510,
@@ -22509,7 +23005,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Boreal_Wood_Breastplate.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 2511,
@@ -22517,7 +23014,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Boreal_Wood_Greaves.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 2512,
@@ -22525,7 +23023,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Palm_Wood_Helmet.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 2513,
@@ -22533,7 +23032,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Palm_Wood_Breastplate.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 2514,
@@ -22541,7 +23041,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Palm_Wood_Greaves.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 1
   },
   {
     "id": 2515,
@@ -22551,6 +23052,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Palm_Wood_Bow.png",
     "rarity": 0,
     "damage": 6,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -22561,6 +23063,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Palm_Wood_Hammer.png",
     "rarity": 0,
     "damage": 4,
+    "damageType": "Melee",
     "sellValue": 10
   },
   {
@@ -22571,6 +23074,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Palm_Wood_Sword.png",
     "rarity": 0,
     "damage": 8,
+    "damageType": "Melee",
     "sellValue": 20
   },
   {
@@ -22733,6 +23237,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Optic_Staff.png",
     "rarity": 5,
     "damage": 24,
+    "damageType": "Summon",
     "sellValue": 20000
   },
   {
@@ -22877,6 +23382,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Spider_Staff.png",
     "rarity": 4,
     "damage": 26,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
@@ -23173,6 +23679,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Pirate_Staff.png",
     "rarity": 5,
     "damage": 40,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
@@ -23192,6 +23699,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Sticky_Grenade.png",
     "rarity": 0,
     "damage": 60,
+    "damageType": "Ranged",
     "sellValue": 15
   },
   {
@@ -23229,6 +23737,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Molotov_Cocktail.png",
     "rarity": 1,
     "damage": 23,
+    "damageType": "Ranged",
     "sellValue": 100
   },
   {
@@ -23392,6 +23901,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Falcon_Blade.png",
     "rarity": 4,
     "damage": 25,
+    "damageType": "Melee",
     "sellValue": 2000
   },
   {
@@ -23406,7 +23916,7 @@
   {
     "id": 2610,
     "name": "Slime Gun",
-    "category": "miscellaneous",
+    "category": "tool",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Slime_Gun.png",
     "rarity": 0,
@@ -23420,6 +23930,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flairoon.png",
     "rarity": 8,
     "damage": 66,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -23511,6 +24022,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tempest_Staff.png",
     "rarity": 8,
     "damage": 50,
+    "damageType": "Summon",
     "sellValue": 50000
   },
   {
@@ -23521,6 +24033,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Razorblade_Typhoon.png",
     "rarity": 8,
     "damage": 85,
+    "damageType": "Magic",
     "sellValue": 50000
   },
   {
@@ -23531,6 +24044,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bubble_Gun.png",
     "rarity": 8,
     "damage": 70,
+    "damageType": "Magic",
     "sellValue": 50000
   },
   {
@@ -23541,6 +24055,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tsunami.png",
     "rarity": 8,
     "damage": 53,
+    "damageType": "Ranged",
     "sellValue": 50000
   },
   {
@@ -24602,6 +25117,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Boreal_Wood_Sword.png",
     "rarity": 0,
     "damage": 8,
+    "damageType": "Melee",
     "sellValue": 20
   },
   {
@@ -24612,6 +25128,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Boreal_Wood_Hammer.png",
     "rarity": 0,
     "damage": 4,
+    "damageType": "Melee",
     "sellValue": 10
   },
   {
@@ -24622,6 +25139,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Boreal_Wood_Bow.png",
     "rarity": 0,
     "damage": 6,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -24641,6 +25159,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Xeno_Staff.png",
     "rarity": 8,
     "damage": 36,
+    "damageType": "Summon",
     "sellValue": 100000
   },
   {
@@ -24651,6 +25170,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Meteor_Staff.png",
     "rarity": 5,
     "damage": 50,
+    "damageType": "Magic",
     "sellValue": 20000
   },
   {
@@ -24709,6 +25229,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Vortex_Helmet.png",
     "rarity": 10,
+    "defense": 14,
     "sellValue": 70000
   },
   {
@@ -24718,6 +25239,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Vortex_Breastplate.png",
     "rarity": 10,
+    "defense": 28,
     "sellValue": 140000
   },
   {
@@ -24727,6 +25249,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Vortex_Leggings.png",
     "rarity": 10,
+    "defense": 20,
     "sellValue": 105000
   },
   {
@@ -24736,6 +25259,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Nebula_Helmet.png",
     "rarity": 10,
+    "defense": 14,
     "sellValue": 70000
   },
   {
@@ -24745,6 +25269,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Nebula_Breastplate.png",
     "rarity": 10,
+    "defense": 18,
     "sellValue": 140000
   },
   {
@@ -24754,6 +25279,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Nebula_Leggings.png",
     "rarity": 10,
+    "defense": 14,
     "sellValue": 105000
   },
   {
@@ -24763,6 +25289,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Solar_Flare_Helmet.png",
     "rarity": 10,
+    "defense": 24,
     "sellValue": 70000
   },
   {
@@ -24772,6 +25299,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Solar_Flare_Breastplate.png",
     "rarity": 10,
+    "defense": 34,
     "sellValue": 140000
   },
   {
@@ -24781,6 +25309,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Solar_Flare_Leggings.png",
     "rarity": 10,
+    "defense": 20,
     "sellValue": 105000
   },
   {
@@ -24843,6 +25372,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Vortex_Axe.png",
     "rarity": 10,
     "damage": 100,
+    "damageType": "Melee",
     "sellValue": 60000
   },
   {
@@ -24853,6 +25383,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Vortex_Chainsaw.png",
     "rarity": 10,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 60000
   },
   {
@@ -24863,6 +25394,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Vortex_Drill.png",
     "rarity": 10,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 70000
   },
   {
@@ -24873,6 +25405,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Vortex_Hammer.png",
     "rarity": 10,
     "damage": 110,
+    "damageType": "Melee",
     "sellValue": 80000
   },
   {
@@ -24883,6 +25416,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Vortex_Pickaxe.png",
     "rarity": 10,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 70000
   },
   {
@@ -24893,6 +25427,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nebula_Axe.png",
     "rarity": 10,
     "damage": 100,
+    "damageType": "Melee",
     "sellValue": 60000
   },
   {
@@ -24903,6 +25438,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nebula_Chainsaw.png",
     "rarity": 10,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 60000
   },
   {
@@ -24913,6 +25449,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nebula_Drill.png",
     "rarity": 10,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 70000
   },
   {
@@ -24923,6 +25460,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nebula_Hammer.png",
     "rarity": 10,
     "damage": 110,
+    "damageType": "Melee",
     "sellValue": 80000
   },
   {
@@ -24933,6 +25471,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nebula_Pickaxe.png",
     "rarity": 10,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 70000
   },
   {
@@ -24943,6 +25482,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Solar_Flare_Axe.png",
     "rarity": 10,
     "damage": 100,
+    "damageType": "Melee",
     "sellValue": 60000
   },
   {
@@ -24953,6 +25493,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Solar_Flare_Chainsaw.png",
     "rarity": 10,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 60000
   },
   {
@@ -24963,6 +25504,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Solar_Flare_Drill.png",
     "rarity": 10,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 70000
   },
   {
@@ -24973,6 +25515,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Solar_Flare_Hammer.png",
     "rarity": 10,
     "damage": 110,
+    "damageType": "Melee",
     "sellValue": 80000
   },
   {
@@ -24983,6 +25526,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Solar_Flare_Pickaxe.png",
     "rarity": 10,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 70000
   },
   {
@@ -25057,6 +25601,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Laser_Machinegun.png",
     "rarity": 8,
     "damage": 60,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -25067,6 +25612,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Electrosphere_Launcher.png",
     "rarity": 8,
     "damage": 40,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -25077,6 +25623,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Xenopopper.png",
     "rarity": 8,
     "damage": 45,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -25087,6 +25634,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Laser_Drill.png",
     "rarity": 8,
     "damage": 35,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -25821,6 +26369,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Influx_Waver.png",
     "rarity": 8,
     "damage": 100,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -25839,6 +26388,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Charged_Blaster_Cannon.png",
     "rarity": 8,
     "damage": 100,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -25894,6 +26444,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/The_Bee's_Knees.png",
     "rarity": 3,
     "damage": 23,
+    "damageType": "Ranged",
     "sellValue": 20000
   },
   {
@@ -26930,6 +27481,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bone_Arrow.png",
     "rarity": 0,
     "damage": 8,
+    "damageType": "Ranged",
     "sellValue": 3
   },
   {
@@ -26957,6 +27509,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Life_Drain.png",
     "rarity": 5,
     "damage": 35,
+    "damageType": "Magic",
     "sellValue": 80000
   },
   {
@@ -26967,6 +27520,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Dart_Pistol.png",
     "rarity": 5,
     "damage": 28,
+    "damageType": "Ranged",
     "sellValue": 80000
   },
   {
@@ -26977,6 +27531,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Dart_Rifle.png",
     "rarity": 5,
     "damage": 52,
+    "damageType": "Ranged",
     "sellValue": 80000
   },
   {
@@ -26987,6 +27542,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Crystal_Dart.png",
     "rarity": 3,
     "damage": 14,
+    "damageType": "Ranged",
     "sellValue": 6
   },
   {
@@ -26997,6 +27553,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cursed_Dart.png",
     "rarity": 3,
     "damage": 9,
+    "damageType": "Ranged",
     "sellValue": 6
   },
   {
@@ -27007,6 +27564,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ichor_Dart.png",
     "rarity": 3,
     "damage": 7,
+    "damageType": "Ranged",
     "sellValue": 6
   },
   {
@@ -27017,6 +27575,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Chain_Guillotines.png",
     "rarity": 5,
     "damage": 59,
+    "damageType": "Melee",
     "sellValue": 80000
   },
   {
@@ -27027,6 +27586,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Fetid_Baghnakhs.png",
     "rarity": 5,
     "damage": 60,
+    "damageType": "Melee",
     "sellValue": 80000
   },
   {
@@ -27037,6 +27597,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Clinger_Staff.png",
     "rarity": 5,
     "damage": 43,
+    "damageType": "Magic",
     "sellValue": 80000
   },
   {
@@ -27055,6 +27616,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Flesh_Knuckles.png",
     "rarity": 5,
+    "defense": 8,
     "sellValue": 80000
   },
   {
@@ -27074,6 +27636,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Seedler.png",
     "rarity": 5,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -27084,6 +27647,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Hellwing_Bow.png",
     "rarity": 3,
     "damage": 22,
+    "damageType": "Ranged",
     "sellValue": 25000
   },
   {
@@ -27175,6 +27739,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Daedalus_Stormbow.png",
     "rarity": 6,
     "damage": 38,
+    "damageType": "Ranged",
     "sellValue": 80000
   },
   {
@@ -27185,6 +27750,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flying_Knife.png",
     "rarity": 6,
     "damage": 40,
+    "damageType": "Melee",
     "sellValue": 80000
   },
   {
@@ -27370,6 +27936,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Crystal_Vile_Shard.png",
     "rarity": 5,
     "damage": 25,
+    "damageType": "Magic",
     "sellValue": 80000
   },
   {
@@ -27380,6 +27947,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shadowflame_Bow.png",
     "rarity": 5,
     "damage": 47,
+    "damageType": "Ranged",
     "sellValue": 20000
   },
   {
@@ -27390,6 +27958,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shadowflame_Hex_Doll.png",
     "rarity": 5,
     "damage": 32,
+    "damageType": "Magic",
     "sellValue": 20000
   },
   {
@@ -27400,6 +27969,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shadowflame_Knife.png",
     "rarity": 5,
     "damage": 43,
+    "damageType": "Melee",
     "sellValue": 20000
   },
   {
@@ -27482,6 +28052,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Meowmere.png",
     "rarity": 10,
     "damage": 200,
+    "damageType": "Melee",
     "sellValue": 200000
   },
   {
@@ -27501,6 +28072,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Star_Wrath.png",
     "rarity": 10,
     "damage": 170,
+    "damageType": "Melee",
     "sellValue": 200000
   },
   {
@@ -27536,6 +28108,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Wand_of_Sparking.png",
     "rarity": 1,
     "damage": 14,
+    "damageType": "Magic",
     "sellValue": 2000
   },
   {
@@ -27753,6 +28326,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Javelin.png",
     "rarity": 0,
     "damage": 17,
+    "damageType": "Ranged",
     "sellValue": 5
   },
   {
@@ -27781,6 +28355,8 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shield_of_Cthulhu.png",
     "rarity": -12,
     "damage": 30,
+    "damageType": "Melee",
+    "defense": 2,
     "sellValue": 20000
   },
   {
@@ -27791,6 +28367,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Butcher's_Chainsaw.png",
     "rarity": 8,
     "damage": 120,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -27835,6 +28412,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Endless_Quiver.png",
     "rarity": 2,
     "damage": 5,
+    "damageType": "Ranged",
     "sellValue": 10000
   },
   {
@@ -27845,6 +28423,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Endless_Musket_Pouch.png",
     "rarity": 2,
     "damage": 7,
+    "damageType": "Ranged",
     "sellValue": 10000
   },
   {
@@ -27855,6 +28434,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Toxic_Flask.png",
     "rarity": 8,
     "damage": 52,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -27865,6 +28445,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Psycho_Knife.png",
     "rarity": 8,
     "damage": 85,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -27875,6 +28456,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nail_Gun.png",
     "rarity": 8,
     "damage": 85,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -27885,6 +28467,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nail.png",
     "rarity": 8,
     "damage": 30,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -27894,6 +28477,7 @@
     "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Night_Vision_Helmet.png",
     "rarity": 2,
+    "defense": 4,
     "sellValue": 10000
   },
   {
@@ -27958,6 +28542,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bouncy_Grenade.png",
     "rarity": 0,
     "damage": 65,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -28594,6 +29179,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Gladiator_Helmet.png",
     "rarity": 0,
+    "defense": 5,
     "sellValue": 3500
   },
   {
@@ -28603,6 +29189,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Gladiator_Breastplate.png",
     "rarity": 0,
+    "defense": 6,
     "sellValue": 2800
   },
   {
@@ -28612,6 +29199,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Gladiator_Leggings.png",
     "rarity": 0,
+    "defense": 5,
     "sellValue": 2100
   },
   {
@@ -28686,6 +29274,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Frost_Daggerfish.png",
     "rarity": 1,
     "damage": 17,
+    "damageType": "Ranged",
     "sellValue": 16
   },
   {
@@ -28795,6 +29384,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Crystal_Serpent.png",
     "rarity": 5,
     "damage": 40,
+    "damageType": "Magic",
     "sellValue": 40000
   },
   {
@@ -28805,6 +29395,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Toxikarp.png",
     "rarity": 5,
     "damage": 43,
+    "damageType": "Ranged",
     "sellValue": 40000
   },
   {
@@ -28815,6 +29406,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bladetongue.png",
     "rarity": 5,
     "damage": 55,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -29149,6 +29741,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Deadly_Sphere_Staff.png",
     "rarity": 8,
     "damage": 55,
+    "damageType": "Summon",
     "sellValue": 100000
   },
   {
@@ -29227,6 +29820,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Slap_Hand.png",
     "rarity": 4,
     "damage": 55,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -29264,6 +29858,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Code_1.png",
     "rarity": 2,
     "damage": 21,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -29300,6 +29895,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Obsidian_Outlaw_Hat.png",
     "rarity": 1,
+    "defense": 4,
     "sellValue": 900
   },
   {
@@ -29309,6 +29905,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Obsidian_Longcoat.png",
     "rarity": 1,
+    "defense": 6,
     "sellValue": 900
   },
   {
@@ -29318,6 +29915,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Obsidian_Pants.png",
     "rarity": 1,
+    "defense": 5,
     "sellValue": 900
   },
   {
@@ -29328,6 +29926,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Medusa_Head.png",
     "rarity": 4,
     "damage": 40,
+    "damageType": "Magic",
     "sellValue": 40000
   },
   {
@@ -29402,6 +30001,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Wooden_Yoyo.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Melee",
     "sellValue": 100
   },
   {
@@ -29412,6 +30012,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Malaise.png",
     "rarity": 1,
     "damage": 16,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -29422,6 +30023,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Artery.png",
     "rarity": 1,
     "damage": 17,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -29432,6 +30034,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Amazon.png",
     "rarity": 3,
     "damage": 18,
+    "damageType": "Melee",
     "sellValue": 13000
   },
   {
@@ -29442,6 +30045,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cascade.png",
     "rarity": 3,
     "damage": 27,
+    "damageType": "Melee",
     "sellValue": 18000
   },
   {
@@ -29451,7 +30055,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Chik.png",
     "rarity": 4,
-    "damage": 39,
+    "damage": 34,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -29462,6 +30067,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Code_2.png",
     "rarity": 5,
     "damage": 54,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -29472,6 +30078,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rally.png",
     "rarity": 1,
     "damage": 14,
+    "damageType": "Melee",
     "sellValue": 5000
   },
   {
@@ -29482,6 +30089,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Yelets.png",
     "rarity": 7,
     "damage": 60,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -29492,6 +30100,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Red's_Throw.png",
     "rarity": 9,
     "damage": 70,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -29502,6 +30111,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Valkyrie_Yoyo.png",
     "rarity": 9,
     "damage": 70,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -29511,7 +30121,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Amarok.png",
     "rarity": 4,
-    "damage": 43,
+    "damage": 47,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -29521,7 +30132,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Hel-Fire.png",
     "rarity": 4,
-    "damage": 39,
+    "damage": 43,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -29531,7 +30143,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Kraken.png",
     "rarity": 8,
-    "damage": 95,
+    "damage": 120,
+    "damageType": "Melee",
     "sellValue": 110000
   },
   {
@@ -29542,6 +30155,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/The_Eye_of_Cthulhu.png",
     "rarity": 8,
     "damage": 115,
+    "damageType": "Melee",
     "sellValue": 125000
   },
   {
@@ -29748,8 +30362,9 @@
     "category": "weapon",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Format_C.png",
-    "rarity": 3,
-    "damage": 39,
+    "rarity": 5,
+    "damage": 40,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -29758,8 +30373,9 @@
     "category": "weapon",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Gradient.png",
-    "rarity": 3,
-    "damage": 49,
+    "rarity": 4,
+    "damage": 53,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -29770,6 +30386,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Valor.png",
     "rarity": 3,
     "damage": 28,
+    "damageType": "Melee",
     "sellValue": 17500
   },
   {
@@ -30033,6 +30650,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Exotic_Scimitar.png",
     "rarity": 2,
     "damage": 20,
+    "damageType": "Melee",
     "sellValue": 5000
   },
   {
@@ -30043,6 +30661,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Paintball_Gun.png",
     "rarity": 2,
     "damage": 12,
+    "damageType": "Ranged",
     "sellValue": 5000
   },
   {
@@ -30053,6 +30672,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Classy_Cane.png",
     "rarity": 3,
     "damage": 40,
+    "damageType": "Melee",
     "sellValue": 20000
   },
   {
@@ -30063,6 +30683,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stylish_Scissors.png",
     "rarity": 2,
     "damage": 14,
+    "damageType": "Melee",
     "sellValue": 5000
   },
   {
@@ -30206,6 +30827,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Arkhalis.png",
     "rarity": 9,
     "damage": 25,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -30260,6 +30882,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Fossil_Helmet.png",
     "rarity": 1,
+    "defense": 4,
     "sellValue": 3000
   },
   {
@@ -30269,6 +30892,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Fossil_Plate.png",
     "rarity": 1,
+    "defense": 5,
     "sellValue": 5000
   },
   {
@@ -30278,6 +30902,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Fossil_Greaves.png",
     "rarity": 1,
+    "defense": 4,
     "sellValue": 4000
   },
   {
@@ -30288,6 +30913,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Amber_Staff.png",
     "rarity": 1,
     "damage": 21,
+    "damageType": "Magic",
     "sellValue": 4000
   },
   {
@@ -30298,6 +30924,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bone_Javelin.png",
     "rarity": 1,
     "damage": 20,
+    "damageType": "Ranged",
     "sellValue": 10
   },
   {
@@ -30308,6 +30935,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bone_Throwing_Knife.png",
     "rarity": 1,
     "damage": 14,
+    "damageType": "Ranged",
     "sellValue": 10
   },
   {
@@ -30325,6 +30953,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Stardust_Helmet.png",
     "rarity": 10,
+    "defense": 10,
     "sellValue": 70000
   },
   {
@@ -30334,6 +30963,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Stardust_Plate.png",
     "rarity": 10,
+    "defense": 16,
     "sellValue": 140000
   },
   {
@@ -30343,6 +30973,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Stardust_Leggings.png",
     "rarity": 10,
+    "defense": 12,
     "sellValue": 105000
   },
   {
@@ -30398,6 +31029,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Terrarian.png",
     "rarity": 10,
     "damage": 190,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -31052,6 +31684,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stardust_Axe.png",
     "rarity": 10,
     "damage": 100,
+    "damageType": "Melee",
     "sellValue": 60000
   },
   {
@@ -31062,6 +31695,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stardust_Chainsaw.png",
     "rarity": 10,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 60000
   },
   {
@@ -31072,6 +31706,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stardust_Drill.png",
     "rarity": 10,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 70000
   },
   {
@@ -31082,6 +31717,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stardust_Hammer.png",
     "rarity": 10,
     "damage": 110,
+    "damageType": "Melee",
     "sellValue": 80000
   },
   {
@@ -31092,6 +31728,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stardust_Pickaxe.png",
     "rarity": 10,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 70000
   },
   {
@@ -31155,6 +31792,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Solar_Eruption.png",
     "rarity": 10,
     "damage": 105,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -31165,6 +31803,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stardust_Cell_Staff.png",
     "rarity": 10,
     "damage": 60,
+    "damageType": "Summon",
     "sellValue": 100000
   },
   {
@@ -31175,6 +31814,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Vortex_Beater.png",
     "rarity": 10,
     "damage": 50,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -31185,6 +31825,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nebula_Arcanum.png",
     "rarity": 10,
     "damage": 70,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -31223,6 +31864,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Platinum_Bow.png",
     "rarity": 0,
     "damage": 13,
+    "damageType": "Ranged",
     "sellValue": 2100
   },
   {
@@ -31233,6 +31875,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Platinum_Hammer.png",
     "rarity": 0,
     "damage": 10,
+    "damageType": "Melee",
     "sellValue": 2400
   },
   {
@@ -31243,6 +31886,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Platinum_Axe.png",
     "rarity": 0,
     "damage": 8,
+    "damageType": "Melee",
     "sellValue": 2400
   },
   {
@@ -31253,6 +31897,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Platinum_Shortsword.png",
     "rarity": 0,
     "damage": 13,
+    "damageType": "Melee",
     "sellValue": 2100
   },
   {
@@ -31263,6 +31908,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Platinum_Broadsword.png",
     "rarity": 0,
     "damage": 16,
+    "damageType": "Melee",
     "sellValue": 2700
   },
   {
@@ -31273,6 +31919,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Platinum_Pickaxe.png",
     "rarity": 0,
     "damage": 7,
+    "damageType": "Melee",
     "sellValue": 3000
   },
   {
@@ -31283,6 +31930,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tungsten_Bow.png",
     "rarity": 0,
     "damage": 10,
+    "damageType": "Ranged",
     "sellValue": 1050
   },
   {
@@ -31293,6 +31941,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tungsten_Hammer.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Melee",
     "sellValue": 1200
   },
   {
@@ -31303,6 +31952,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tungsten_Axe.png",
     "rarity": 0,
     "damage": 7,
+    "damageType": "Melee",
     "sellValue": 1200
   },
   {
@@ -31313,6 +31963,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tungsten_Shortsword.png",
     "rarity": 0,
     "damage": 10,
+    "damageType": "Melee",
     "sellValue": 1050
   },
   {
@@ -31323,6 +31974,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tungsten_Broadsword.png",
     "rarity": 0,
     "damage": 14,
+    "damageType": "Melee",
     "sellValue": 1350
   },
   {
@@ -31333,6 +31985,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tungsten_Pickaxe.png",
     "rarity": 0,
     "damage": 6,
+    "damageType": "Melee",
     "sellValue": 1500
   },
   {
@@ -31343,6 +31996,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lead_Bow.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Ranged",
     "sellValue": 420
   },
   {
@@ -31353,6 +32007,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lead_Hammer.png",
     "rarity": 0,
     "damage": 8,
+    "damageType": "Melee",
     "sellValue": 480
   },
   {
@@ -31363,6 +32018,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lead_Axe.png",
     "rarity": 0,
     "damage": 6,
+    "damageType": "Melee",
     "sellValue": 480
   },
   {
@@ -31373,6 +32029,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lead_Shortsword.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Melee",
     "sellValue": 420
   },
   {
@@ -31383,6 +32040,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lead_Broadsword.png",
     "rarity": 0,
     "damage": 13,
+    "damageType": "Melee",
     "sellValue": 540
   },
   {
@@ -31393,6 +32051,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lead_Pickaxe.png",
     "rarity": 0,
     "damage": 6,
+    "damageType": "Melee",
     "sellValue": 600
   },
   {
@@ -31403,6 +32062,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tin_Bow.png",
     "rarity": 0,
     "damage": 7,
+    "damageType": "Ranged",
     "sellValue": 105
   },
   {
@@ -31413,6 +32073,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tin_Hammer.png",
     "rarity": 0,
     "damage": 6,
+    "damageType": "Melee",
     "sellValue": 120
   },
   {
@@ -31423,6 +32084,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tin_Axe.png",
     "rarity": 0,
     "damage": 4,
+    "damageType": "Melee",
     "sellValue": 120
   },
   {
@@ -31433,6 +32095,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tin_Shortsword.png",
     "rarity": 0,
     "damage": 7,
+    "damageType": "Melee",
     "sellValue": 105
   },
   {
@@ -31443,6 +32106,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tin_Broadsword.png",
     "rarity": 0,
     "damage": 10,
+    "damageType": "Melee",
     "sellValue": 135
   },
   {
@@ -31453,6 +32117,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tin_Pickaxe.png",
     "rarity": 0,
     "damage": 5,
+    "damageType": "Melee",
     "sellValue": 150
   },
   {
@@ -31463,6 +32128,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Copper_Bow.png",
     "rarity": 0,
     "damage": 6,
+    "damageType": "Ranged",
     "sellValue": 70
   },
   {
@@ -31473,6 +32139,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Copper_Hammer.png",
     "rarity": 0,
     "damage": 4,
+    "damageType": "Melee",
     "sellValue": 80
   },
   {
@@ -31483,6 +32150,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Copper_Axe.png",
     "rarity": 0,
     "damage": 3,
+    "damageType": "Melee",
     "sellValue": 80
   },
   {
@@ -31493,6 +32161,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Copper_Shortsword.png",
     "rarity": 0,
     "damage": 5,
+    "damageType": "Melee",
     "sellValue": 70
   },
   {
@@ -31503,6 +32172,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Copper_Broadsword.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Melee",
     "sellValue": 90
   },
   {
@@ -31513,6 +32183,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Copper_Pickaxe.png",
     "rarity": 0,
     "damage": 4,
+    "damageType": "Melee",
     "sellValue": 100
   },
   {
@@ -31523,6 +32194,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Silver_Bow.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Ranged",
     "sellValue": 700
   },
   {
@@ -31533,6 +32205,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Silver_Hammer.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Melee",
     "sellValue": 800
   },
   {
@@ -31543,6 +32216,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Silver_Axe.png",
     "rarity": 0,
     "damage": 6,
+    "damageType": "Melee",
     "sellValue": 800
   },
   {
@@ -31553,6 +32227,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Silver_Shortsword.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Melee",
     "sellValue": 700
   },
   {
@@ -31563,6 +32238,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Silver_Broadsword.png",
     "rarity": 0,
     "damage": 14,
+    "damageType": "Melee",
     "sellValue": 900
   },
   {
@@ -31573,6 +32249,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Silver_Pickaxe.png",
     "rarity": 0,
     "damage": 6,
+    "damageType": "Melee",
     "sellValue": 1000
   },
   {
@@ -31583,6 +32260,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Gold_Bow.png",
     "rarity": 0,
     "damage": 11,
+    "damageType": "Ranged",
     "sellValue": 1400
   },
   {
@@ -31593,6 +32271,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Gold_Hammer.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Melee",
     "sellValue": 1600
   },
   {
@@ -31603,6 +32282,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Gold_Axe.png",
     "rarity": 0,
     "damage": 7,
+    "damageType": "Melee",
     "sellValue": 1600
   },
   {
@@ -31613,6 +32293,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Gold_Shortsword.png",
     "rarity": 0,
     "damage": 12,
+    "damageType": "Melee",
     "sellValue": 1400
   },
   {
@@ -31623,6 +32304,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Gold_Broadsword.png",
     "rarity": 0,
     "damage": 15,
+    "damageType": "Melee",
     "sellValue": 1800
   },
   {
@@ -31633,6 +32315,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Gold_Pickaxe.png",
     "rarity": 0,
     "damage": 6,
+    "damageType": "Melee",
     "sellValue": 2000
   },
   {
@@ -31643,6 +32326,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Solar_Flare_Hamaxe.png",
     "rarity": 10,
     "damage": 60,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -31653,6 +32337,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Vortex_Hamaxe.png",
     "rarity": 10,
     "damage": 60,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -31663,6 +32348,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nebula_Hamaxe.png",
     "rarity": 10,
     "damage": 60,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -31673,6 +32359,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stardust_Hamaxe.png",
     "rarity": 10,
     "damage": 60,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -31728,6 +32415,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stardust_Dragon_Staff.png",
     "rarity": 10,
     "damage": 40,
+    "damageType": "Summon",
     "sellValue": 100000
   },
   {
@@ -31810,6 +32498,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Phantasm.png",
     "rarity": 10,
     "damage": 50,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -31820,6 +32509,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Last_Prism.png",
     "rarity": 10,
     "damage": 100,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -31830,6 +32520,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nebula_Blaze.png",
     "rarity": 10,
     "damage": 130,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -31840,6 +32531,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Daybreak.png",
     "rarity": 10,
     "damage": 150,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -31868,6 +32560,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Celebration.png",
     "rarity": 8,
     "damage": 25,
+    "damageType": "Ranged",
     "sellValue": 160000
   },
   {
@@ -31888,6 +32581,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Happy_Grenade.png",
     "rarity": 2,
     "damage": 30,
+    "damageType": "Ranged",
     "sellValue": 50
   },
   {
@@ -32059,6 +32753,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Luminite_Bullet.png",
     "rarity": 9,
     "damage": 20,
+    "damageType": "Ranged",
     "sellValue": 2
   },
   {
@@ -32069,6 +32764,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Luminite_Arrow.png",
     "rarity": 9,
     "damage": 15,
+    "damageType": "Ranged",
     "sellValue": 2
   },
   {
@@ -32079,6 +32775,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lunar_Portal_Staff.png",
     "rarity": 10,
     "damage": 100,
+    "damageType": "Summon",
     "sellValue": 100000
   },
   {
@@ -32089,6 +32786,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lunar_Flare.png",
     "rarity": 10,
     "damage": 100,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -32099,6 +32797,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rainbow_Crystal_Staff.png",
     "rarity": 10,
     "damage": 130,
+    "damageType": "Summon",
     "sellValue": 100000
   },
   {
@@ -33808,6 +34507,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Blue_Phasesaber.png",
     "rarity": 4,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -33818,6 +34518,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Red_Phasesaber.png",
     "rarity": 4,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -33828,6 +34529,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Green_Phasesaber.png",
     "rarity": 4,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -33838,6 +34540,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Purple_Phasesaber.png",
     "rarity": 4,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -33848,6 +34551,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/White_Phasesaber.png",
     "rarity": 4,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -33858,6 +34562,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Yellow_Phasesaber.png",
     "rarity": 4,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -33886,6 +34591,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mandible_Blade.png",
     "rarity": 2,
     "damage": 16,
+    "damageType": "Melee",
     "sellValue": 1000
   },
   {
@@ -33922,6 +34628,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Forbidden_Mask.png",
     "rarity": 5,
+    "defense": 6,
     "sellValue": 50000
   },
   {
@@ -33931,6 +34638,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Forbidden_Robes.png",
     "rarity": 5,
+    "defense": 12,
     "sellValue": 40000
   },
   {
@@ -33940,6 +34648,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Forbidden_Treads.png",
     "rarity": 5,
+    "defense": 8,
     "sellValue": 30000
   },
   {
@@ -33950,6 +34659,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Spirit_Flame.png",
     "rarity": 4,
     "damage": 85,
+    "damageType": "Magic",
     "sellValue": 10000
   },
   {
@@ -34023,6 +34733,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Sky_Fracture.png",
     "rarity": 4,
     "damage": 38,
+    "damageType": "Magic",
     "sellValue": 60000
   },
   {
@@ -34033,6 +34744,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Onyx_Blaster.png",
     "rarity": 4,
     "damage": 24,
+    "damageType": "Ranged",
     "sellValue": 50000
   },
   {
@@ -34114,6 +34826,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Apprentice's_Hat.png",
     "rarity": 8,
+    "defense": 7,
     "sellValue": 30000
   },
   {
@@ -34123,6 +34836,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Apprentice's_Robe.png",
     "rarity": 8,
+    "defense": 15,
     "sellValue": 30000
   },
   {
@@ -34132,6 +34846,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Apprentice's_Trousers.png",
     "rarity": 8,
+    "defense": 10,
     "sellValue": 30000
   },
   {
@@ -34141,6 +34856,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Squire's_Great_Helm.png",
     "rarity": 8,
+    "defense": 13,
     "sellValue": 30000
   },
   {
@@ -34150,6 +34866,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Squire's_Plating.png",
     "rarity": 8,
+    "defense": 27,
     "sellValue": 30000
   },
   {
@@ -34159,6 +34876,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Squire's_Greaves.png",
     "rarity": 8,
+    "defense": 18,
     "sellValue": 30000
   },
   {
@@ -34168,6 +34886,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Huntress's_Wig.png",
     "rarity": 8,
+    "defense": 7,
     "sellValue": 30000
   },
   {
@@ -34177,6 +34896,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Huntress's_Jerkin.png",
     "rarity": 8,
+    "defense": 17,
     "sellValue": 30000
   },
   {
@@ -34186,6 +34906,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Huntress's_Pants.png",
     "rarity": 8,
+    "defense": 12,
     "sellValue": 30000
   },
   {
@@ -34195,6 +34916,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Monk's_Bushy_Brow_Bald_Cap.png",
     "rarity": 8,
+    "defense": 8,
     "sellValue": 30000
   },
   {
@@ -34204,6 +34926,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Monk's_Shirt.png",
     "rarity": 8,
+    "defense": 22,
     "sellValue": 30000
   },
   {
@@ -34213,6 +34936,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Monk's_Pants.png",
     "rarity": 8,
+    "defense": 16,
     "sellValue": 30000
   },
   {
@@ -34303,6 +35027,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flameburst_Rod.png",
     "rarity": 3,
     "damage": 17,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
@@ -34313,6 +35038,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flameburst_Cane.png",
     "rarity": 5,
     "damage": 42,
+    "damageType": "Summon",
     "sellValue": 50000
   },
   {
@@ -34323,6 +35049,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flameburst_Staff.png",
     "rarity": 8,
     "damage": 88,
+    "damageType": "Summon",
     "sellValue": 150000
   },
   {
@@ -34333,6 +35060,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ale_Tosser.png",
     "rarity": 2,
     "damage": 32,
+    "damageType": "Ranged",
     "sellValue": 2500
   },
   {
@@ -34351,6 +35079,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Brand_of_the_Inferno.png",
     "rarity": 5,
     "damage": 95,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -34361,6 +35090,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ballista_Rod.png",
     "rarity": 3,
     "damage": 30,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
@@ -34371,6 +35101,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ballista_Cane.png",
     "rarity": 5,
     "damage": 74,
+    "damageType": "Summon",
     "sellValue": 50000
   },
   {
@@ -34381,6 +35112,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ballista_Staff.png",
     "rarity": 8,
     "damage": 156,
+    "damageType": "Summon",
     "sellValue": 150000
   },
   {
@@ -34391,6 +35123,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flying_Dragon.png",
     "rarity": 8,
     "damage": 180,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -34410,6 +35143,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lightning_Aura_Rod.png",
     "rarity": 3,
     "damage": 4,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
@@ -34420,6 +35154,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lightning_Aura_Cane.png",
     "rarity": 5,
     "damage": 11,
+    "damageType": "Summon",
     "sellValue": 50000
   },
   {
@@ -34430,6 +35165,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lightning_Aura_Staff.png",
     "rarity": 8,
     "damage": 34,
+    "damageType": "Summon",
     "sellValue": 150000
   },
   {
@@ -34440,6 +35176,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Explosive_Trap_Rod.png",
     "rarity": 3,
     "damage": 24,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
@@ -34450,6 +35187,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Explosive_Trap_Cane.png",
     "rarity": 5,
     "damage": 59,
+    "damageType": "Summon",
     "sellValue": 50000
   },
   {
@@ -34460,6 +35198,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Explosive_Trap_Staff.png",
     "rarity": 8,
     "damage": 126,
+    "damageType": "Summon",
     "sellValue": 150000
   },
   {
@@ -34470,6 +35209,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Sleepy_Octopod.png",
     "rarity": 5,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -34480,6 +35220,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ghastly_Glaive.png",
     "rarity": 5,
     "damage": 45,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -34620,6 +35361,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tome_of_Infinite_Wisdom.png",
     "rarity": 5,
     "damage": 36,
+    "damageType": "Magic",
     "sellValue": 10000
   },
   {
@@ -34638,6 +35380,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Phantom_Phoenix.png",
     "rarity": 5,
     "damage": 32,
+    "damageType": "Ranged",
     "sellValue": 10000
   },
   {
@@ -34675,6 +35418,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Sky_Dragon's_Fury.png",
     "rarity": 8,
     "damage": 140,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -34685,6 +35429,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Aerial_Bane.png",
     "rarity": 8,
     "damage": 38,
+    "damageType": "Ranged",
     "sellValue": 50000
   },
   {
@@ -34701,7 +35446,7 @@
     "category": "grab bag",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Treasure_Bag_(Ogre).png",
-    "rarity": -12
+    "rarity": 0
   },
   {
     "id": 3862,
@@ -34709,7 +35454,7 @@
     "category": "grab bag",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Treasure_Bag_(Dark_Mage).png",
-    "rarity": -12
+    "rarity": 0
   },
   {
     "id": 3863,
@@ -34782,6 +35527,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Betsy's_Wrath.png",
     "rarity": 8,
     "damage": 100,
+    "damageType": "Magic",
     "sellValue": 50000
   },
   {
@@ -34791,6 +35537,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Valhalla_Knight's_Helm.png",
     "rarity": 8,
+    "defense": 20,
     "sellValue": 30000
   },
   {
@@ -34800,6 +35547,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Valhalla_Knight's_Breastplate.png",
     "rarity": 8,
+    "defense": 24,
     "sellValue": 30000
   },
   {
@@ -34809,6 +35557,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Valhalla_Knight's_Greaves.png",
     "rarity": 8,
+    "defense": 24,
     "sellValue": 30000
   },
   {
@@ -34818,6 +35567,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Dark_Artist's_Hat.png",
     "rarity": 8,
+    "defense": 7,
     "sellValue": 30000
   },
   {
@@ -34827,6 +35577,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Dark_Artist's_Robes.png",
     "rarity": 8,
+    "defense": 21,
     "sellValue": 30000
   },
   {
@@ -34836,6 +35587,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Dark_Artist's_Leggings.png",
     "rarity": 8,
+    "defense": 14,
     "sellValue": 30000
   },
   {
@@ -34845,6 +35597,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Red_Riding_Hood.png",
     "rarity": 8,
+    "defense": 8,
     "sellValue": 30000
   },
   {
@@ -34854,6 +35607,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Red_Riding_Dress.png",
     "rarity": 8,
+    "defense": 24,
     "sellValue": 30000
   },
   {
@@ -34863,6 +35617,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Red_Riding_Leggings.png",
     "rarity": 8,
+    "defense": 16,
     "sellValue": 30000
   },
   {
@@ -34872,6 +35627,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shinobi_Infiltrator's_Helmet.png",
     "rarity": 8,
+    "defense": 10,
     "sellValue": 30000
   },
   {
@@ -34881,6 +35637,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shinobi_Infiltrator's_Torso.png",
     "rarity": 8,
+    "defense": 26,
     "sellValue": 30000
   },
   {
@@ -34890,6 +35647,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shinobi_Infiltrator's_Pants.png",
     "rarity": 8,
+    "defense": 18,
     "sellValue": 30000
   },
   {
@@ -35317,6 +36075,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Celebration_Mk2.png",
     "rarity": 10,
     "damage": 50,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -35866,6 +36625,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Berserker's_Glove.png",
     "rarity": 5,
+    "defense": 8,
     "sellValue": 100000
   },
   {
@@ -35911,6 +36671,7 @@
     "subcategory": "accessory",
     "imageUrl": "https://terraria.wiki.gg/images/Frozen_Shield.png",
     "rarity": 5,
+    "defense": 6,
     "sellValue": 80000
   },
   {
@@ -35920,6 +36681,7 @@
     "subcategory": "accessory",
     "imageUrl": "https://terraria.wiki.gg/images/Hero_Shield.png",
     "rarity": 5,
+    "defense": 10,
     "sellValue": 100000
   },
   {
@@ -35953,7 +36715,7 @@
     "id": 4002,
     "name": "Molten Quiver",
     "category": "accessory",
-    "subcategory": null,
+    "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Molten_Quiver.png",
     "rarity": 5,
     "sellValue": 75000
@@ -36010,6 +36772,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ultrabright_Helmet.png",
     "rarity": 5,
+    "defense": 4,
     "sellValue": 20000
   },
   {
@@ -36442,7 +37205,7 @@
   {
     "id": 4057,
     "name": "Rain Song",
-    "category": "tool",
+    "category": "miscellaneous",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Rain_Song.png",
     "rarity": 3,
@@ -36456,6 +37219,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Skull_Bow.png",
     "rarity": 3,
     "damage": 8,
+    "damageType": "Ranged",
     "sellValue": 20000
   },
   {
@@ -36466,6 +37230,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Fossil_Pickaxe.png",
     "rarity": 1,
     "damage": 8,
+    "damageType": "Melee",
     "sellValue": 3000
   },
   {
@@ -36476,6 +37241,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Super_Star_Shooter.png",
     "rarity": 3,
     "damage": 60,
+    "damageType": "Ranged",
     "sellValue": 100000
   },
   {
@@ -36486,22 +37252,24 @@
     "imageUrl": "https://terraria.wiki.gg/images/Storm_Spear.png",
     "rarity": 1,
     "damage": 14,
+    "damageType": "Melee",
     "sellValue": 3000
   },
   {
     "id": 4062,
     "name": "Thunder Zapper",
     "category": "weapon",
-    "subcategory": null,
+    "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Thunder_Zapper.png",
     "rarity": 1,
     "damage": 24,
+    "damageType": "Magic",
     "sellValue": 3000
   },
   {
     "id": 4063,
     "name": "Drum Set",
-    "category": null,
+    "category": "furniture",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Drum_Set.png",
     "rarity": 1,
@@ -37232,6 +38000,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Terragrim.png",
     "rarity": 2,
     "damage": 17,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -38225,6 +38994,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Amber_Robe.png",
     "rarity": 2,
+    "defense": 3,
     "sellValue": 30000
   },
   {
@@ -38244,6 +39014,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Orange_Phaseblade.png",
     "rarity": 1,
     "damage": 26,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -38254,6 +39025,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Orange_Phasesaber.png",
     "rarity": 4,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -38345,6 +39117,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Sanguine_Staff.png",
     "rarity": 4,
     "damage": 35,
+    "damageType": "Summon",
     "sellValue": 50000
   },
   {
@@ -38354,7 +39127,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Blood_Thorn.png",
     "rarity": 4,
-    "damage": 34,
+    "damage": 40,
+    "damageType": "Magic",
     "sellValue": 40000
   },
   {
@@ -38373,6 +39147,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Drippler_Crippler.png",
     "rarity": 4,
     "damage": 110,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -38383,6 +39158,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Vampire_Frog_Staff.png",
     "rarity": 3,
     "damage": 11,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
@@ -38452,6 +39228,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Finch_Staff.png",
     "rarity": 1,
     "damage": 7,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
@@ -38776,6 +39553,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Haemorrhaxe.png",
     "rarity": 4,
     "damage": 30,
+    "damageType": "Melee",
     "sellValue": 20000
   },
   {
@@ -39005,6 +39783,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Paper_Airplane.png",
     "rarity": 0,
     "damage": 4,
+    "damageType": "Ranged",
     "sellValue": 1000
   },
   {
@@ -39015,13 +39794,14 @@
     "imageUrl": "https://terraria.wiki.gg/images/White_Paper_Airplane.png",
     "rarity": 0,
     "damage": 4,
+    "damageType": "Ranged",
     "sellValue": 1000
   },
   {
     "id": 4345,
     "name": "Can Of Worms",
     "category": "grab bag",
-    "subcategory": "crafting material",
+    "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Can_Of_Worms.png",
     "rarity": 1,
     "sellValue": 500
@@ -39043,6 +39823,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Gray_Zapinator.png",
     "rarity": 2,
     "damage": 42,
+    "damageType": "Magic",
     "sellValue": 34000
   },
   {
@@ -39053,6 +39834,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Orange_Zapinator.png",
     "rarity": 5,
     "damage": 100,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -39258,7 +40040,7 @@
   {
     "id": 4372,
     "name": "Ivy",
-    "category": "tool",
+    "category": "miscellaneous",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ivy.png",
     "rarity": 3,
@@ -39340,6 +40122,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Blood_Rain_Bow.png",
     "rarity": 3,
     "damage": 14,
+    "damageType": "Ranged",
     "sellValue": 10000
   },
   {
@@ -39908,6 +40691,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cluster_Rocket_I.png",
     "rarity": 0,
     "damage": 50,
+    "damageType": "Ranged",
     "sellValue": 150
   },
   {
@@ -39918,6 +40702,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cluster_Rocket_II.png",
     "rarity": 0,
     "damage": 50,
+    "damageType": "Ranged",
     "sellValue": 300
   },
   {
@@ -39928,6 +40713,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Wet_Rocket.png",
     "rarity": 0,
     "damage": 40,
+    "damageType": "Ranged",
     "sellValue": 1000
   },
   {
@@ -39938,6 +40724,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lava_Rocket.png",
     "rarity": 0,
     "damage": 40,
+    "damageType": "Ranged",
     "sellValue": 1000
   },
   {
@@ -39948,6 +40735,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Honey_Rocket.png",
     "rarity": 0,
     "damage": 40,
+    "damageType": "Ranged",
     "sellValue": 1000
   },
   {
@@ -40021,6 +40809,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mini_Nuke_I.png",
     "rarity": 0,
     "damage": 75,
+    "damageType": "Ranged",
     "sellValue": 100
   },
   {
@@ -40031,6 +40820,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mini_Nuke_II.png",
     "rarity": 0,
     "damage": 75,
+    "damageType": "Ranged",
     "sellValue": 200
   },
   {
@@ -40041,6 +40831,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Dry_Rocket.png",
     "rarity": 0,
     "damage": 40,
+    "damageType": "Ranged",
     "sellValue": 1000
   },
   {
@@ -40076,6 +40867,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Gladius.png",
     "rarity": 1,
     "damage": 15,
+    "damageType": "Melee",
     "sellValue": 3000
   },
   {
@@ -41313,6 +42105,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Desert_Tiger_Staff.png",
     "rarity": 8,
     "damage": 41,
+    "damageType": "Summon",
     "sellValue": 200000
   },
   {
@@ -41894,12 +42687,13 @@
     "imageUrl": "https://terraria.wiki.gg/images/Leather_Whip.png",
     "rarity": 1,
     "damage": 14,
-    "sellValue": 20000
+    "damageType": "Summon",
+    "sellValue": 10000
   },
   {
     "id": 4673,
     "name": "Drumstick",
-    "category": null,
+    "category": "miscellaneous",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Drumstick.png",
     "rarity": 0,
@@ -41949,6 +42743,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Durendal.png",
     "rarity": 5,
     "damage": 55,
+    "damageType": "Summon",
     "sellValue": 46000
   },
   {
@@ -41959,6 +42754,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Morning_Star.png",
     "rarity": 8,
     "damage": 160,
+    "damageType": "Summon",
     "sellValue": 60000
   },
   {
@@ -41969,6 +42765,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Dark_Harvest.png",
     "rarity": 8,
     "damage": 110,
+    "damageType": "Summon",
     "sellValue": 100000
   },
   {
@@ -42171,6 +42968,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Quad-Barrel_Shotgun.png",
     "rarity": 3,
     "damage": 14,
+    "damageType": "Ranged",
     "sellValue": 70000
   },
   {
@@ -42208,6 +43006,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tragic_Umbrella.png",
     "rarity": 2,
     "damage": 15,
+    "damageType": "Melee",
     "sellValue": 20000
   },
   {
@@ -42244,6 +43043,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Gravedigger's_Shovel.png",
     "rarity": 1,
     "damage": 12,
+    "damageType": "Melee",
     "sellValue": 1000
   },
   {
@@ -42280,6 +43080,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Stellar_Tune.png",
     "rarity": 5,
     "damage": 85,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -42339,6 +43140,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/First_Fractal.png",
     "rarity": 10,
     "damage": 190,
+    "damageType": "Melee",
     "sellValue": 200000
   },
   {
@@ -42664,6 +43466,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Blade_Staff.png",
     "rarity": 5,
     "damage": 6,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
@@ -42683,6 +43486,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Sergeant_United_Shield.png",
     "rarity": 5,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 70000
   },
   {
@@ -42719,6 +43523,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shroomerang.png",
     "rarity": 1,
     "damage": 23,
+    "damageType": "Melee",
     "sellValue": 6000
   },
   {
@@ -42729,6 +43534,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tree_Globe.png",
     "rarity": 2,
     "damage": -1,
+    "damageType": "Ranged",
     "sellValue": 6000
   },
   {
@@ -42739,6 +43545,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/World_Globe.png",
     "rarity": 2,
     "damage": -1,
+    "damageType": "Ranged",
     "sellValue": 6000
   },
   {
@@ -42934,6 +43741,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Jousting_Lance.png",
     "rarity": 4,
     "damage": 60,
+    "damageType": "Melee",
     "sellValue": 12000
   },
   {
@@ -42944,6 +43752,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shadow_Jousting_Lance.png",
     "rarity": 8,
     "damage": 130,
+    "damageType": "Melee",
     "sellValue": 100000
   },
   {
@@ -42954,6 +43763,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Hallowed_Jousting_Lance.png",
     "rarity": 5,
     "damage": 90,
+    "damageType": "Melee",
     "sellValue": 46000
   },
   {
@@ -43207,6 +44017,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Combat_Wrench.png",
     "rarity": 2,
     "damage": 25,
+    "damageType": "Melee",
     "sellValue": 5000
   },
   {
@@ -43703,6 +44514,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Hallowed_Hood.png",
     "rarity": 5,
+    "defense": 1,
     "sellValue": 50000
   },
   {
@@ -43896,6 +44708,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Hallowed_Mask.png",
     "rarity": 5,
+    "defense": 24,
     "sellValue": 50000
   },
   {
@@ -43905,6 +44718,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Hallowed_Helmet.png",
     "rarity": 5,
+    "defense": 9,
     "sellValue": 50000
   },
   {
@@ -43914,6 +44728,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Hallowed_Headgear.png",
     "rarity": 5,
+    "defense": 5,
     "sellValue": 50000
   },
   {
@@ -43923,6 +44738,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Hallowed_Hood.png",
     "rarity": 5,
+    "defense": 1,
     "sellValue": 50000
   },
   {
@@ -43932,6 +44748,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Hallowed_Plate_Mail.png",
     "rarity": 5,
+    "defense": 15,
     "sellValue": 40000
   },
   {
@@ -43941,6 +44758,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ancient_Hallowed_Greaves.png",
     "rarity": 5,
+    "defense": 11,
     "sellValue": 30000
   },
   {
@@ -44034,6 +44852,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cool_Whip.png",
     "rarity": 4,
     "damage": 45,
+    "damageType": "Summon",
     "sellValue": 40000
   },
   {
@@ -44044,6 +44863,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Firecracker.png",
     "rarity": 4,
     "damage": 37,
+    "damageType": "Summon",
     "sellValue": 30000
   },
   {
@@ -44054,6 +44874,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Snapthorn.png",
     "rarity": 3,
     "damage": 18,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
@@ -44064,6 +44885,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Kaleidoscope.png",
     "rarity": 8,
     "damage": 170,
+    "damageType": "Summon",
     "sellValue": 50000
   },
   {
@@ -44074,6 +44896,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tungsten_Bullet.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Ranged",
     "sellValue": 3
   },
   {
@@ -44147,6 +44970,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Starlight.png",
     "rarity": 8,
     "damage": 80,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -44409,6 +45233,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Nightglow.png",
     "rarity": 8,
     "damage": 50,
+    "damageType": "Magic",
     "sellValue": 50000
   },
   {
@@ -44419,6 +45244,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Eventide.png",
     "rarity": 8,
     "damage": 50,
+    "damageType": "Ranged",
     "sellValue": 50000
   },
   {
@@ -44447,6 +45273,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Zenith.png",
     "rarity": 10,
     "damage": 190,
+    "damageType": "Melee",
     "sellValue": 200000
   },
   {
@@ -44677,6 +45504,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Crystal_Assassin_Hood.png",
     "rarity": 5,
+    "defense": 12,
     "sellValue": 20000
   },
   {
@@ -44686,6 +45514,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Crystal_Assassin_Shirt.png",
     "rarity": 5,
+    "defense": 14,
     "sellValue": 20000
   },
   {
@@ -44695,6 +45524,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Crystal_Assassin_Pants.png",
     "rarity": 5,
+    "defense": 10,
     "sellValue": 20000
   },
   {
@@ -44848,6 +45678,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Moon_Lord_Legs.png",
     "rarity": 2,
+    "defense": 3,
     "sellValue": 20000
   },
   {
@@ -44885,6 +45716,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Terraprisma.png",
     "rarity": 5,
     "damage": 90,
+    "damageType": "Summon",
     "sellValue": 200000
   },
   {
@@ -44903,6 +45735,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Dead_Man's_Sweater.png",
     "rarity": 2,
+    "defense": 4,
     "sellValue": 2000
   },
   {
@@ -44940,6 +45773,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mace.png",
     "rarity": 1,
     "damage": 18,
+    "damageType": "Melee",
     "sellValue": 20000
   },
   {
@@ -44950,6 +45784,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flaming_Mace.png",
     "rarity": 1,
     "damage": 18,
+    "damageType": "Melee",
     "sellValue": 20000
   },
   {
@@ -45268,12 +46103,11 @@
   },
   {
     "id": 5048,
-    "name": "Wandering Jingasa",
-    "category": "vanity",
+    "name": "Shiny Black Slab",
+    "category": "pet summon",
     "subcategory": null,
-    "imageUrl": "https://terraria.wiki.gg/images/Wandering_Jingasa.png",
-    "rarity": 2,
-    "sellValue": 100
+    "imageUrl": "https://terraria.wiki.gg/images/Shiny_Black_Slab.png",
+    "rarity": 5
   },
   {
     "id": 5049,
@@ -45304,12 +46138,11 @@
   },
   {
     "id": 5052,
-    "name": "Timeless Traveler's Cloak",
-    "category": "vanity",
+    "name": "Rainbow Piece",
+    "category": "crafting material",
     "subcategory": null,
-    "imageUrl": "https://terraria.wiki.gg/images/Timeless_Traveler's_Cloak.png",
-    "rarity": 2,
-    "sellValue": 100
+    "imageUrl": "https://terraria.wiki.gg/images/Rainbow_Piece.png",
+    "rarity": 1
   },
   {
     "id": 5053,
@@ -45425,6 +46258,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Resonance_Scepter.png",
     "rarity": 5,
     "damage": 70,
+    "damageType": "Magic",
     "sellValue": 100000
   },
   {
@@ -45452,6 +46286,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Flinx_Fur_Coat.png",
     "rarity": 2,
+    "defense": 1,
     "sellValue": 25000
   },
   {
@@ -45462,6 +46297,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flinx_Staff.png",
     "rarity": 3,
     "damage": 8,
+    "damageType": "Summon",
     "sellValue": 5000
   },
   {
@@ -45508,6 +46344,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Spinal_Tap.png",
     "rarity": 2,
     "damage": 29,
+    "damageType": "Summon",
     "sellValue": 15000
   },
   {
@@ -45688,6 +46525,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Tentacle_Spike.png",
     "rarity": 2,
     "damage": 20,
+    "damageType": "Melee",
     "sellValue": 5000
   },
   {
@@ -45698,6 +46536,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Lucy_the_Axe.png",
     "rarity": 2,
     "damage": 27,
+    "damageType": "Melee",
     "sellValue": 15000
   },
   {
@@ -45708,6 +46547,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ham_Bat.png",
     "rarity": 4,
     "damage": 57,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -45718,6 +46558,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Bat_Bat.png",
     "rarity": 2,
     "damage": 36,
+    "damageType": "Melee",
     "sellValue": 2500
   },
   {
@@ -45871,6 +46712,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Abigail's_Flower.png",
     "rarity": 3,
     "damage": 6,
+    "damageType": "Summon",
     "sellValue": 5000
   },
   {
@@ -45899,6 +46741,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Pew-matic_Horn.png",
     "rarity": 2,
     "damage": 20,
+    "damageType": "Ranged",
     "sellValue": 15000
   },
   {
@@ -45909,6 +46752,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Weather_Pain.png",
     "rarity": 2,
     "damage": 13,
+    "damageType": "Magic",
     "sellValue": 15000
   },
   {
@@ -45919,6 +46763,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Houndius_Shootius.png",
     "rarity": 2,
     "damage": 24,
+    "damageType": "Summon",
     "sellValue": 15000
   },
   {
@@ -46007,6 +46852,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flymeal.png",
     "rarity": 2,
     "damage": 15,
+    "damageType": "Melee",
     "sellValue": 3500
   },
   {
@@ -46169,6 +47015,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Wand_of_Frosting.png",
     "rarity": 1,
     "damage": 15,
+    "damageType": "Magic",
     "sellValue": 1500
   },
   {
@@ -47349,7 +48196,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ash_Wood_Helmet.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 2
   },
   {
     "id": 5280,
@@ -47357,7 +48205,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ash_Wood_Breastplate.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 3
   },
   {
     "id": 5281,
@@ -47365,7 +48214,8 @@
     "category": "armor",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Ash_Wood_Greaves.png",
-    "rarity": 0
+    "rarity": 0,
+    "defense": 2
   },
   {
     "id": 5282,
@@ -47375,6 +48225,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ash_Wood_Bow.png",
     "rarity": 0,
     "damage": 10,
+    "damageType": "Ranged",
     "sellValue": 20
   },
   {
@@ -47385,6 +48236,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ash_Wood_Hammer.png",
     "rarity": 0,
     "damage": 9,
+    "damageType": "Melee",
     "sellValue": 10
   },
   {
@@ -47395,6 +48247,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Ash_Wood_Sword.png",
     "rarity": 0,
     "damage": 13,
+    "damageType": "Melee",
     "sellValue": 20
   },
   {
@@ -47405,6 +48258,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Moon_Globe.png",
     "rarity": 2,
     "damage": -1,
+    "damageType": "Ranged",
     "sellValue": 6000
   },
   {
@@ -47487,6 +48341,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Hive-Five.png",
     "rarity": 3,
     "damage": 24,
+    "damageType": "Melee",
     "sellValue": 7000
   },
   {
@@ -47497,6 +48352,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Axe_of_Regrowth.png",
     "rarity": 4,
     "damage": 20,
+    "damageType": "Melee",
     "sellValue": 15000
   },
   {
@@ -47525,6 +48381,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Trimarang.png",
     "rarity": 3,
     "damage": 21,
+    "damageType": "Melee",
     "sellValue": 20000
   },
   {
@@ -47966,6 +48823,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shimmer_Arrow.png",
     "rarity": 2,
     "damage": 12,
+    "damageType": "Ranged",
     "sellValue": 2
   },
   {
@@ -48211,6 +49069,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Spelunker_Flare.png",
     "rarity": 1,
     "damage": 1,
+    "damageType": "Ranged",
     "sellValue": 30
   },
   {
@@ -48221,6 +49080,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cursed_Flare.png",
     "rarity": 0,
     "damage": 1,
+    "damageType": "Ranged",
     "sellValue": 1
   },
   {
@@ -48231,6 +49091,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rainbow_Flare.png",
     "rarity": 0,
     "damage": 1,
+    "damageType": "Ranged",
     "sellValue": 1
   },
   {
@@ -48241,6 +49102,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Shimmer_Flare.png",
     "rarity": 0,
     "damage": 1,
+    "damageType": "Ranged",
     "sellValue": 1
   },
   {
@@ -48260,6 +49122,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Waffle's_Iron.png",
     "rarity": 5,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 30000
   },
   {
@@ -48874,6 +49737,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Mushroom_Staff.png",
     "rarity": 2,
     "damage": 8,
+    "damageType": "Summon",
     "sellValue": 3000
   },
   {
@@ -48911,6 +49775,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Barrel_Launcher.png",
     "rarity": 4,
     "damage": 100,
+    "damageType": "Ranged",
     "sellValue": 40000
   },
   {
@@ -48921,6 +49786,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Killing_Deck.png",
     "rarity": 4,
     "damage": 22,
+    "damageType": "Magic",
     "sellValue": 40000
   },
   {
@@ -48931,6 +49797,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flint.png",
     "rarity": 4,
     "damage": 70,
+    "damageType": "Melee",
     "sellValue": 40000
   },
   {
@@ -48941,6 +49808,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Barnacle_Staff.png",
     "rarity": 4,
     "damage": 33,
+    "damageType": "Summon",
     "sellValue": 40000
   },
   {
@@ -49030,6 +49898,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Cobwhip.png",
     "rarity": 1,
     "damage": 9,
+    "damageType": "Summon",
     "sellValue": 150
   },
   {
@@ -49040,6 +49909,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Soulscourge.png",
     "rarity": 1,
     "damage": 17,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
@@ -49050,6 +49920,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Vasculash.png",
     "rarity": 1,
     "damage": 19,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
@@ -49060,6 +49931,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Starcrash.png",
     "rarity": 2,
     "damage": 18,
+    "damageType": "Summon",
     "sellValue": 25000
   },
   {
@@ -49069,7 +49941,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Vulgar_Display_of_Flower.png",
     "rarity": 7,
-    "damage": 75,
+    "damage": 50,
+    "damageType": "Summon",
     "sellValue": 60000
   },
   {
@@ -49080,6 +49953,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Electric_Eel.png",
     "rarity": 8,
     "damage": 150,
+    "damageType": "Summon",
     "sellValue": 50000
   },
   {
@@ -49090,6 +49964,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Constellation.png",
     "rarity": 10,
     "damage": 130,
+    "damageType": "Summon",
     "sellValue": 100000
   },
   {
@@ -49100,6 +49975,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Possession.png",
     "rarity": 10,
     "damage": 110,
+    "damageType": "Summon",
     "sellValue": 100000
   },
   {
@@ -49220,7 +50096,7 @@
   {
     "id": 5495,
     "name": "Shimmer Gun",
-    "category": "miscellaneous",
+    "category": "tool",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Shimmer_Gun.png",
     "rarity": 5,
@@ -49439,6 +50315,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Axearang.png",
     "rarity": 4,
     "damage": 20,
+    "damageType": "Melee",
     "sellValue": 15000
   },
   {
@@ -49481,7 +50358,17 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Chlorophyte_Visor.png",
     "rarity": 7,
+    "defense": 2,
     "sellValue": 60000
+  },
+  {
+    "id": 5525,
+    "name": "Cursed Piper Flute",
+    "category": "mount summon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Cursed_Piper_Flute.png",
+    "rarity": 8,
+    "sellValue": 15000
   },
   {
     "id": 5526,
@@ -49491,6 +50378,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Flairon.png",
     "rarity": 8,
     "damage": 132,
+    "damageType": "Melee",
     "sellValue": 50000
   },
   {
@@ -49571,6 +50459,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Pink_Phaseblade.png",
     "rarity": 1,
     "damage": 26,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -49581,6 +50470,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Pink_Phasesaber.png",
     "rarity": 4,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -50014,6 +50904,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Prospector_Helmet.png",
     "rarity": 4,
+    "defense": 10,
     "sellValue": 25000
   },
   {
@@ -50023,6 +50914,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Prospector_Shirt.png",
     "rarity": 4,
+    "defense": 12,
     "sellValue": 25000
   },
   {
@@ -50032,6 +50924,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Prospector_Pants.png",
     "rarity": 4,
+    "defense": 11,
     "sellValue": 25000
   },
   {
@@ -50041,6 +50934,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Captain_Hat.png",
     "rarity": 4,
+    "defense": 10,
     "sellValue": 25000
   },
   {
@@ -50050,6 +50944,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Captain_Vest.png",
     "rarity": 4,
+    "defense": 12,
     "sellValue": 25000
   },
   {
@@ -50059,6 +50954,7 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Captain_Pants.png",
     "rarity": 4,
+    "defense": 11,
     "sellValue": 25000
   },
   {
@@ -50659,27 +51555,29 @@
     "id": 5663,
     "name": "Cattiva",
     "category": "weapon",
-    "subcategory": null,
+    "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Cattiva.png",
     "rarity": 5,
-    "damage": 9,
+    "damage": 11,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
     "id": 5664,
     "name": "Foxparks",
     "category": "weapon",
-    "subcategory": null,
+    "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Foxparks.png",
     "rarity": 4,
     "damage": 20,
+    "damageType": "Summon",
     "sellValue": 10000
   },
   {
     "id": 5665,
     "name": "Chillet",
     "category": "mount summon",
-    "subcategory": null,
+    "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Chillet.png",
     "rarity": 1,
     "sellValue": 100
@@ -50688,7 +51586,7 @@
     "id": 5666,
     "name": "Chillet Ignis",
     "category": "mount summon",
-    "subcategory": null,
+    "subcategory": "crafting material",
     "imageUrl": "https://terraria.wiki.gg/images/Chillet_Ignis.png",
     "rarity": 5,
     "sellValue": 100
@@ -50696,7 +51594,7 @@
   {
     "id": 5667,
     "name": "Digtoise",
-    "category": null,
+    "category": "crafting material",
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Digtoise.png",
     "rarity": 3,
@@ -50718,6 +51616,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/True_Copper_Shortsword.png",
     "rarity": 10,
     "damage": 190,
+    "damageType": "Melee",
     "sellValue": 200000
   },
   {
@@ -50728,6 +51627,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rainbow_Phaseblade.gif",
     "rarity": 1,
     "damage": 26,
+    "damageType": "Melee",
     "sellValue": 5400
   },
   {
@@ -50738,6 +51638,7 @@
     "imageUrl": "https://terraria.wiki.gg/images/Rainbow_Phasesaber.gif",
     "rarity": 4,
     "damage": 50,
+    "damageType": "Melee",
     "sellValue": 10000
   },
   {
@@ -50882,7 +51783,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Slime_Spear.png",
     "rarity": 0,
-    "damage": 9,
+    "damage": 12,
+    "damageType": "Melee",
     "sellValue": 50
   },
   {
@@ -50892,7 +51794,8 @@
     "subcategory": null,
     "imageUrl": "https://terraria.wiki.gg/images/Slime_Whip.png",
     "rarity": 1,
-    "damage": 12,
+    "damage": 15,
+    "damageType": "Summon",
     "sellValue": 50
   },
   {
@@ -54419,5 +55322,467 @@
     "imageUrl": "https://terraria.wiki.gg/images/Music_Box_(Silence).png",
     "rarity": 4,
     "sellValue": 20000
+  },
+  {
+    "id": 6147,
+    "name": "Giant Tiki",
+    "category": null,
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Giant_Tiki.png",
+    "rarity": 1,
+    "sellValue": 500
+  },
+  {
+    "id": 6148,
+    "name": "Trusty Cattiva",
+    "category": "weapon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Trusty_Cattiva.png",
+    "rarity": 5,
+    "damage": 22,
+    "damageType": "Summon",
+    "sellValue": 10000
+  },
+  {
+    "id": 6149,
+    "name": "Trusty Foxparks",
+    "category": "weapon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Trusty_Foxparks.png",
+    "rarity": 4,
+    "damage": 40,
+    "damageType": "Summon",
+    "sellValue": 10000
+  },
+  {
+    "id": 6150,
+    "name": "Trusty Chillet",
+    "category": "mount summon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Trusty_Chillet.png",
+    "rarity": 1,
+    "sellValue": 100
+  },
+  {
+    "id": 6151,
+    "name": "Trusty Chillet Ignis",
+    "category": "mount summon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Trusty_Chillet_Ignis.png",
+    "rarity": 5,
+    "sellValue": 100
+  },
+  {
+    "id": 6152,
+    "name": "Daybloom Staff",
+    "category": "weapon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Daybloom_Staff.png",
+    "rarity": 1,
+    "damage": 8,
+    "damageType": "Magic",
+    "sellValue": 20
+  },
+  {
+    "id": 6153,
+    "name": "Glacier Fang",
+    "category": "weapon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Glacier_Fang.png",
+    "rarity": 1,
+    "damage": 11,
+    "damageType": "Magic",
+    "sellValue": 4000
+  },
+  {
+    "id": 6154,
+    "name": "Mystic Bloom",
+    "category": "weapon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Mystic_Bloom.png",
+    "rarity": 3,
+    "damage": 20,
+    "damageType": "Magic",
+    "sellValue": 15000
+  },
+  {
+    "id": 6155,
+    "name": "Lightning Strike",
+    "category": "weapon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Lightning_Strike.png",
+    "rarity": 6,
+    "damage": 150,
+    "damageType": "Magic",
+    "sellValue": 10000
+  },
+  {
+    "id": 6156,
+    "name": "Silver Bracer",
+    "category": "accessory",
+    "subcategory": "crafting material",
+    "imageUrl": "https://terraria.wiki.gg/images/Silver_Bracer.png",
+    "rarity": 2,
+    "sellValue": 17500
+  },
+  {
+    "id": 6157,
+    "name": "Snake Band",
+    "category": "accessory",
+    "subcategory": "crafting material",
+    "imageUrl": "https://terraria.wiki.gg/images/Snake_Band.png",
+    "rarity": 4,
+    "sellValue": 20000
+  },
+  {
+    "id": 6158,
+    "name": "Mobius Strip",
+    "category": "accessory",
+    "subcategory": "crafting material",
+    "imageUrl": "https://terraria.wiki.gg/images/Mobius_Strip.png",
+    "rarity": 7,
+    "sellValue": 50000
+  },
+  {
+    "id": 6159,
+    "name": "Wicked Armlet",
+    "category": "accessory",
+    "subcategory": "crafting material",
+    "imageUrl": "https://terraria.wiki.gg/images/Wicked_Armlet.png",
+    "rarity": 4,
+    "sellValue": 20000
+  },
+  {
+    "id": 6160,
+    "name": "Razortip",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Razortip.png",
+    "rarity": 3,
+    "sellValue": 10000
+  },
+  {
+    "id": 6161,
+    "name": "Clay Bud Staff",
+    "category": "weapon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Clay_Bud_Staff.png",
+    "rarity": 1,
+    "damage": 5,
+    "damageType": "Summon",
+    "sellValue": 100
+  },
+  {
+    "id": 6162,
+    "name": "Ouroboros Ring",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Ouroboros_Ring.png",
+    "rarity": 8,
+    "sellValue": 35000
+  },
+  {
+    "id": 6163,
+    "name": "Twilight Grasp",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Twilight_Grasp.png",
+    "rarity": 5,
+    "sellValue": 22500
+  },
+  {
+    "id": 6164,
+    "name": "Ruinous Staff",
+    "category": "weapon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Ruinous_Staff.png",
+    "rarity": 4,
+    "damage": 40,
+    "damageType": "Summon",
+    "sellValue": 10000
+  },
+  {
+    "id": 6165,
+    "name": "Poison Barb",
+    "category": "accessory",
+    "subcategory": "crafting material",
+    "imageUrl": "https://terraria.wiki.gg/images/Poison_Barb.png",
+    "rarity": 1,
+    "sellValue": 7500
+  },
+  {
+    "id": 6166,
+    "name": "Harpy Charm",
+    "category": "accessory",
+    "subcategory": "crafting material",
+    "imageUrl": "https://terraria.wiki.gg/images/Harpy_Charm.png",
+    "rarity": 2,
+    "sellValue": 6500
+  },
+  {
+    "id": 6167,
+    "name": "Snapping Stone",
+    "category": "accessory",
+    "subcategory": "crafting material",
+    "imageUrl": "https://terraria.wiki.gg/images/Snapping_Stone.png",
+    "rarity": 3,
+    "sellValue": 15000
+  },
+  {
+    "id": 6168,
+    "name": "Chaos Cylinder",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Chaos_Cylinder.png",
+    "rarity": 5,
+    "sellValue": 80000
+  },
+  {
+    "id": 6169,
+    "name": "Chaos Cylinder (Full)",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Chaos_Cylinder_(Full).png",
+    "rarity": 5,
+    "sellValue": 80000
+  },
+  {
+    "id": 6170,
+    "name": "Enchanted Timer",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Enchanted_Timer.png",
+    "rarity": 3,
+    "sellValue": 10000
+  },
+  {
+    "id": 6171,
+    "name": "Bejeweled Staff",
+    "category": "weapon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Bejeweled_Staff.png",
+    "rarity": 5,
+    "damage": 27,
+    "damageType": "Magic",
+    "sellValue": 10000
+  },
+  {
+    "id": 6172,
+    "name": "Heavy Sling",
+    "category": "accessory",
+    "subcategory": "crafting material",
+    "imageUrl": "https://terraria.wiki.gg/images/Heavy_Sling.png",
+    "rarity": 5,
+    "sellValue": 10000
+  },
+  {
+    "id": 6173,
+    "name": "Arc Surge",
+    "category": "weapon",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Arc_Surge.png",
+    "rarity": 10,
+    "damage": 180,
+    "damageType": "Magic",
+    "sellValue": 10000
+  },
+  {
+    "id": 6174,
+    "name": "Trusty Digtoise",
+    "category": null,
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Trusty_Digtoise.png",
+    "rarity": 3,
+    "sellValue": 10000
+  },
+  {
+    "id": 6175,
+    "name": "Scout's Sling",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Scout's_Sling.png",
+    "rarity": 7,
+    "sellValue": 42500
+  },
+  {
+    "id": 6176,
+    "name": "Templar's Sling",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Templar's_Sling.png",
+    "rarity": 8,
+    "sellValue": 37500
+  },
+  {
+    "id": 6177,
+    "name": "Royal Guard's Harness",
+    "category": "shield",
+    "subcategory": "accessory",
+    "imageUrl": "https://terraria.wiki.gg/images/Royal_Guard's_Harness.png",
+    "rarity": 6,
+    "defense": 1,
+    "sellValue": 15000
+  },
+  {
+    "id": 6178,
+    "name": "Pyroclastic Stone",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Pyroclastic_Stone.png",
+    "rarity": 4,
+    "sellValue": 20000
+  },
+  {
+    "id": 6179,
+    "name": "Armlet Of Ruin",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Armlet_Of_Ruin.png",
+    "rarity": 5,
+    "sellValue": 20000
+  },
+  {
+    "id": 6180,
+    "name": "Seraph Necklace",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Seraph_Necklace.png",
+    "rarity": 5,
+    "sellValue": 15000
+  },
+  {
+    "id": 6181,
+    "name": "Phoenix Quiver",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Phoenix_Quiver.png",
+    "rarity": 6,
+    "sellValue": 45000
+  },
+  {
+    "id": 6182,
+    "name": "Wicked Claws",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Wicked_Claws.png",
+    "rarity": 4,
+    "sellValue": 15000
+  },
+  {
+    "id": 6183,
+    "name": "Silver Shield",
+    "category": "shield",
+    "subcategory": "accessory",
+    "imageUrl": "https://terraria.wiki.gg/images/Silver_Shield.png",
+    "rarity": 3,
+    "defense": 2,
+    "sellValue": 17500
+  },
+  {
+    "id": 6184,
+    "name": "Sweet Barb",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Sweet_Barb.png",
+    "rarity": 3,
+    "sellValue": 15000
+  },
+  {
+    "id": 6185,
+    "name": "Catalyst Band",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Catalyst_Band.png",
+    "rarity": 5,
+    "sellValue": 15000
+  },
+  {
+    "id": 6186,
+    "name": "Druidic Serpent Cloak",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Druidic_Serpent_Cloak.png",
+    "rarity": 5,
+    "sellValue": 20000
+  },
+  {
+    "id": 6187,
+    "name": "Crossed Heart Necklace",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Crossed_Heart_Necklace.png",
+    "rarity": 5,
+    "sellValue": 15000
+  },
+  {
+    "id": 6188,
+    "name": "Restoration Shield",
+    "category": "shield",
+    "subcategory": "accessory",
+    "imageUrl": "https://terraria.wiki.gg/images/Restoration_Shield.png",
+    "rarity": 2,
+    "defense": 1,
+    "sellValue": 15000
+  },
+  {
+    "id": 6189,
+    "name": "Mystic Arts Sash",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Mystic_Arts_Sash.png",
+    "rarity": 8,
+    "sellValue": 20000
+  },
+  {
+    "id": 6190,
+    "name": "Guide to Old World Parkour",
+    "category": "tool",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Guide_to_Old_World_Parkour.png",
+    "rarity": 10,
+    "sellValue": 70000
+  },
+  {
+    "id": 6191,
+    "name": "Little Kinship Peach",
+    "category": "crafting material",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Little_Kinship_Peach.png",
+    "rarity": 5
+  },
+  {
+    "id": 6192,
+    "name": "Kinship Peach",
+    "category": "crafting material",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Kinship_Peach.png",
+    "rarity": 7
+  },
+  {
+    "id": 6193,
+    "name": "Chaos Cylinder (Random)",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Chaos_Cylinder_(Random).png",
+    "rarity": 5,
+    "sellValue": 80000
+  },
+  {
+    "id": 6194,
+    "name": "Chaos Cylinder (Simple)",
+    "category": "accessory",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Chaos_Cylinder_(Simple).png",
+    "rarity": 5,
+    "sellValue": 80000
+  },
+  {
+    "id": 6195,
+    "name": "Guide to Old World Parkour (Inactive)",
+    "category": "tool",
+    "subcategory": null,
+    "imageUrl": "https://terraria.wiki.gg/images/Guide_to_Old_World_Parkour_(Inactive).png",
+    "rarity": 10,
+    "sellValue": 70000
   }
 ]

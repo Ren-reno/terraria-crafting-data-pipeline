@@ -67,6 +67,32 @@ def parse_damage(damage_raw):
         return None
 
 
+def parse_defense(defense_raw):
+    """Confirmado contra datos reales (500 filas de muestra, itemid 1-501):
+    siempre viene como entero limpio, sin HTML mezclado -- a diferencia de
+    'sell'/'rare', no necesita regex. Mismo patrón que parse_damage.
+    """
+    if defense_raw in (None, ""):
+        return None
+    try:
+        return int(str(defense_raw).strip())
+    except ValueError:
+        return None
+
+
+def parse_damage_type(damage_type_raw):
+    """Confirmado contra datos reales: valores vistos son 'Melee', 'Ranged',
+    'Magic', 'Summon' (con mayúscula inicial). 'Thrown' existe en la lógica
+    del módulo Iteminfo de la wiki pero no se confirmó en una fila real
+    todavía -- se acepta igual si aparece, sin lista cerrada de valores
+    válidos (evitar descartar un valor legítimo por no estar en una lista
+    hardcodeada). Ver test correspondiente para el set de valores vigilado.
+    """
+    if damage_type_raw in (None, ""):
+        return None
+    return decode_text(damage_type_raw)
+
+
 def parse_rare(rare_raw):
     """Parsea 'rare'. La mayoría de las veces viene como entero limpio (o
     el string literal 'quest'), pero un puñado de filas (~12 en el dataset
@@ -172,6 +198,14 @@ def process_items(raw_items):
         if damage is not None:
             item["damage"] = damage
 
+        damage_type = parse_damage_type(row.get("damagetype"))
+        if damage_type is not None:
+            item["damageType"] = damage_type
+
+        defense = parse_defense(row.get("defense"))
+        if defense is not None:
+            item["defense"] = defense
+
         sell_value = parse_sell(row.get("sell"))
         if sell_value is not None:
             item["sellValue"] = sell_value
@@ -271,6 +305,17 @@ def load_ingredient_categories():
         "Green Jellyfish (bait)": [2437],  # = "Green Jellyfish" en Items
         "Pink Jellyfish (bait)": [2438],   # = "Pink Jellyfish" en Items
         "Recorded Music Boxes": [],        # categoría abierta, ver nota arriba
+        "Any Gold Bar": [19, 706],          # = Gold Bar + Platinum Bar (ver doc 08:
+                                             # apareció en receta nueva "Format:C",
+                                             # no cubierto por extract_categories.py
+                                             # en la corrida original -- mismo patrón
+                                             # que Any Iron Bar = [Iron Bar, Lead Bar])
+        "Any Silver Bar": [21, 705],        # = Silver Bar + Tungsten Bar (ver doc 08:
+                                             # apareció en "Harpy Charm", receta ya
+                                             # existente que antes resolvía bien --
+                                             # la wiki parece haber re-escrito el
+                                             # texto del ingrediente con la nueva
+                                             # versión del juego, no un ítem nuevo)
     }
     for name, ids in manual_extras.items():
         categories.setdefault(name, ids)

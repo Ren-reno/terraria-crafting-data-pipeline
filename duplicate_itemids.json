@@ -9,33 +9,39 @@
       "rare": "<span class=\"rarity\"><s class=\"sortkey\" style=\"display:none;\">01*</s>[[File:Rarity color 1.png|Blue (Rarity level: 1)|link=Category:Items of rarity 1]]</span>",
       "damage": "",
       "sell": "<span class=\"coin\" title=\"1 Gold&#32;Coin\" data-sort-value=\"10000\"><span class=\"gc\">1<i> GC</i></span></span>",
-      "imagefile": "Ocram Trophy.png"
+      "imagefile": "Ocram Trophy.png",
+      "damagetype": "",
+      "defense": ""
     }
   },
   {
     "itemid": 5048,
-    "name": "Shiny Black Slab",
+    "name": "Wandering Jingasa",
     "row": {
       "itemid": "5048",
-      "name": "Shiny Black Slab",
-      "type": "pet summon",
-      "rare": "<span class=\"rarity\"><s class=\"sortkey\" style=\"display:none;\">05*</s>[[File:Rarity color 5.png|Pink (Rarity level: 5)|link=Category:Items of rarity 5]]</span>[[Category:Items of rarity 5]]",
+      "name": "Wandering Jingasa",
+      "type": "vanity",
+      "rare": "2",
       "damage": "",
-      "sell": "",
-      "imagefile": "Shiny Black Slab.png"
+      "sell": "<span class=\"coin\" title=\"1 Silver&#32;Coin\" data-sort-value=\"100\"><span class=\"sc\">1<i> SC</i></span></span>",
+      "imagefile": "Wandering Jingasa.png",
+      "damagetype": "",
+      "defense": ""
     }
   },
   {
     "itemid": 5052,
-    "name": "Rainbow Piece",
+    "name": "Timeless Traveler's Cloak",
     "row": {
       "itemid": "5052",
-      "name": "Rainbow Piece",
-      "type": "crafting material",
-      "rare": "<span class=\"rarity\"><s class=\"sortkey\" style=\"display:none;\">01*</s>[[File:Rarity color 1.png|Blue (Rarity level: 1)|link=Category:Items of rarity 1]]</span>[[Category:Items of rarity 1]]",
+      "name": "Timeless Traveler's Cloak",
+      "type": "vanity",
+      "rare": "2",
       "damage": "",
-      "sell": "",
-      "imagefile": "Rainbow Piece.png"
+      "sell": "<span class=\"coin\" title=\"1 Silver&#32;Coin\" data-sort-value=\"100\"><span class=\"sc\">1<i> SC</i></span></span>",
+      "imagefile": "Timeless Traveler's Cloak.png",
+      "damagetype": "",
+      "defense": ""
     }
   },
   {
@@ -48,7 +54,9 @@
       "rare": "2",
       "damage": "",
       "sell": "<span class=\"coin\" title=\"1 Silver&#32;Coin\" data-sort-value=\"100\"><span class=\"sc\">1<i> SC</i></span></span>",
-      "imagefile": "Floret Protector Helmet.png"
+      "imagefile": "Floret Protector Helmet.png",
+      "damagetype": "",
+      "defense": ""
     }
   },
   {
@@ -61,7 +69,9 @@
       "rare": "2",
       "damage": "",
       "sell": "<span class=\"coin\" title=\"1 Silver&#32;Coin\" data-sort-value=\"100\"><span class=\"sc\">1<i> SC</i></span></span>",
-      "imagefile": "Floret Protector Shirt.png"
+      "imagefile": "Floret Protector Shirt.png",
+      "damagetype": "",
+      "defense": ""
     }
   },
   {
@@ -74,7 +84,9 @@
       "rare": "<span class=\"rarity\"><s class=\"sortkey\" style=\"display:none;\">03*</s>[[File:Rarity color 3.png|Orange (Rarity level: 3)|link=Category:Items of rarity 3]]</span>[[Category:Items of rarity 3]]",
       "damage": "",
       "sell": "",
-      "imagefile": "Red Envelope.png"
+      "imagefile": "Red Envelope.png",
+      "damagetype": "",
+      "defense": ""
     }
   },
   {
@@ -86,8 +98,10 @@
       "type": "accessory^vanity",
       "rare": "5",
       "damage": "",
-      "sell": "<span class=\"coin\" title=\"20 Gold&#32;Coins\" data-sort-value=\"200000\"><span class=\"gc\">20<i> GC</i></span></span>",
-      "imagefile": "Glass Slipper.png"
+      "sell": "<span class=\"coin\" data-sort-value=\"200000\" title=\"20 Gold&#32;Coins\"><span class=\"gc\">20<span class=\"t\">&nbsp;Gold</span></span></span>",
+      "imagefile": "Glass Slipper.png",
+      "damagetype": "",
+      "defense": ""
     }
   },
   {
@@ -100,7 +114,9 @@
       "rare": "5",
       "damage": "",
       "sell": "<span class=\"coin\" title=\"10 Gold&#32;Coins\" data-sort-value=\"100000\"><span class=\"gc\">10<i> GC</i></span></span>",
-      "imagefile": "Prince Uniform.png"
+      "imagefile": "Prince Uniform.png",
+      "damagetype": "",
+      "defense": ""
     }
   },
   {
@@ -113,7 +129,9 @@
       "rare": "5",
       "damage": "",
       "sell": "<span class=\"coin\" title=\"10 Gold&#32;Coins\" data-sort-value=\"100000\"><span class=\"gc\">10<i> GC</i></span></span>",
-      "imagefile": "Prince Pants.png"
+      "imagefile": "Prince Pants.png",
+      "damagetype": "",
+      "defense": ""
     }
   },
   {
@@ -126,7 +144,9 @@
       "rare": "0",
       "damage": "",
       "sell": "<span class=\"coin\" title=\"50 Silver&#32;Coins\" data-sort-value=\"5000\"><span class=\"sc\">50<i> SC</i></span></span>",
-      "imagefile": "Silent Fish.png"
+      "imagefile": "Silent Fish.png",
+      "damagetype": "",
+      "defense": ""
     }
   },
   {
@@ -139,7 +159,24 @@
       "rare": "0",
       "damage": "",
       "sell": "",
-      "imagefile": "Forbidden Lihzahrd Brick Wall.png"
+      "imagefile": "Forbidden Lihzahrd Brick Wall.png",
+      "damagetype": "",
+      "defense": ""
+    }
+  },
+  {
+    "itemid": 6168,
+    "name": "Chaos Cylinder",
+    "row": {
+      "itemid": "6168",
+      "name": "Chaos Cylinder",
+      "type": "accessory",
+      "rare": "5",
+      "damage": "",
+      "sell": "<span class=\"coin\" data-sort-value=\"80000\" title=\"8 Gold&#32;Coins\"><span class=\"gc\">8<span class=\"t\">&nbsp;Gold</span></span></span>",
+      "imagefile": "Chaos Cylinder.png",
+      "damagetype": "",
+      "defense": ""
     }
   }
 ]

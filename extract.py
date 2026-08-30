@@ -118,7 +118,12 @@ def main():
 
     # --- Items ---
     # Campos mínimos acordados en el doc 03, sección "Qué falta hacer".
-    items_fields = "itemid,name,type,rare,damage,sell,imagefile"
+    # damagetype/defense agregados después (ver doc 07): confirmados en
+    # vivo contra la API real -- damagetype devuelve "Melee"/"Ranged"/
+    # "Magic"/"Summon" (con mayúscula inicial, no en minúscula como se
+    # asumía al principio), defense es un entero limpio como string (no
+    # necesita regex, a diferencia de sell/rare).
+    items_fields = "itemid,name,type,rare,damage,sell,imagefile,damagetype,defense"
     items = extract_table(
         tables="Items",
         fields=items_fields,
