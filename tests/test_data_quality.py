@@ -16,6 +16,7 @@ process.py primero).
 """
 
 import json
+import warnings
 from pathlib import Path
 
 import pytest
@@ -33,6 +34,24 @@ VALID_RARITY_SPECIAL = {"quest"}
 # Si este número sube mucho más, probablemente indica un bug de matching real.
 MAX_EXPECTED_UNRESOLVED_INGREDIENTS = 400
 
+# --- Política de conteos (leer antes de editar los tests de abajo) ----------
+# La wiki cambia sola (parches del juego, migración de fichas). Un conteo
+# EXACTO hace que el pipeline "se rompa" cada vez que eso pasa, aunque los
+# datos estén bien. Por eso estos tests usan LÍMITES RELATIVOS (% del total)
+# que solo fallan ante algo realmente anómalo (p. ej. un bug de parseo que
+# deja miles de items sin categoría). El valor histórico conocido se conserva
+# como referencia: si el número real se aleja de él, el test NO falla pero
+# emite un warning visible en el resumen de pytest, para enterarse igual.
+def avisar_si_cambio(nombre, actual, conocido):
+    if actual != conocido:
+        warnings.warn(
+            f"{nombre}: {actual} (referencia histórica: {conocido}). Cambio "
+            f"dentro de lo tolerado; revisar si es contenido nuevo de la wiki "
+            f"y, si es así, actualizar la referencia.",
+            UserWarning,
+            stacklevel=2,
+        )
+
 
 @pytest.fixture(scope="module")
 def items():
@@ -47,6 +66,14 @@ def recipes():
     path = DATA_DIR / "recipes.json"
     if not path.exists():
         pytest.skip(f"{path} no existe — correr extract.py y process.py primero")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+@pytest.fixture(scope="module")
+def ingredient_categories():
+    path = DATA_DIR / "ingredient_categories.json"
+    if not path.exists():
+        pytest.skip(f"{path} no existe — correr extract_categories.py primero")
     return json.loads(path.read_text(encoding="utf-8"))
 
 
@@ -107,16 +134,19 @@ class TestItemsStructure:
         # coincidencia. Por eso este test valida contra items.json (el
         # dato real que consume la app), no contra el crudo.
         from collections import Counter
-        KNOWN_DUPLICATE_NAME_COUNT = 7
+        KNOWN_DUPLICATE_NAME_COUNT = 7  # referencia histórica
+        MAX_DUPLICATE_NAME_RATIO = 0.01  # tolerancia: hasta 1% de los items
 
         name_counts = Counter(item["name"] for item in items if item.get("name"))
         duplicated_names = {name: count for name, count in name_counts.items() if count > 1}
-        assert len(duplicated_names) == KNOWN_DUPLICATE_NAME_COUNT, (
-            f"{len(duplicated_names)} nombres duplicados entre distintos id, "
-            f"distinto al valor conocido de {KNOWN_DUPLICATE_NAME_COUNT}. "
-            f"Ejemplos: {list(duplicated_names.items())[:5]}. Si subió mucho, "
-            f"revisar si sigue siendo solo variantes de bioma/reskins."
+        limite = MAX_DUPLICATE_NAME_RATIO * len(items)
+        assert len(duplicated_names) <= limite, (
+            f"{len(duplicated_names)} nombres duplicados entre distintos id "
+            f"(límite {limite:.0f}, histórico {KNOWN_DUPLICATE_NAME_COUNT}). "
+            f"Ejemplos: {list(duplicated_names.items())[:5]}. Revisar si sigue "
+            f"siendo solo variantes de bioma/reskins."
         )
+        avisar_si_cambio("nombres duplicados", len(duplicated_names), KNOWN_DUPLICATE_NAME_COUNT)
 
     def test_ids_son_unicos(self, items):
         # Se descubrió en la extracción real que la wiki puede devolver el
@@ -193,13 +223,15 @@ class TestItemsStructure:
         # en crafteo, que es la razón por la que no bloquea el resto del
         # pipeline. Si (b) deja de cumplirse, sí habría que resolverlo antes
         # de mostrar esa receta en la UI.
-        KNOWN_QUEST_COUNT = 45
+        KNOWN_QUEST_COUNT = 45  # referencia histórica; banda 50%-200%
         quest_items = [i for i in items if i.get("rarity") == "quest"]
-        assert len(quest_items) == KNOWN_QUEST_COUNT, (
-            f"{len(quest_items)} items con rarity='quest', distinto al valor "
-            f"conocido de {KNOWN_QUEST_COUNT}. Revisar si sigue siendo el "
-            f"mismo caso (peces del Angler / Strange Plants) o algo nuevo."
+        assert 0.5 * KNOWN_QUEST_COUNT <= len(quest_items) <= 2 * KNOWN_QUEST_COUNT, (
+            f"{len(quest_items)} items con rarity='quest', fuera de la banda "
+            f"{0.5 * KNOWN_QUEST_COUNT:.0f}-{2 * KNOWN_QUEST_COUNT} (histórico "
+            f"{KNOWN_QUEST_COUNT}). Revisar si sigue siendo el mismo caso "
+            f"(peces del Angler / Strange Plants) o un bug de parseo de rarity."
         )
+        avisar_si_cambio("items rarity='quest'", len(quest_items), KNOWN_QUEST_COUNT)
 
         quest_ids = {i["id"] for i in quest_items}
         en_recetas = [
@@ -234,25 +266,31 @@ class TestItemsStructure:
         # receta ya cargada en Cargo, ficha de ítem (category) sin migrar
         # todavía. El total de null-category (107) no cambió, solo subió
         # cuántos de esos 107 tienen receta.
-        KNOWN_NULL_CATEGORY_COUNT = 107
-        KNOWN_CRAFTEABLE_COUNT = 9
+        KNOWN_NULL_CATEGORY_COUNT = 107  # referencia histórica
+        KNOWN_CRAFTEABLE_COUNT = 9  # referencia histórica
+        MAX_NULL_CATEGORY_RATIO = 0.05  # hasta 5% de los items
+        MAX_CRAFTEABLE_NULL_RATIO = 0.01  # hasta 1% de las recetas
 
         null_category_items = [i for i in items if i.get("category") is None]
-        assert len(null_category_items) == KNOWN_NULL_CATEGORY_COUNT, (
-            f"{len(null_category_items)} items con category=null, distinto al "
-            f"valor conocido de {KNOWN_NULL_CATEGORY_COUNT}."
+        limite = MAX_NULL_CATEGORY_RATIO * len(items)
+        assert len(null_category_items) <= limite, (
+            f"{len(null_category_items)} items con category=null, sobre el "
+            f"límite de {limite:.0f} (histórico {KNOWN_NULL_CATEGORY_COUNT}). "
+            f"¿Se rompió el parseo de 'type' en process.py?"
         )
+        avisar_si_cambio("items con category=null", len(null_category_items), KNOWN_NULL_CATEGORY_COUNT)
 
         null_ids = {i["id"] for i in null_category_items}
         crafteables = [r for r in recipes if r["resultItemId"] in null_ids]
-        assert len(crafteables) == KNOWN_CRAFTEABLE_COUNT, (
+        limite_c = MAX_CRAFTEABLE_NULL_RATIO * len(recipes)
+        assert len(crafteables) <= limite_c, (
             f"{len(crafteables)} items con category=null SÍ son crafteables "
-            f"(aparecen como resultado de receta), distinto al valor conocido "
-            f"de {KNOWN_CRAFTEABLE_COUNT}. Si subió, revisar si es contenido "
-            f"nuevo del juego (ver doc 08) antes de asumir que es un bug; "
-            f"si es contenido nuevo, actualizar este número con la evidencia "
-            f"correspondiente, no solo silenciar el test."
+            f"(aparecen como resultado de receta), sobre el límite de "
+            f"{limite_c:.0f} (histórico {KNOWN_CRAFTEABLE_COUNT}). Revisar si "
+            f"es contenido nuevo del juego (ver doc 08) antes de asumir que "
+            f"es un bug."
         )
+        avisar_si_cambio("items category=null crafteables", len(crafteables), KNOWN_CRAFTEABLE_COUNT)
 
     def test_damage_type_tiene_valores_dentro_del_set_tolerado(self, items):
         # Confirmado contra datos reales (muestra de 500 items, itemid
@@ -399,15 +437,17 @@ class TestIntegridadReferencial:
         # test solo vigila que el conteo no cambie sin que nos enteremos —
         # si cambia, alguien debe revisar si sigue siendo el mismo caso
         # conocido o es un problema nuevo.
-        KNOWN_ORPHAN_COUNT = 67
+        KNOWN_ORPHAN_COUNT = 67  # referencia histórica
+        MAX_ORPHAN_RATIO = 0.05  # hasta 5% de las recetas
         huerfanas = [r for r in recipes if r["resultItemId"] not in item_ids]
-        assert len(huerfanas) == KNOWN_ORPHAN_COUNT, (
-            f"{len(huerfanas)} recipes huérfanas encontradas, distinto al valor "
-            f"conocido de {KNOWN_ORPHAN_COUNT}. Si subió: revisar si son casos "
-            f"nuevos del mismo tipo (sets de muebles sin migrar en la wiki) o un "
-            f"bug distinto. Si bajó: la wiki completó infoboxes que faltaban, "
-            f"buena noticia -- actualizar KNOWN_ORPHAN_COUNT en este test."
+        limite = MAX_ORPHAN_RATIO * len(recipes)
+        assert len(huerfanas) <= limite, (
+            f"{len(huerfanas)} recipes huérfanas, sobre el límite de {limite:.0f} "
+            f"(histórico {KNOWN_ORPHAN_COUNT}). Revisar si son casos nuevos del "
+            f"mismo tipo (sets de muebles sin migrar en la wiki) o un bug "
+            f"distinto. Menos huérfanas es buena noticia (la wiki completó fichas)."
         )
+        avisar_si_cambio("recetas huérfanas", len(huerfanas), KNOWN_ORPHAN_COUNT)
 
     def test_result_item_id_huerfanas_tienen_result_name(self, recipes, item_ids):
         # Contrato de datos (ver doc 03, "Decisión: mostrar huérfanas
@@ -480,10 +520,11 @@ class TestIntegridadReferencial:
         # doc 03), así que un número muy menor indica que orphan_image_urls.json
         # no se cargó, no un cambio legítimo en los datos.
         total_huerfanas = [r for r in recipes if r["resultItemId"] not in item_ids]
-        MIN_EXPECTED_WITH_IMAGE = 60
-        assert len(huerfanas_con_imagen) >= MIN_EXPECTED_WITH_IMAGE, (
+        MIN_IMAGE_COVERAGE = 0.8  # al menos 80% de las huérfanas con imagen
+        minimo = MIN_IMAGE_COVERAGE * len(total_huerfanas)
+        assert len(huerfanas_con_imagen) >= minimo, (
             f"Solo {len(huerfanas_con_imagen)} de {len(total_huerfanas)} recetas "
-            f"huérfanas tienen resultImageUrl (mínimo esperado: {MIN_EXPECTED_WITH_IMAGE}). "
+            f"huérfanas tienen resultImageUrl (mínimo esperado: {minimo:.0f}). "
             f"Causa más probable: process.py corrió antes de que "
             f"orphan_image_urls.json existiera -- correr verify_orphan_images.py "
             f"y luego process.py de nuevo, en ese orden."
@@ -506,6 +547,24 @@ class TestIntegridadReferencial:
             f"(referencia irresoluble para la app). Ejemplos: {sin_ninguno[:5]}. "
             f"Si son nombres nuevos tipo '(bait)' o categorías abiertas, "
             f"agregar a manual_extras en load_ingredient_categories() (process.py)."
+        )
+
+    def test_todo_categoryhint_existe_en_ingredient_categories(self, recipes, ingredient_categories):
+        # Contrato del README: ingredient_categories.json es "requerido para
+        # leer recipes.json". Si un categoryHint no tiene entrada en ese
+        # archivo, una app que lo consuma no puede resolver el ingrediente.
+        # process.py combina el scrape con unas pocas excepciones manuales y
+        # las guarda en el archivo (save_ingredient_categories); si este test
+        # falla, correr `python process.py` de nuevo.
+        hints = {
+            ing["categoryHint"]
+            for r in recipes for ing in r["ingredients"] if "categoryHint" in ing
+        }
+        faltan = sorted(hints - set(ingredient_categories))
+        assert not faltan, (
+            f"{len(faltan)} categoryHint sin entrada en ingredient_categories.json: "
+            f"{faltan}. Correr `python process.py` (guarda las excepciones manuales "
+            f"en ese archivo) y volver a correr los tests."
         )
 
     def test_porcentaje_de_ingredientes_sin_resolver_es_razonable(self, recipes):

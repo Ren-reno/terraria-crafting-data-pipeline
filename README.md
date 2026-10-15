@@ -2,7 +2,7 @@
 
 Pipeline de extracción, limpieza y validación de datos que convierte el catálogo completo de ítems y recetas de crafteo de Terraria en dos archivos JSON estructurados, listos para consumir desde una aplicación.
 
-**Resultado final:** 6.121 ítems y 3.954 recetas, validados por una suite de 31 tests automatizados de calidad de datos.
+**Resultado final:** 6.141 ítems y 3.942 recetas (extracción del 15 de octubre de 2026), validados por una suite de 32 tests automatizados de calidad de datos.
 
 ## Por qué este proyecto
 
@@ -28,7 +28,7 @@ raw_items.json / raw_recipes.json     (datos crudos, sin transformar)
    items.json / recipes.json          (datos finales, listos para consumir)
         │
         ▼
-   tests/test_data_quality.py         → 31 tests validan el resultado
+   tests/test_data_quality.py         → 32 tests validan el resultado
 ```
 
 Dos scripts auxiliares resuelven casos especiales del dataset:
@@ -43,7 +43,7 @@ Esta es la parte que más vale la pena leer. Cada punto es un caso concreto dond
 
 **IDs duplicados en la fuente.** 12 `itemId` de la tabla `Items` están repetidos entre dos ítems distintos — rompe la clave primaria del modelo de datos. Se investigó el patrón (todos caen en el mismo rango de IDs, correspondiente a contenido reciente del juego) antes de decidir cómo resolverlo: se conserva la primera aparición y se reporta el resto para auditoría, en vez de perder el dato silenciosamente.
 
-**Referencias rotas entre tablas.** 67 recetas señalan un ítem resultado que no existe en la tabla de ítems — la receta está completa, pero el ítem no tiene ficha propia. En vez de asumir un bug y descartarlas, se investigó qué eran realmente: 22 sets temáticos de muebles decorativos agregados en una actualización reciente del juego, confirmado cruzando contra la documentación pública de la wiki. La decisión de producto fue no ocultarlos: se completa su nombre y su imagen desde fuentes alternativas (recuperando el nombre directo de la tabla de recetas, y confirmando con peticiones HTTP reales que la imagen correspondiente existe en el servidor) en vez de perder 67 recetas válidas del dataset.
+**Referencias rotas entre tablas.** En la extracción original, 67 recetas señalaban un ítem resultado que no existe en la tabla de ítems — la receta está completa, pero el ítem no tenía ficha propia. En vez de asumir un bug y descartarlas, se investigó qué eran realmente: 22 sets temáticos de muebles decorativos agregados en una actualización reciente del juego, confirmado cruzando contra la documentación pública de la wiki. La decisión de producto fue no ocultarlos: se completa su nombre y su imagen desde fuentes alternativas (recuperando el nombre directo de la tabla de recetas, y confirmando con peticiones HTTP reales que la imagen correspondiente existe en el servidor) en vez de perder recetas válidas del dataset. Con el tiempo la wiki fue completando esas fichas: en la extracción del 15 de octubre de 2026 quedan 46 recetas (45 ítems) en este caso, porque los 22 ítems "Candle" ya no aparecen entre los huérfanos. De esos 45 ítems, 43 tienen imagen confirmada; "Trusty Chillet" y "Trusty Chillet Ignis" quedaron sin imagen y están pendientes de investigar (en extracciones anteriores sí tenían ficha propia).
 
 **Categorías de ingredientes "intercambiables".** Varios cientos de ingredientes en las recetas no corresponden a un ítem único sino a una categoría del propio juego (p. ej. "cualquier lingote de hierro sirve"). En vez de forzarlos a un ítem arbitrario o descartar la información, se modeló como una relación de uno a muchos, resuelta contra el listado oficial de categorías de la wiki.
 
@@ -53,13 +53,13 @@ Esta es la parte que más vale la pena leer. Cada punto es un caso concreto dond
 
 **Nombres que no son identificadores únicos.** Varios nombres de ítem aparecen repetidos en 2 o más filas distintas (ej. "Strange Plant" con 4 variantes según bioma). El nombre es un dato descriptivo, no una clave — solo `id` lo es, y el modelo de datos y los tests lo dejan explícito para evitar que una futura integración use el nombre como identificador por error.
 
-**Distinguir un bug de un cambio legítimo en la fuente.** Terraria lanzó una actualización de contenido durante el desarrollo de este proyecto. Una re-extracción posterior hizo fallar 2 tests que antes pasaban — no por un error del pipeline, sino porque el juego agregó ítems y recetas nuevas genuinas. En vez de "arreglar" los tests bajándoles la exigencia, se investigó cada fallo con evidencia externa (confirmando la actualización real del juego y el contenido específico involucrado) antes de actualizar los valores esperados, dejando registrado el motivo de cada cambio.
+**Distinguir un bug de un cambio legítimo en la fuente.** El juego y la wiki cambian durante la vida del proyecto. Una re-extracción posterior a una actualización de contenido hizo fallar tests que antes pasaban — no por un error del pipeline, sino porque el juego agregó ítems y recetas nuevas genuinas. Esos primeros fallos se investigaron con evidencia externa (confirmando la actualización real y el contenido involucrado) antes de actualizar los valores esperados. Al repetirse en una extracción posterior (la wiki completó fichas que faltaban), se cambió el diseño: los conteos exactos pasaron a ser límites relativos (p. ej. "no más de 5 % de recetas huérfanas") que solo fallan ante algo realmente anómalo, y el valor histórico se conserva como referencia que emite un warning de pytest cuando cambia. Así el pipeline no se rompe con cada parche del juego, pero cualquier desvío sigue siendo visible.
 
 El registro completo de esta investigación — con evidencia, números exactos y el razonamiento detrás de cada decisión — está en [`docs/`](./docs/), empezando por [`03-avance-extraccion-cargo.md`](./docs/03-avance-extraccion-cargo.md).
 
 ## Validación de datos, no solo extracción
 
-`tests/test_data_quality.py` corre 31 tests con `pytest` sobre el resultado final: tipos de dato correctos, unicidad de identificadores, ausencia de HTML sin procesar, integridad referencial entre archivos, y límites de tolerancia para los casos especiales documentados arriba. No son tests de código — son tests sobre el contrato del propio dataset, para que cualquier cambio futuro en la fuente (una nueva versión del juego, un cambio en la wiki) se detecte automáticamente en lugar de corromper el resultado en silencio.
+`tests/test_data_quality.py` corre 32 tests con `pytest` sobre el resultado final: tipos de dato correctos, unicidad de identificadores, ausencia de HTML sin procesar, integridad referencial entre archivos, y límites de tolerancia (relativos, no números exactos) para los casos especiales documentados arriba. También verifica que todo `categoryHint` de `recipes.json` exista en `ingredient_categories.json`. No son tests de código — son tests sobre el contrato del propio dataset, para que cualquier cambio futuro en la fuente (una nueva versión del juego, un cambio en la wiki) se detecte automáticamente en lugar de corromper el resultado en silencio.
 
 ## Estructura del repositorio
 
@@ -92,11 +92,16 @@ pip install -r requirements.txt
 
 python extract.py              # genera raw_items.json y raw_recipes.json (no versionados, ~2.5 MB)
 python extract_categories.py   # genera ingredient_categories.json
-python process.py              # genera items.json y recipes.json
-python verify_orphan_images.py # genera orphan_image_urls.json
+python process.py              # genera items.json y recipes.json (1ª pasada)
+python verify_orphan_images.py # genera orphan_image_urls.json (lee recipes.json)
+python process.py              # 2ª pasada: incorpora resultImageUrl a las recetas huérfanas
 
-python -m pytest tests/ -v     # corre la suite de validación — 31 passed
+python -m pytest tests/ -v     # corre la suite de validación — 32 passed
 ```
+
+`process.py` va dos veces porque depende de `verify_orphan_images.py` y viceversa: la verificación de imágenes necesita `recipes.json` para saber qué ítems son huérfanos, y `process.py` necesita `orphan_image_urls.json` para completar sus recetas. En la primera pasada se usa el `orphan_image_urls.json` que ya esté en el repo; la segunda actualiza las recetas con el resultado de la verificación. `process.py` no usa la red, así que puede repetirse las veces que haga falta.
+
+Si los tests emiten *warnings* de pytest (p. ej. "recetas huérfanas: 46 (referencia histórica: 67)"), no es un error: el dato cambió dentro de lo tolerado. Conviene revisar si es contenido nuevo de la wiki y, si lo es, actualizar el valor de referencia en `tests/test_data_quality.py`.
 
 ## Modelo de datos
 

@@ -283,9 +283,10 @@ def load_ingredient_categories():
     son categorías legítimas del juego, confirmadas cruzando manualmente
     contra Items.
 
-    Devuelve {} si el archivo no existe, para que process.py siga
-    funcionando aunque ese paso opcional todavía no se haya corrido —
-    simplemente no habrá categoryHint en ese caso.
+    Si el archivo no existe, devuelve SOLO estas excepciones manuales (nunca
+    {}); main() detecta esa situación mirando si el archivo existe en disco.
+    process.py sigue funcionando aunque ese paso opcional no se haya corrido,
+    pero los grupos "Any X" del scrape no tendrán categoryHint.
     """
     path = BASE / "ingredient_categories.json"
     categories = {}
@@ -321,6 +322,20 @@ def load_ingredient_categories():
         categories.setdefault(name, ids)
 
     return categories
+
+
+def save_ingredient_categories(categories):
+    """Guarda en ingredient_categories.json los grupos ya combinados (scrape +
+    excepciones manuales), para que ese archivo sea COMPLETO: todo categoryHint
+    de recipes.json debe poder resolverse leyendo solo ese archivo. Misma
+    serialización que extract_categories.py. No reescribe si no hay cambios.
+    """
+    path = BASE / "ingredient_categories.json"
+    texto = json.dumps(categories, ensure_ascii=False, indent=2)
+    if path.read_text(encoding="utf-8") != texto:
+        path.write_text(texto, encoding="utf-8")
+        return True
+    return False
 
 
 def load_orphan_image_urls():
@@ -452,13 +467,19 @@ def main():
     print(f"-> {len(items)} items procesados.")
 
     valid_item_ids = {item["id"] for item in items}
+    categories_exists = (BASE / "ingredient_categories.json").exists()
     ingredient_categories = load_ingredient_categories()
-    if ingredient_categories:
-        print(f"Cargado ingredient_categories.json: {len(ingredient_categories)} grupos.")
+    if categories_exists:
+        print(f"Cargado ingredient_categories.json: {len(ingredient_categories)} grupos "
+              f"(incluye excepciones manuales).")
+        if save_ingredient_categories(ingredient_categories):
+            print("-> ingredient_categories.json actualizado con las excepciones manuales.")
     else:
         print("⚠️  ingredient_categories.json no encontrado -- los ingredientes "
-              "tipo 'Any X' quedarán sin categoryHint. Correr extract_categories.py "
-              "para generarlo (opcional, no bloquea el resto del pipeline).")
+              "tipo 'Any X' del scrape quedarán sin categoryHint (solo se usan "
+              f"{len(ingredient_categories)} excepciones manuales). Correr "
+              "extract_categories.py para generarlo (opcional, no bloquea el "
+              "resto del pipeline).")
 
     orphan_image_urls = load_orphan_image_urls()
     if orphan_image_urls:
