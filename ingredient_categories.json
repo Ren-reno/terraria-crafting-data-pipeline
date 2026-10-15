@@ -14,6 +14,14 @@
     22,
     704
   ],
+  "Any Silver Bar": [
+    21,
+    705
+  ],
+  "Any Gold Bar": [
+    19,
+    706
+  ],
   "Any Cobalt Bar": [
     381,
     1184
@@ -184,5 +192,15 @@
   ],
   "Any Torch": [
     8
-  ]
+  ],
+  "Blue Jellyfish (bait)": [
+    2436
+  ],
+  "Green Jellyfish (bait)": [
+    2437
+  ],
+  "Pink Jellyfish (bait)": [
+    2438
+  ],
+  "Recorded Music Boxes": []
 }
