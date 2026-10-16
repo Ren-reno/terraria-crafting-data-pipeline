@@ -16,6 +16,8 @@ process.py primero).
 """
 
 import json
+import random
+import sys
 import warnings
 from pathlib import Path
 
@@ -53,6 +55,15 @@ def avisar_si_cambio(nombre, actual, conocido):
         )
 
 
+def _pares_id_contenido(lista_recetas):
+    """Lista ordenada de (id, contenido-sin-id): permite comparar dos asignaciones
+    de ids sin depender del orden de las filas."""
+    return sorted(
+        (r["id"], json.dumps({k: v for k, v in r.items() if k != "id"}, sort_keys=True))
+        for r in lista_recetas
+    )
+
+
 @pytest.fixture(scope="module")
 def items():
     path = DATA_DIR / "items.json"
@@ -67,6 +78,18 @@ def recipes():
     if not path.exists():
         pytest.skip(f"{path} no existe — correr extract.py y process.py primero")
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+@pytest.fixture(scope="module")
+def assign_stable_ids():
+    # process.py vive en la raíz del repo; se agrega al path para que el test
+    # funcione igual con `pytest` que con `python -m pytest`.
+    sys.path.insert(0, str(DATA_DIR))
+    try:
+        from process import assign_stable_ids as fn
+    finally:
+        sys.path.remove(str(DATA_DIR))
+    return fn
 
 
 @pytest.fixture(scope="module")
@@ -565,6 +588,58 @@ class TestIntegridadReferencial:
             f"{len(faltan)} categoryHint sin entrada en ingredient_categories.json: "
             f"{faltan}. Correr `python process.py` (guarda las excepciones manuales "
             f"en ese archivo) y volver a correr los tests."
+        )
+
+    def test_recipe_ids_no_dependen_del_orden_de_entrada(self, recipes, assign_stable_ids):
+        # Propiedad central del id de receta: el mismo contenido recibe el mismo
+        # id aunque la fuente devuelva las filas en otro orden. (Antes el id
+        # usaba un contador global y cambiaba en el 97% de las recetas entre dos
+        # extracciones.) Las recetas de contenido idéntico son intercambiables,
+        # por eso se compara el conjunto de pares (id, contenido), no fila a fila.
+        base = [dict(r) for r in recipes]
+        assign_stable_ids(base)
+        for semilla in (1, 2, 3):
+            barajadas = [dict(r) for r in recipes]
+            random.Random(semilla).shuffle(barajadas)
+            assign_stable_ids(barajadas)
+            assert _pares_id_contenido(barajadas) == _pares_id_contenido(base), (
+                "Los ids de receta dependen del orden de entrada: no son estables "
+                "entre extracciones. Revisar assign_stable_ids() en process.py."
+            )
+
+    def test_recipe_ids_no_cambian_al_quitar_recetas_de_otros_items(self, recipes, assign_stable_ids):
+        # Quitar o agregar recetas de OTROS ítems (lo que pasa cuando la wiki
+        # cambia contenido ajeno) no debe alterar los ids de un ítem dado.
+        completo = [dict(r) for r in recipes]
+        assign_stable_ids(completo)
+
+        items_resultado = sorted({r["resultItemId"] for r in recipes})
+        conservados = set(items_resultado[::2])  # se queda con la mitad de los ítems
+        parcial = [dict(r) for r in recipes if r["resultItemId"] in conservados]
+        assign_stable_ids(parcial)
+
+        esperado = [r for r in completo if r["resultItemId"] in conservados]
+        assert _pares_id_contenido(parcial) == _pares_id_contenido(esperado), (
+            "Quitar recetas de otros ítems cambió los ids de los ítems que se conservaron."
+        )
+
+    def test_recipe_ids_son_unicos_y_con_formato_esperado(self, recipes):
+        import re
+        ids = [r["id"] for r in recipes]
+        assert len(ids) == len(set(ids)), "Hay ids de receta repetidos."
+        malos = [r["id"] for r in recipes if not re.fullmatch(rf"{r['resultItemId']}-\d+", r["id"])]
+        assert not malos, f"ids con formato inesperado (esperado '<resultItemId>-<n>'): {malos[:5]}"
+
+    def test_recipe_ids_de_recipes_json_son_los_canonicos(self, recipes, assign_stable_ids):
+        # Contrato: recipes.json fue generado con el esquema estable. Si este test
+        # falla, recipes.json se generó con una versión anterior de process.py:
+        # correr `python process.py` de nuevo (no usa la red) y volver a testear.
+        recalculadas = [dict(r) for r in recipes]
+        assign_stable_ids(recalculadas)
+        distintos = [(a["id"], b["id"]) for a, b in zip(recipes, recalculadas) if a["id"] != b["id"]]
+        assert not distintos, (
+            f"{len(distintos)} ids de recipes.json no coinciden con el esquema estable "
+            f"(ej. {distintos[:3]}). Correr `python process.py` para regenerar recipes.json."
         )
 
     def test_porcentaje_de_ingredientes_sin_resolver_es_razonable(self, recipes):

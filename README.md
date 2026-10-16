@@ -2,7 +2,7 @@
 
 Pipeline de extracción, limpieza y validación de datos que convierte el catálogo completo de ítems y recetas de crafteo de Terraria en dos archivos JSON estructurados, listos para consumir desde una aplicación.
 
-**Resultado final:** 6.141 ítems y 3.942 recetas (extracción del 15 de octubre de 2026), validados por una suite de 32 tests automatizados de calidad de datos.
+**Resultado final:** 6.141 ítems y 3.942 recetas (extracción del 15 de octubre de 2026), validados por una suite de 36 tests automatizados de calidad de datos.
 
 ## Por qué este proyecto
 
@@ -28,7 +28,7 @@ raw_items.json / raw_recipes.json     (datos crudos, sin transformar)
    items.json / recipes.json          (datos finales, listos para consumir)
         │
         ▼
-   tests/test_data_quality.py         → 32 tests validan el resultado
+   tests/test_data_quality.py         → 36 tests validan el resultado
 ```
 
 Dos scripts auxiliares resuelven casos especiales del dataset:
@@ -59,7 +59,7 @@ El registro completo de esta investigación — con evidencia, números exactos 
 
 ## Validación de datos, no solo extracción
 
-`tests/test_data_quality.py` corre 32 tests con `pytest` sobre el resultado final: tipos de dato correctos, unicidad de identificadores, ausencia de HTML sin procesar, integridad referencial entre archivos, y límites de tolerancia (relativos, no números exactos) para los casos especiales documentados arriba. También verifica que todo `categoryHint` de `recipes.json` exista en `ingredient_categories.json`. No son tests de código — son tests sobre el contrato del propio dataset, para que cualquier cambio futuro en la fuente (una nueva versión del juego, un cambio en la wiki) se detecte automáticamente en lugar de corromper el resultado en silencio.
+`tests/test_data_quality.py` corre 36 tests con `pytest` sobre el resultado final: tipos de dato correctos, unicidad de identificadores, ausencia de HTML sin procesar, integridad referencial entre archivos, y límites de tolerancia (relativos, no números exactos) para los casos especiales documentados arriba. También verifica que todo `categoryHint` de `recipes.json` exista en `ingredient_categories.json`. No son tests de código — son tests sobre el contrato del propio dataset, para que cualquier cambio futuro en la fuente (una nueva versión del juego, un cambio en la wiki) se detecte automáticamente en lugar de corromper el resultado en silencio.
 
 ## Estructura del repositorio
 
@@ -96,7 +96,7 @@ python process.py              # genera items.json y recipes.json (1ª pasada)
 python verify_orphan_images.py # genera orphan_image_urls.json (lee recipes.json)
 python process.py              # 2ª pasada: incorpora resultImageUrl a las recetas huérfanas
 
-python -m pytest tests/ -v     # corre la suite de validación — 32 passed
+python -m pytest tests/ -v     # corre la suite de validación — 36 passed
 ```
 
 `process.py` va dos veces porque depende de `verify_orphan_images.py` y viceversa: la verificación de imágenes necesita `recipes.json` para saber qué ítems son huérfanos, y `process.py` necesita `orphan_image_urls.json` para completar sus recetas. En la primera pasada se usa el `orphan_image_urls.json` que ya esté en el repo; la segunda actualiza las recetas con el resultado de la verificación. `process.py` no usa la red, así que puede repetirse las veces que haga falta.
@@ -112,6 +112,8 @@ recipes.json  → { id, resultItemId, resultQuantity, ingredients[], station, re
 ```
 
 `ingredients[]` es una lista de `{ itemId, quantity }`, o `{ itemId: null, quantity, categoryHint }` cuando el ingrediente es una categoría intercambiable en vez de un ítem específico.
+
+El `id` de cada receta tiene el formato `{resultItemId}-{n}`, donde `n` es la posición de la receta entre las recetas de ese mismo ítem, ordenadas por contenido. No depende del orden en que la wiki devuelve las filas ni de las recetas de otros ítems, así que una app puede usarlo como clave estable (favoritos, progreso) entre extracciones. Solo puede cambiar si cambian las recetas del propio ítem (p. ej. la wiki agrega o quita una variante): en ese caso los ids de las recetas de ese ítem pueden reordenarse. En una comparación real entre dos extracciones, 3.917 de 3.942 recetas conservaron su id (las 25 restantes cambiaron de contenido); con el esquema anterior, un contador global, solo conservaron su id 125.
 
 ## Fuente y licencia de los datos
 

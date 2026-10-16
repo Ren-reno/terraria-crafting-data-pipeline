@@ -351,6 +351,48 @@ def load_orphan_image_urls():
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def recipe_sort_key(recipe):
+    """Clave canónica de una receta, calculada SOLO con su contenido (nunca con
+    su posición en la lista). Se usa para numerar las recetas de un mismo ítem
+    de forma determinista."""
+    ingredientes = tuple(sorted(
+        (ing["itemId"] if ing["itemId"] is not None else -1,
+         ing.get("categoryHint") or "",
+         ing["quantity"])
+        for ing in recipe["ingredients"]
+    ))
+    return (
+        recipe["resultQuantity"],
+        ingredientes,
+        tuple(recipe["station"] or ()),
+        recipe["requiredCondition"] or "",
+    )
+
+
+def assign_stable_ids(recipes):
+    """Asigna recipe["id"] = "{resultItemId}-{n}", con n = posición de la receta
+    entre las recetas de ESE mismo ítem, ordenadas por contenido
+    (recipe_sort_key).
+
+    Antes el id usaba un contador global ("{resultid}-{len(recipes)}"), que se
+    corría con cualquier fila que apareciera, desapareciera o cambiara de orden
+    en la wiki: en una re-extracción real el 97% de los ids cambió aunque las
+    recetas fueran idénticas. Con este esquema el id NO depende del orden de
+    la fuente ni de las recetas de otros ítems; solo puede cambiar si cambia
+    el conjunto de recetas del propio ítem (p. ej. la wiki agrega o quita una
+    variante). Dos recetas de contenido idéntico son intercambiables, así que
+    su orden relativo no importa.
+
+    Modifica las recetas in place y conserva el orden de la lista.
+    """
+    por_resultado = {}
+    for recipe in recipes:
+        por_resultado.setdefault(recipe["resultItemId"], []).append(recipe)
+    for result_id, grupo in por_resultado.items():
+        for n, recipe in enumerate(sorted(grupo, key=recipe_sort_key)):
+            recipe["id"] = f"{result_id}-{n}"
+
+
 def process_recipes(raw_recipes, name_to_id, valid_item_ids, ingredient_categories, orphan_image_urls):
     recipes = []
 
@@ -427,7 +469,7 @@ def process_recipes(raw_recipes, name_to_id, valid_item_ids, ingredient_categori
             ORPHAN_RESULT_IDS.add(resultid)
 
         recipe = {
-            "id": f"{resultid}-{len(recipes)}",  # id simple, ver nota abajo
+            "id": None,  # se asigna al final con assign_stable_ids() (ver nota ahí)
             "resultItemId": resultid,
             "resultQuantity": amount,
             "ingredients": ingredients,
@@ -448,6 +490,7 @@ def process_recipes(raw_recipes, name_to_id, valid_item_ids, ingredient_categori
                 recipe["resultImageUrl"] = image_url
         recipes.append(recipe)
 
+    assign_stable_ids(recipes)
     return recipes
 
 
