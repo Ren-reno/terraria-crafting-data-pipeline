@@ -55,11 +55,11 @@ Esta es la parte que más vale la pena leer. Cada punto es un caso concreto dond
 
 **Distinguir un bug de un cambio legítimo en la fuente.** El juego y la wiki cambian durante la vida del proyecto. Una re-extracción posterior a una actualización de contenido hizo fallar tests que antes pasaban — no por un error del pipeline, sino porque el juego agregó ítems y recetas nuevas genuinas. Esos primeros fallos se investigaron con evidencia externa (confirmando la actualización real y el contenido involucrado) antes de actualizar los valores esperados. Al repetirse en una extracción posterior (la wiki completó fichas que faltaban), se cambió el diseño: los conteos exactos pasaron a ser límites relativos (p. ej. "no más de 5 % de recetas huérfanas") que solo fallan ante algo realmente anómalo, y el valor histórico se conserva como referencia que emite un warning de pytest cuando cambia. Así el pipeline no se rompe con cada parche del juego, pero cualquier desvío sigue siendo visible.
 
-El registro completo de esta investigación — con evidencia, números exactos y el razonamiento detrás de cada decisión — está en [`docs/`](./docs/), empezando por [`03-avance-extraccion-cargo.md`](./docs/03-avance-extraccion-cargo.md).
+El registro de esta investigación — con evidencia, números exactos y el razonamiento detrás de cada decisión — está en [`docs/`](./docs/), empezando por [`03-avance-extraccion-cargo.md`](./docs/03-avance-extraccion-cargo.md), y en [`actualizacion-version-1-4-5-7.md`](./actualizacion-version-1-4-5-7.md) (el primer cambio de versión real del juego y su efecto en los tests). Los documentos son una bitácora: reflejan el estado del proyecto en cada momento (p. ej. los ids de receta de ejemplo usan el esquema anterior al actual) y la serie está incompleta — los números 02, 04, 05 y 07, que se citan en comentarios del código, no están en este repositorio.
 
 ## Validación de datos, no solo extracción
 
-`tests/test_data_quality.py` corre 36 tests con `pytest` sobre el resultado final: tipos de dato correctos, unicidad de identificadores, ausencia de HTML sin procesar, integridad referencial entre archivos, y límites de tolerancia (relativos, no números exactos) para los casos especiales documentados arriba. También verifica que todo `categoryHint` de `recipes.json` exista en `ingredient_categories.json`. No son tests de código — son tests sobre el contrato del propio dataset, para que cualquier cambio futuro en la fuente (una nueva versión del juego, un cambio en la wiki) se detecte automáticamente en lugar de corromper el resultado en silencio.
+`tests/test_data_quality.py` corre 36 tests con `pytest` sobre el resultado final: tipos de dato correctos, unicidad de identificadores, ausencia de HTML sin procesar, integridad referencial entre archivos, y límites de tolerancia (relativos, no números exactos) para los casos especiales documentados arriba. También verifica que todo `categoryHint` de `recipes.json` exista en `ingredient_categories.json` y que los ids de receta sean únicos y no dependan del orden en que la wiki devuelve las filas. No son tests de código — son tests sobre el contrato del propio dataset, para que cualquier cambio futuro en la fuente (una nueva versión del juego, un cambio en la wiki) se detecte automáticamente en lugar de corromper el resultado en silencio.
 
 ## Estructura del repositorio
 
@@ -69,6 +69,7 @@ extract_categories.py         # Mapeo de categorías de ingredientes intercambia
 verify_orphan_images.py       # Verificación HTTP de imágenes para ítems incompletos en la fuente
 process.py                    # Limpieza, validación y transformación al modelo final
 tests/test_data_quality.py    # Suite de validación de datos (pytest)
+requirements.txt              # Dependencias: requests, beautifulsoup4, pytest
 
 items.json                    # Ítems del juego
 recipes.json                  # Recetas de crafteo
@@ -77,8 +78,10 @@ ingredient_categories.json    # Grupos de ingredientes intercambiables (requerid
 duplicate_itemids.json        # Auditoría: IDs duplicados en la fuente
 orphan_result_ids.json        # Auditoría: recetas sin ítem correspondiente en la fuente
 orphan_image_urls.json        # Auditoría: imágenes verificadas para esos casos
+orphan_images_not_found.json  # Auditoría: huérfanos cuya imagen NO se pudo confirmar (revisar a mano)
 
-docs/                          # Registro completo de la investigación, decisión por decisión
+docs/                          # Bitácora de la investigación (documento 03: extracción y decisiones de modelado)
+actualizacion-version-1-4-5-7.md  # Bitácora: primer cambio de versión real del juego y su efecto en los tests
 ATTRIBUTION.md                 # Fuente, licencia y atribución de los datos
 LICENSE                        # Licencia del código (MIT)
 ```
@@ -88,7 +91,7 @@ LICENSE                        # Licencia del código (MIT)
 Los datos ya están generados (`items.json`, `recipes.json`) — no hace falta correr nada para usarlos. Para reproducir el pipeline desde cero:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt   # requests, beautifulsoup4 y pytest
 
 python extract.py              # genera raw_items.json y raw_recipes.json (no versionados, ~2.5 MB)
 python extract_categories.py   # genera ingredient_categories.json
