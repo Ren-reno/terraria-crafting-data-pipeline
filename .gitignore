@@ -10,12 +10,9 @@ env/
 .venv/
 
 # Datos crudos intermedios (grandes, no aportan valor al repo — se
-# regeneran corriendo extract.py; ver README "Cómo correrlo")
-raw_items.json
-raw_recipes.json
-
-# Diagnóstico temporal (usado una vez para depurar extract_categories.py)
-debug_page.html
+# regeneran corriendo src/extract.py; ver README "Cómo correrlo").
+# Incluye debug_page.html, el volcado de diagnóstico de extract_categories.py.
+data/raw/
 
 # Sistema operativo
 .DS_Store

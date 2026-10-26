@@ -5,17 +5,16 @@ y produce items.json / recipes.json según el modelo de datos definido en los
 docs 02/03 del proyecto.
 
 Uso:
-    python process.py
+    python src/process.py
 
-Requiere que extract.py ya se haya corrido antes en la misma carpeta.
+Requiere que extract.py ya se haya corrido antes (lee data/raw/; escribe en data/ y data/audit/).
 """
 
 import json
 import re
 import html
-from pathlib import Path
 
-BASE = Path(__file__).parent
+from paths import AUDIT_DIR, DATA_DIR, RAW_DIR
 
 # Lista curada de "estaciones" que en realidad no son ítems poseíbles/craftables
 # (objetos o condiciones especiales del mundo). Ver doc 03, sección
@@ -288,7 +287,7 @@ def load_ingredient_categories():
     process.py sigue funcionando aunque ese paso opcional no se haya corrido,
     pero los grupos "Any X" del scrape no tendrán categoryHint.
     """
-    path = BASE / "ingredient_categories.json"
+    path = DATA_DIR / "ingredient_categories.json"
     categories = {}
     if path.exists():
         categories = json.loads(path.read_text(encoding="utf-8"))
@@ -330,7 +329,7 @@ def save_ingredient_categories(categories):
     de recipes.json debe poder resolverse leyendo solo ese archivo. Misma
     serialización que extract_categories.py. No reescribe si no hay cambios.
     """
-    path = BASE / "ingredient_categories.json"
+    path = DATA_DIR / "ingredient_categories.json"
     texto = json.dumps(categories, ensure_ascii=False, indent=2)
     if path.read_text(encoding="utf-8") != texto:
         path.write_text(texto, encoding="utf-8")
@@ -345,7 +344,7 @@ def load_orphan_image_urls():
     Devuelve {} si el archivo no existe, para que process.py siga
     funcionando aunque este paso opcional todavía no se haya corrido.
     """
-    path = BASE / "orphan_image_urls.json"
+    path = AUDIT_DIR / "orphan_image_urls.json"
     if not path.exists():
         return {}
     return json.loads(path.read_text(encoding="utf-8"))
@@ -495,11 +494,13 @@ def process_recipes(raw_recipes, name_to_id, valid_item_ids, ingredient_categori
 
 
 def main():
-    raw_items_path = BASE / "raw_items.json"
-    raw_recipes_path = BASE / "raw_recipes.json"
+    AUDIT_DIR.mkdir(parents=True, exist_ok=True)
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    raw_items_path = RAW_DIR / "raw_items.json"
+    raw_recipes_path = RAW_DIR / "raw_recipes.json"
 
     if not raw_items_path.exists() or not raw_recipes_path.exists():
-        print("❌ Faltan raw_items.json / raw_recipes.json. Corré extract.py primero.")
+        print("❌ Faltan data/raw/raw_items.json / raw_recipes.json. Corré src/extract.py primero.")
         return
 
     raw_items = json.loads(raw_items_path.read_text(encoding="utf-8"))
@@ -510,7 +511,7 @@ def main():
     print(f"-> {len(items)} items procesados.")
 
     valid_item_ids = {item["id"] for item in items}
-    categories_exists = (BASE / "ingredient_categories.json").exists()
+    categories_exists = (DATA_DIR / "ingredient_categories.json").exists()
     ingredient_categories = load_ingredient_categories()
     if categories_exists:
         print(f"Cargado ingredient_categories.json: {len(ingredient_categories)} grupos "
@@ -521,7 +522,7 @@ def main():
         print("⚠️  ingredient_categories.json no encontrado -- los ingredientes "
               "tipo 'Any X' del scrape quedarán sin categoryHint (solo se usan "
               f"{len(ingredient_categories)} excepciones manuales). Correr "
-              "extract_categories.py para generarlo (opcional, no bloquea el "
+              "src/extract_categories.py para generarlo (opcional, no bloquea el "
               "resto del pipeline).")
 
     orphan_image_urls = load_orphan_image_urls()
@@ -529,15 +530,15 @@ def main():
         print(f"Cargado orphan_image_urls.json: {len(orphan_image_urls)} URLs confirmadas.")
     else:
         print("⚠️  orphan_image_urls.json no encontrado -- las recetas huérfanas "
-              "quedarán sin resultImageUrl. Correr verify_orphan_images.py "
+              "quedarán sin resultImageUrl. Correr src/verify_orphan_images.py "
               "para generarlo (opcional, no bloquea el resto del pipeline).")
 
     print(f"Procesando {len(raw_recipes)} recipes crudas...")
     recipes = process_recipes(raw_recipes, name_to_id, valid_item_ids, ingredient_categories, orphan_image_urls)
     print(f"-> {len(recipes)} recipes procesadas (legacy descartadas).")
 
-    items_out = BASE / "items.json"
-    recipes_out = BASE / "recipes.json"
+    items_out = DATA_DIR / "items.json"
+    recipes_out = DATA_DIR / "recipes.json"
     items_out.write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
     recipes_out.write_text(json.dumps(recipes, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -563,7 +564,7 @@ def main():
                   f"no cubierto por ingredient_categories.json.")
 
     if UNKNOWN_STATIONS:
-        unknown_path = BASE / "unknown_stations.json"
+        unknown_path = AUDIT_DIR / "unknown_stations.json"
         unknown_path.write_text(
             json.dumps(sorted(UNKNOWN_STATIONS), ensure_ascii=False, indent=2),
             encoding="utf-8"
@@ -574,7 +575,7 @@ def main():
               f"con nombres de estación distintos a los ya vistos.")
 
     if DUPLICATE_ITEMIDS:
-        dup_path = BASE / "duplicate_itemids.json"
+        dup_path = AUDIT_DIR / "duplicate_itemids.json"
         dup_path.write_text(
             json.dumps(DUPLICATE_ITEMIDS, ensure_ascii=False, indent=2),
             encoding="utf-8"
@@ -589,7 +590,7 @@ def main():
               f"a número (quedaron como null). Ejemplos: {list(UNPARSED_RARE)[:3]}")
 
     if MALFORMED_RESULTIDS:
-        malformed_path = BASE / "malformed_resultids.json"
+        malformed_path = AUDIT_DIR / "malformed_resultids.json"
         malformed_path.write_text(
             json.dumps(sorted(MALFORMED_RESULTIDS), ensure_ascii=False, indent=2),
             encoding="utf-8"
@@ -600,7 +601,7 @@ def main():
               f"eran legacy, revisar si esto sigue siendo cierto en una re-extracción.")
 
     if ORPHAN_RESULT_IDS:
-        orphan_path = BASE / "orphan_result_ids.json"
+        orphan_path = AUDIT_DIR / "orphan_result_ids.json"
         orphan_path.write_text(
             json.dumps(sorted(ORPHAN_RESULT_IDS), ensure_ascii=False, indent=2),
             encoding="utf-8"

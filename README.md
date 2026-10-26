@@ -1,8 +1,15 @@
 # Terraria Data Pipeline
 
+[![tests](https://github.com/Ren-reno/terraria-crafting-data-pipeline/actions/workflows/tests.yml/badge.svg)](https://github.com/Ren-reno/terraria-crafting-data-pipeline/actions/workflows/tests.yml)
+![code license: MIT](https://img.shields.io/badge/code%20license-MIT-blue)
+
 Pipeline de extracción, limpieza y validación de datos que convierte el catálogo completo de ítems y recetas de crafteo de Terraria en dos archivos JSON estructurados, listos para consumir desde una aplicación.
 
 **Resultado final:** 6.141 ítems y 3.942 recetas (extracción del 15 de octubre de 2026), validados por una suite de 36 tests automatizados de calidad de datos.
+
+**Stack:** Python · `requests` · `BeautifulSoup` · `pytest` · API MediaWiki/Cargo · GitHub Actions.
+
+Los datos ya generados están en [`data/`](./data/); para reproducir el pipeline, ver [Cómo correrlo](#cómo-correrlo).
 
 ## Por qué este proyecto
 
@@ -16,24 +23,24 @@ Ese proceso de investigación es, en buena parte, el objetivo de este repo: most
 terraria.wiki.gg (API Cargo)
         │
         ▼
-   extract.py            → extrae Items y Recipes, paginado, con rate limiting
+   src/extract.py        → extrae Items y Recipes, paginado, con rate limiting
         │
         ▼
-raw_items.json / raw_recipes.json     (datos crudos, sin transformar)
+data/raw/raw_items.json / raw_recipes.json     (datos crudos, sin transformar)
         │
         ▼
-   process.py             → limpia, valida tipos, cruza referencias
+   src/process.py         → limpia, valida tipos, cruza referencias
         │
         ▼
-   items.json / recipes.json          (datos finales, listos para consumir)
+   data/items.json / data/recipes.json    (datos finales, listos para consumir)
         │
         ▼
    tests/test_data_quality.py         → 36 tests validan el resultado
 ```
 
 Dos scripts auxiliares resuelven casos especiales del dataset:
-- `extract_categories.py` — mapea los grupos de ingredientes "intercambiables" del juego (p. ej. cualquier tipo de madera sirve para una receta) a sus IDs reales, scrapeando y parseando la página correspondiente de la wiki.
-- `verify_orphan_images.py` — confirma con peticiones HTTP reales, uno por uno, que existen las imágenes de un conjunto de ítems que el pipeline detectó como incompletos en la fuente (ver más abajo).
+- `src/extract_categories.py` — mapea los grupos de ingredientes "intercambiables" del juego (p. ej. cualquier tipo de madera sirve para una receta) a sus IDs reales, scrapeando y parseando la página correspondiente de la wiki.
+- `src/verify_orphan_images.py` — confirma con peticiones HTTP reales, uno por uno, que existen las imágenes de un conjunto de ítems que el pipeline detectó como incompletos en la fuente (ver más abajo).
 
 ## Problemas de datos reales, encontrados y resueltos
 
@@ -55,7 +62,7 @@ Esta es la parte que más vale la pena leer. Cada punto es un caso concreto dond
 
 **Distinguir un bug de un cambio legítimo en la fuente.** El juego y la wiki cambian durante la vida del proyecto. Una re-extracción posterior a una actualización de contenido hizo fallar tests que antes pasaban — no por un error del pipeline, sino porque el juego agregó ítems y recetas nuevas genuinas. Esos primeros fallos se investigaron con evidencia externa (confirmando la actualización real y el contenido involucrado) antes de actualizar los valores esperados. Al repetirse en una extracción posterior (la wiki completó fichas que faltaban), se cambió el diseño: los conteos exactos pasaron a ser límites relativos (p. ej. "no más de 5 % de recetas huérfanas") que solo fallan ante algo realmente anómalo, y el valor histórico se conserva como referencia que emite un warning de pytest cuando cambia. Así el pipeline no se rompe con cada parche del juego, pero cualquier desvío sigue siendo visible.
 
-El registro de esta investigación — con evidencia, números exactos y el razonamiento detrás de cada decisión — está en [`docs/`](./docs/), empezando por [`03-avance-extraccion-cargo.md`](./docs/03-avance-extraccion-cargo.md), y en [`actualizacion-version-1-4-5-7.md`](./actualizacion-version-1-4-5-7.md) (el primer cambio de versión real del juego y su efecto en los tests). Los documentos son una bitácora: reflejan el estado del proyecto en cada momento (p. ej. los ids de receta de ejemplo usan el esquema anterior al actual) y la serie está incompleta — los números 02, 04, 05 y 07, que se citan en comentarios del código, no están en este repositorio.
+El registro de esta investigación — con evidencia, números exactos y el razonamiento detrás de cada decisión — está en [`docs/`](./docs/), empezando por [`03-avance-extraccion-cargo.md`](./docs/03-avance-extraccion-cargo.md), y en [`actualizacion-version-1-4-5-7.md`](./docs/actualizacion-version-1-4-5-7.md) (el primer cambio de versión real del juego y su efecto en los tests). Los documentos son una bitácora: reflejan el estado del proyecto en cada momento (p. ej. los ids de receta de ejemplo usan el esquema anterior al actual) y la serie está incompleta — los números 02, 04, 05 y 07, que se citan en comentarios del código, no están en este repositorio.
 
 ## Validación de datos, no solo extracción
 
@@ -64,45 +71,53 @@ El registro de esta investigación — con evidencia, números exactos y el razo
 ## Estructura del repositorio
 
 ```
-extract.py                    # Extracción desde la API Cargo (paginada, con rate limiting)
-extract_categories.py         # Mapeo de categorías de ingredientes intercambiables
-verify_orphan_images.py       # Verificación HTTP de imágenes para ítems incompletos en la fuente
-process.py                    # Limpieza, validación y transformación al modelo final
-tests/test_data_quality.py    # Suite de validación de datos (pytest)
-requirements.txt              # Dependencias: requests, beautifulsoup4, pytest
+src/                              # Código del pipeline
+├── extract.py                    # Extracción desde la API Cargo (paginada, con rate limiting)
+├── extract_categories.py         # Mapeo de categorías de ingredientes intercambiables
+├── process.py                    # Limpieza, validación y transformación al modelo final
+├── verify_orphan_images.py       # Verificación HTTP de imágenes para ítems incompletos en la fuente
+└── paths.py                      # Rutas del proyecto, definidas en un solo lugar
 
-items.json                    # Ítems del juego
-recipes.json                  # Recetas de crafteo
-ingredient_categories.json    # Grupos de ingredientes intercambiables (requerido para leer recipes.json)
+data/                             # Datos
+├── items.json                    # Ítems del juego
+├── recipes.json                  # Recetas de crafteo
+├── ingredient_categories.json    # Grupos de ingredientes intercambiables (requerido para leer recipes.json)
+├── raw/                          # Crudos de extract.py (no versionados)
+└── audit/                        # Reportes de auditoría de los casos especiales de la fuente
+    ├── duplicate_itemids.json        # IDs duplicados en la fuente
+    ├── orphan_result_ids.json        # Recetas sin ítem correspondiente en la fuente
+    ├── orphan_image_urls.json        # Imágenes verificadas para esos casos (process.py también lo lee)
+    └── orphan_images_not_found.json  # Huérfanos cuya imagen NO se pudo confirmar (revisar a mano)
 
-duplicate_itemids.json        # Auditoría: IDs duplicados en la fuente
-orphan_result_ids.json        # Auditoría: recetas sin ítem correspondiente en la fuente
-orphan_image_urls.json        # Auditoría: imágenes verificadas para esos casos
-orphan_images_not_found.json  # Auditoría: huérfanos cuya imagen NO se pudo confirmar (revisar a mano)
+tests/test_data_quality.py        # Suite de validación de datos (pytest)
 
-docs/                          # Bitácora de la investigación (documento 03: extracción y decisiones de modelado)
-actualizacion-version-1-4-5-7.md  # Bitácora: primer cambio de versión real del juego y su efecto en los tests
-ATTRIBUTION.md                 # Fuente, licencia y atribución de los datos
-LICENSE                        # Licencia del código (MIT)
+docs/                             # Bitácora de la investigación
+├── 03-avance-extraccion-cargo.md             # Extracción y decisiones de modelado
+└── actualizacion-version-1-4-5-7.md          # Primer cambio de versión real del juego y su efecto en los tests
+
+.github/workflows/tests.yml       # CI: corre la suite en cada push
+requirements.txt                  # Dependencias: requests, beautifulsoup4, pytest
+ATTRIBUTION.md                    # Fuente, licencia y atribución de los datos
+LICENSE                           # Licencia del código (MIT)
 ```
 
 ## Cómo correrlo
 
-Los datos ya están generados (`items.json`, `recipes.json`) — no hace falta correr nada para usarlos. Para reproducir el pipeline desde cero:
+Los datos ya están generados (`data/items.json`, `data/recipes.json`) — no hace falta correr nada para usarlos. Para reproducir el pipeline desde cero:
 
 ```bash
 pip install -r requirements.txt   # requests, beautifulsoup4 y pytest
 
-python extract.py              # genera raw_items.json y raw_recipes.json (no versionados, ~2.5 MB)
-python extract_categories.py   # genera ingredient_categories.json
-python process.py              # genera items.json y recipes.json (1ª pasada)
-python verify_orphan_images.py # genera orphan_image_urls.json (lee recipes.json)
-python process.py              # 2ª pasada: incorpora resultImageUrl a las recetas huérfanas
+python src/extract.py              # genera data/raw/raw_items.json y raw_recipes.json (no versionados, ~2.5 MB)
+python src/extract_categories.py   # genera data/ingredient_categories.json
+python src/process.py              # genera data/items.json y data/recipes.json (1ª pasada)
+python src/verify_orphan_images.py # genera data/audit/orphan_image_urls.json (lee data/recipes.json)
+python src/process.py              # 2ª pasada: incorpora resultImageUrl a las recetas huérfanas
 
 python -m pytest tests/ -v     # corre la suite de validación — 36 passed
 ```
 
-`process.py` va dos veces porque depende de `verify_orphan_images.py` y viceversa: la verificación de imágenes necesita `recipes.json` para saber qué ítems son huérfanos, y `process.py` necesita `orphan_image_urls.json` para completar sus recetas. En la primera pasada se usa el `orphan_image_urls.json` que ya esté en el repo; la segunda actualiza las recetas con el resultado de la verificación. `process.py` no usa la red, así que puede repetirse las veces que haga falta.
+`src/process.py` va dos veces porque depende de `verify_orphan_images.py` y viceversa: la verificación de imágenes necesita `recipes.json` para saber qué ítems son huérfanos, y `process.py` necesita `orphan_image_urls.json` para completar sus recetas. En la primera pasada se usa el `orphan_image_urls.json` que ya esté en el repo; la segunda actualiza las recetas con el resultado de la verificación. `process.py` no usa la red, así que puede repetirse las veces que haga falta.
 
 Si los tests emiten *warnings* de pytest (p. ej. "recetas huérfanas: 46 (referencia histórica: 67)"), no es un error: el dato cambió dentro de lo tolerado. Conviene revisar si es contenido nuevo de la wiki y, si lo es, actualizar el valor de referencia en `tests/test_data_quality.py`.
 
@@ -115,6 +130,39 @@ recipes.json  → { id, resultItemId, resultQuantity, ingredients[], station, re
 ```
 
 `ingredients[]` es una lista de `{ itemId, quantity }`, o `{ itemId: null, quantity, categoryHint }` cuando el ingrediente es una categoría intercambiable en vez de un ítem específico.
+
+Ejemplo real de un ítem (`data/items.json`):
+
+```json
+{
+  "id": 3507,
+  "name": "Copper Shortsword",
+  "category": "weapon",
+  "subcategory": "crafting material",
+  "imageUrl": "https://terraria.wiki.gg/images/Copper_Shortsword.png",
+  "rarity": 0,
+  "damage": 5,
+  "damageType": "Melee",
+  "sellValue": 70
+}
+```
+
+Y de una receta con un ingrediente intercambiable (`data/recipes.json`: la *Actuation Rod* usa 10 de "cualquier lingote de hierro"; los ids de `categoryHint` se resuelven en `data/ingredient_categories.json`):
+
+```json
+{
+  "id": "3620-0",
+  "resultItemId": 3620,
+  "resultQuantity": 1,
+  "ingredients": [
+    { "itemId": 849, "quantity": 50 },
+    { "itemId": null, "quantity": 10, "categoryHint": "Any Iron Bar" },
+    { "itemId": 530, "quantity": 10 }
+  ],
+  "station": ["Iron Anvil"],
+  "requiredCondition": null
+}
+```
 
 El `id` de cada receta tiene el formato `{resultItemId}-{n}`, donde `n` es la posición de la receta entre las recetas de ese mismo ítem, ordenadas por contenido. No depende del orden en que la wiki devuelve las filas ni de las recetas de otros ítems, así que una app puede usarlo como clave estable (favoritos, progreso) entre extracciones. Solo puede cambiar si cambian las recetas del propio ítem (p. ej. la wiki agrega o quita una variante): en ese caso los ids de las recetas de ese ítem pueden reordenarse. En una comparación real entre dos extracciones, 3.917 de 3.942 recetas conservaron su id (las 25 restantes cambiaron de contenido); con el esquema anterior, un contador global, solo conservaron su id 125.
 

@@ -23,7 +23,9 @@ from pathlib import Path
 
 import pytest
 
-DATA_DIR = Path(__file__).parent.parent
+ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT / "data"
+SRC_DIR = ROOT / "src"
 
 # Campos numéricos válidos de rarity (Terraria usa -13..12 aprox., más el
 # string especial "quest" para ítems de misión). Ver doc 03.
@@ -82,13 +84,13 @@ def recipes():
 
 @pytest.fixture(scope="module")
 def assign_stable_ids():
-    # process.py vive en la raíz del repo; se agrega al path para que el test
+    # process.py vive en src/; se agrega al path para que el test
     # funcione igual con `pytest` que con `python -m pytest`.
-    sys.path.insert(0, str(DATA_DIR))
+    sys.path.insert(0, str(SRC_DIR))
     try:
         from process import assign_stable_ids as fn
     finally:
-        sys.path.remove(str(DATA_DIR))
+        sys.path.remove(str(SRC_DIR))
     return fn
 
 
@@ -578,7 +580,7 @@ class TestIntegridadReferencial:
         # archivo, una app que lo consuma no puede resolver el ingrediente.
         # process.py combina el scrape con unas pocas excepciones manuales y
         # las guarda en el archivo (save_ingredient_categories); si este test
-        # falla, correr `python process.py` de nuevo.
+        # falla, correr `python src/process.py` de nuevo.
         hints = {
             ing["categoryHint"]
             for r in recipes for ing in r["ingredients"] if "categoryHint" in ing
@@ -586,7 +588,7 @@ class TestIntegridadReferencial:
         faltan = sorted(hints - set(ingredient_categories))
         assert not faltan, (
             f"{len(faltan)} categoryHint sin entrada en ingredient_categories.json: "
-            f"{faltan}. Correr `python process.py` (guarda las excepciones manuales "
+            f"{faltan}. Correr `python src/process.py` (guarda las excepciones manuales "
             f"en ese archivo) y volver a correr los tests."
         )
 
@@ -633,13 +635,13 @@ class TestIntegridadReferencial:
     def test_recipe_ids_de_recipes_json_son_los_canonicos(self, recipes, assign_stable_ids):
         # Contrato: recipes.json fue generado con el esquema estable. Si este test
         # falla, recipes.json se generó con una versión anterior de process.py:
-        # correr `python process.py` de nuevo (no usa la red) y volver a testear.
+        # correr `python src/process.py` de nuevo (no usa la red) y volver a testear.
         recalculadas = [dict(r) for r in recipes]
         assign_stable_ids(recalculadas)
         distintos = [(a["id"], b["id"]) for a, b in zip(recipes, recalculadas) if a["id"] != b["id"]]
         assert not distintos, (
             f"{len(distintos)} ids de recipes.json no coinciden con el esquema estable "
-            f"(ej. {distintos[:3]}). Correr `python process.py` para regenerar recipes.json."
+            f"(ej. {distintos[:3]}). Correr `python src/process.py` para regenerar recipes.json."
         )
 
     def test_porcentaje_de_ingredientes_sin_resolver_es_razonable(self, recipes):

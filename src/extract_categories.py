@@ -12,9 +12,9 @@ en cada corrida.
 
 Uso:
     pip install beautifulsoup4 requests
-    python extract_categories.py
+    python src/extract_categories.py
 
-Requiere raw_items.json en la misma carpeta (generado por extract.py).
+Requiere data/raw/raw_items.json (generado por extract.py).
 
 Salida:
     ingredient_categories.json  ->  { "Any Iron Bar": [22, 704], ... }
@@ -27,10 +27,11 @@ import json
 import re
 import time
 import html
-from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
+
+from paths import AUDIT_DIR, DATA_DIR, RAW_DIR
 
 URL = "https://terraria.wiki.gg/wiki/Alternative_crafting_ingredients"
 HEADERS = {
@@ -40,7 +41,7 @@ HEADERS = {
 
 
 def load_name_to_id():
-    raw_items_path = Path(__file__).parent / "raw_items.json"
+    raw_items_path = RAW_DIR / "raw_items.json"
     raw_items = json.loads(raw_items_path.read_text(encoding="utf-8"))
     name_to_id = {}
     for it in raw_items:
@@ -150,7 +151,7 @@ def main():
     # y hay que re-diagnosticar el parser (ver historial: la primera versión
     # de este parser asumía mal dónde vivía el id del header y devolvía 0
     # grupos hasta inspeccionar este archivo).
-    debug_path = Path(__file__).parent / "debug_page.html"
+    debug_path = RAW_DIR / "debug_page.html"
     debug_path.write_text(html_text, encoding="utf-8")
 
     print("Parseando grupos...")
@@ -179,7 +180,8 @@ def main():
                 unmatched.setdefault(group_name, []).append(member_name)
         categories[group_name] = ids
 
-    out_dir = Path(__file__).parent
+    out_dir = DATA_DIR
+    AUDIT_DIR.mkdir(parents=True, exist_ok=True)
     (out_dir / "ingredient_categories.json").write_text(
         json.dumps(categories, ensure_ascii=False, indent=2), encoding="utf-8"
     )
@@ -203,7 +205,7 @@ def main():
         print(f"✅ Total final: {len(categories)} grupos en ingredient_categories.json")
 
     if unmatched:
-        (out_dir / "unmatched_category_members.json").write_text(
+        (AUDIT_DIR / "unmatched_category_members.json").write_text(
             json.dumps(unmatched, ensure_ascii=False, indent=2), encoding="utf-8"
         )
         total_unmatched = sum(len(v) for v in unmatched.values())

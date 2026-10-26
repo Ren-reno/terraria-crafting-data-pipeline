@@ -6,11 +6,11 @@ el entorno de Claude, que respeta robots.txt de forma estricta).
 
 Uso:
     pip install requests
-    python extract.py
+    python src/extract.py
 
 Salida:
-    raw_items.json     -> filas crudas de la tabla Items (paginadas y unidas)
-    raw_recipes.json   -> filas crudas de la tabla Recipes (paginadas y unidas)
+    data/raw/raw_items.json     -> filas crudas de la tabla Items (paginadas y unidas)
+    data/raw/raw_recipes.json   -> filas crudas de la tabla Recipes (paginadas y unidas)
 
 Notas de diseño (ver docs 02/03 del proyecto):
 - limit=500 confirmado como seguro (no se probó ni se usa limit=max/5000,
@@ -27,9 +27,10 @@ Notas de diseño (ver docs 02/03 del proyecto):
 import json
 import time
 import sys
-from pathlib import Path
 
 import requests
+
+from paths import RAW_DIR
 
 API_URL = "https://terraria.wiki.gg/api.php"
 
@@ -113,8 +114,8 @@ def extract_table(tables: str, fields: str, where: str = None,
 
 
 def main():
-    out_dir = Path(__file__).parent
-    out_dir.mkdir(exist_ok=True)
+    out_dir = RAW_DIR
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     # --- Items ---
     # Campos mínimos acordados en el doc 03, sección "Qué falta hacer".
@@ -151,7 +152,7 @@ def main():
     recipes_path.write_text(json.dumps(recipes, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n✅ Recipes: {len(recipes)} filas guardadas en {recipes_path}")
 
-    print("\nListo. Corré process.py para transformar estos crudos a items.json / recipes.json.")
+    print("\nListo. Corré src/process.py para transformar estos crudos a items.json / recipes.json.")
 
 
 if __name__ == "__main__":

@@ -14,9 +14,9 @@ antes de confiar en la convención.
 
 Uso:
     pip install requests
-    python verify_orphan_images.py
+    python src/verify_orphan_images.py
 
-Requiere recipes.json en la misma carpeta (para sacar los 65 resultName).
+Requiere data/recipes.json (para sacar los 65 resultName).
 
 Salida:
     orphan_image_urls.json  -> { "5552": "https://.../Aetherium_Candelabra.png", ... }
@@ -28,9 +28,10 @@ Salida:
 
 import json
 import time
-from pathlib import Path
 
 import requests
+
+from paths import AUDIT_DIR, DATA_DIR
 
 HEADERS = {
     "User-Agent": "TerrariaCrafteosBot/0.1 (uso personal, no comercial; "
@@ -53,10 +54,10 @@ def image_exists(url: str) -> bool:
 
 
 def main():
-    base = Path(__file__).parent
-    recipes_path = base / "recipes.json"
+    AUDIT_DIR.mkdir(parents=True, exist_ok=True)
+    recipes_path = DATA_DIR / "recipes.json"
     if not recipes_path.exists():
-        print("❌ Falta recipes.json. Correr process.py primero.")
+        print("❌ Falta data/recipes.json. Correr src/process.py primero.")
         return
 
     recipes = json.loads(recipes_path.read_text(encoding="utf-8"))
@@ -85,13 +86,13 @@ def main():
 
         time.sleep(DELAY_SECONDS)
 
-    (base / "orphan_image_urls.json").write_text(
+    (AUDIT_DIR / "orphan_image_urls.json").write_text(
         json.dumps(confirmed, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     print(f"\n✅ {len(confirmed)} imágenes confirmadas -> orphan_image_urls.json")
 
     if not_found:
-        (base / "orphan_images_not_found.json").write_text(
+        (AUDIT_DIR / "orphan_images_not_found.json").write_text(
             json.dumps(not_found, ensure_ascii=False, indent=2), encoding="utf-8"
         )
         print(f"⚠️  {len(not_found)} NO encontradas -> orphan_images_not_found.json "
